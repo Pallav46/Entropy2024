@@ -9,6 +9,7 @@ import EventManagement from './pages/TeamPage/SubTeams/EventManagement/EventMana
 import DesignTeam from './pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx'
 import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'
 import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'
+import PastEvents from './pages/PastEvents/PastEvent.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/teams/faculty",
     element: <FacultyCoordinators/>
+  },
+  {
+    path: "/past-events",
+    element: <PastEvents/>
   }
 ])
 
