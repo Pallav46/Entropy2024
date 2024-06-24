@@ -1,8 +1,7 @@
-
 const WebAndCreatives = () => {
   return (
     <div>
-      Web And Creatives
+      WebAndCreatives
     </div>
   )
 }

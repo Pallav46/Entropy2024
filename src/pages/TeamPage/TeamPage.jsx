@@ -1,36 +1,127 @@
-import classes from './TeamPage.module.css';
+import React from "react";
+import Slider from "react-slick";
+import classes from "./TeamPage.module.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const TeamPage = () => {
-  return (
-    <section className={classes.heroSection}>
-      <div className={classes.cardGrid}>
-        <a className={classes.card} href="/teams/webAndCreatives">
-          <div className={classes.cardBackground} style={{ backgroundImage: "url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)" }}></div>
-          <div className={classes.cardContent}>
-            <h3 className={classes.cardHeading}>Faculty Coordinators</h3>
-          </div>
-        </a>
-        <a className={classes.card} href="#">
-          <div className={classes.cardBackground} style={{ backgroundImage: "url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)" }}></div>
-          <div className={classes.cardContent}>
-            <h3 className={classes.cardHeading}>Sponsorship Team</h3>
-          </div>
-        </a>
-        <a className={classes.card} href="#">
-          <div className={classes.cardBackground} style={{ backgroundImage: "url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)" }}></div>
-          <div className={classes.cardContent}>
-            <h3 className={classes.cardHeading}>Web Development Team</h3>
-          </div>
-        </a>
-        <a className={classes.card} href="#">
-          <div className={classes.cardBackground} style={{ backgroundImage: "url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)" }}></div>
-          <div className={classes.cardContent}>
-            <h3 className={classes.cardHeading}>Design Team</h3>
-          </div>
-        </a>
+class WebAndCreatives extends React.Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      vertical: false,
+      verticalSwiping: false,
+      arrows: false,
+      swipe: false,
+      swipeToSlide: false,
+    };
+
+    return (
+      <div className={classes.main_container}>
+        <div className={classes.blogSlider}>
+          <Slider {...settings}>
+            <div className={classes.blogSliderItem}>
+              <div className={classes.blogSliderImg}>
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+                  alt=""
+                />
+              </div>
+              <div className={classes.blogSliderContent}>
+                <div className={classes.blogSliderTitle}>
+                  Faculty Coordinators
+                </div>
+                <div className={classes.blogSliderText}>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+                <a href="/teams/faculty" className={classes.blogSliderButton}>
+                  MEET THE TEAM
+                </a>
+              </div>
+            </div>
+            <div className={classes.blogSliderItem}>
+              <div className={classes.blogSliderImg}>
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+                  alt=""
+                />
+              </div>
+              <div className={classes.blogSliderContent}>
+                <div className={classes.blogSliderTitle}>
+                  Sponsorship Team
+                </div>
+                <div className={classes.blogSliderText}>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+                <a href="/teams/sponsorship" className={classes.blogSliderButton}>
+                  MEET THE TEAM
+                </a>
+              </div>
+            </div>
+            <div className={classes.blogSliderItem}>
+              <div className={classes.blogSliderImg}>
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  alt=""
+                />
+              </div>
+              <div className={classes.blogSliderContent}>
+                <div className={classes.blogSliderTitle}>Web And Creatives</div>
+                <div className={classes.blogSliderText}>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+                <a href="/teams/webAndCreatives" className={classes.blogSliderButton}>
+                  MEET THE TEAM
+                </a>
+              </div>
+            </div>
+            <div className={classes.blogSliderItem}>
+              <div className={classes.blogSliderImg}>
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  alt=""
+                />
+              </div>
+              <div className={classes.blogSliderContent}>
+                <div className={classes.blogSliderTitle}>Event Management</div>
+                <div className={classes.blogSliderText}>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+                <a href="/teams/eventManagement" className={classes.blogSliderButton}>
+                  MEET THE TEAM
+                </a>
+              </div>
+            </div>
+            <div className={classes.blogSliderItem}>
+              <div className={classes.blogSliderImg}>
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  alt=""
+                />
+              </div>
+              <div className={classes.blogSliderContent}>
+                <div className={classes.blogSliderTitle}>Design Team</div>
+                <div className={classes.blogSliderText}>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+                <a href="/teams/design" className={classes.blogSliderButton}>
+                  MEET THE TEAM
+                </a>
+              </div>
+            </div>
+          </Slider>
+        </div>
       </div>
-    </section>
-  );
-};
+    );
+  }
+}
 
-export default TeamPage;
+export default WebAndCreatives;
