@@ -26,7 +26,7 @@ class WebAndCreatives extends React.Component {
             <div className={classes.blogSliderItem}>
               <div className={classes.blogSliderImg}>
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+                  src="/assets/TeamPage/FacultyCoordinators.jpg"
                   alt=""
                 />
               </div>
@@ -46,7 +46,7 @@ class WebAndCreatives extends React.Component {
             <div className={classes.blogSliderItem}>
               <div className={classes.blogSliderImg}>
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+                  src="/assets/TeamPage/SponsorshipTeam.jpg"
                   alt=""
                 />
               </div>
@@ -66,7 +66,7 @@ class WebAndCreatives extends React.Component {
             <div className={classes.blogSliderItem}>
               <div className={classes.blogSliderImg}>
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  src="/assets/TeamPage/WebAndCreatives.jpg"
                   alt=""
                 />
               </div>
@@ -84,7 +84,7 @@ class WebAndCreatives extends React.Component {
             <div className={classes.blogSliderItem}>
               <div className={classes.blogSliderImg}>
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  src="/assets/TeamPage/EventManagement.jpg"
                   alt=""
                 />
               </div>
@@ -102,7 +102,7 @@ class WebAndCreatives extends React.Component {
             <div className={classes.blogSliderItem}>
               <div className={classes.blogSliderImg}>
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                  src="/assets/TeamPage/DesignTeam.jpg"
                   alt=""
                 />
               </div>
