@@ -1,4 +1,4 @@
-/* Container for the entire team section */
+
 .page-bg{
     background-image: url('/public/images/design/background.webp');
     background-size: cover;
@@ -15,7 +15,7 @@
     color: #ffffff;
   }
   
-  /* Title styling */
+
   .design-team h1 {
     margin-bottom: 20px;
     font-family: cursive;
@@ -24,15 +24,15 @@
     backdrop-filter: blur(15px);
     }
   
-  /* Grid container for team members */
+
   .team-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Adds space between grid items */
+    gap: 20px; 
   }
   
-  /* Individual team member styling */
+
   .team-member {
     cursor: pointer;
     transition: transform 0.3s;
@@ -53,8 +53,7 @@
   .team-member:hover {
     transform: scale(1.1);
   }
-  
-  /* Container for the member details card */
+
   .member-details {
     
     padding-top: 320px;
@@ -69,7 +68,7 @@
     z-index: 1000;
   }
   
-  /* Styling for the details card */
+
   .card {
     display: flex;
     flex-direction: column;

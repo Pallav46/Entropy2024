@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './DesignTeam.css';
-import Sparkles from './sparkles'; // Adjust path as needed based on your project structure
+import Sparkles from './sparkles'; 
 
 const teamMembers = [
   {
