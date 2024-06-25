@@ -15,8 +15,8 @@ class WebAndCreatives extends React.Component {
       vertical: false,
       verticalSwiping: false,
       arrows: false,
-      swipe: false,
-      swipeToSlide: false,
+      swipe: true,
+      swipeToSlide: true,
     };
 
     return (
