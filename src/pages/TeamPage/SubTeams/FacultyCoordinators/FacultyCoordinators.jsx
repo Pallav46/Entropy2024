@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import classes from './FacultyCoordinators.module.css';
 import pic from './Man.jpg';
 import { FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa';
