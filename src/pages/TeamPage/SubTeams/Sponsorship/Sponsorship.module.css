@@ -8,10 +8,6 @@
     font-family: Merriweather;
 }
 
-body{
-    background-image: url(images/sponsorTeam/bg.svg);
-}
-
 body::before{
     position: absolute;
     width: min(1400px, 90vw);
@@ -32,6 +28,7 @@ body::before{
     text-align: center;
     overflow: hidden;
     position: relative;
+    background-image: url(images/sponsorTeam/bg.svg);
 }
 
 .banner .slider {
