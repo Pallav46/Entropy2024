@@ -95,23 +95,23 @@ const Sponsorship = () => {
                         onMouseEnter={() => handleItemHover(item.position)}
                         onMouseLeave={handleItemLeave}
                     >
-                        <img src={`./../../../../../public/images/sponsorTeam/profile_${item.position}.avif`} alt={`profile ${item.position}`}/>
+                        <img src={`/images/sponsorTeam/profile_${item.position}.avif`} alt={`profile ${item.position}`}/>
                         {hoveredItem === null && (
                             <div className={SponsorCSS.name}>{item.name}</div>
                         )}
                         {hoveredItem === item.position && (
                             <div className={SponsorCSS.social}>
                                 <a href={item.social.instagram} target="_blank" rel="noopener noreferrer">
-                                    <img src="./../../../../../public/images/sponsorTeam/instagram-icon.png" alt="Instagram" />
+                                    <img src="/images/sponsorTeam/instagram-icon.png" alt="Instagram" />
                                 </a>
                                 <a href={item.social.twitter} target="_blank" rel="noopener noreferrer">
-                                    <img src="./../../../../../public/images/sponsorTeam/twitter-icon.png" alt="Twitter" />
+                                    <img src="/images/sponsorTeam/twitter-icon.png" alt="Twitter" />
                                 </a>
                                 <a href={item.social.linkedin} target="_blank" rel="noopener noreferrer">
-                                    <img src="./../../../../../public/images/sponsorTeam/linkedin-icon.png" alt="LinkedIn" />
+                                    <img src="/images/sponsorTeam/linkedin-icon.png" alt="LinkedIn" />
                                 </a>
                                 <a href={item.social.facebook} target="_blank" rel="noopener noreferrer">
-                                    <img src="./../../../../../public/images/sponsorTeam/facebook-icon.png" alt="Facebook" />
+                                    <img src="/images/sponsorTeam/facebook-icon.png" alt="Facebook" />
                                 </a>
                             </div>
                         )}
