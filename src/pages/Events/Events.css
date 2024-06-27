@@ -69,7 +69,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   color: #fff;
-  font-family: gilroy, sans-serif;
+  font-family: "gilroy", sans-serif;
 }
 
 #hero {
@@ -102,6 +102,7 @@ body {
   left: 0;
   /* line-height: .5; */
   /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "kajiro";
   color: #fff;
   font-weight: 50;
   font-size: 7.5vw;
@@ -123,20 +124,74 @@ body {
   color: #fff;
 }
 
+#heroright .elem2{
+  height: 1.5vw;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#heroright .elem3{
+  height: 9vw;
+  overflow: hidden;
+  margin-top: 1vw;
+  margin-bottom: 5vw;
+  position: relative;
+  width: 100%;
+}
+
+#heroright .elem4{
+  height: 6.5vw;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#heroright .textR1:nth-child(1){
+  top: 0;
+}
+
+#heroright .textR2:nth-child(1){
+  top: 0;
+}
+
+#heroright .textR3:nth-child(1){
+  top: 0;
+}
+
 #heroright p {
   font-size: 14px;
   font-weight: 300;
   text-align: right;
+  position: absolute;
+  left: 0;
+  top: -100%;
+}
+
+#heroright .imgElem{
+  position: relative;
+  overflow: hidden;
+  height: 185px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#heroright .imgElem #imagediv:nth-child(1){
+  top: 0;
 }
 
 #heroright #imagediv {
   width: 100%;
   height: 170px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 30px;
   background-image: url(https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D);
   background-size: cover;
   background-position: center;
+  position: absolute;
+  top: -100%;
+  left: 0;
+
 }
 
 #heroright p:nth-child(3) {

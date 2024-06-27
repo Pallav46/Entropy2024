@@ -52,7 +52,8 @@ const Events = () => {
         var index = 0;
         var animating = false;
       
-        document.querySelector("#main").addEventListener("click", function () {
+        document.querySelector("#main")
+        .addEventListener("click", function () {
           if (!animating) {
             animating = true;
             gsap.to(h1s[index], {
@@ -75,6 +76,135 @@ const Events = () => {
           }
         });
       });
+
+      var imgElems = document.querySelectorAll(".imgElem");
+
+      imgElems.forEach(function (imgElem){
+        var imagedivs = imgElem.querySelectorAll("#imagediv");
+        var index = 0;
+        var animating = false;
+
+        document.querySelector("#main")
+        .addEventListener("click", function () {
+          if(!animating) {
+            animating = true;
+            gsap.to(imagedivs[index], {
+              top: "100%",
+              ease: "expo.inOut",
+              duration: 1,
+              onComplete: function () {
+                gsap.set(this.targets()[0], {top: "-100%"});
+                animating = false;
+              },
+            });
+
+            index = index === imagedivs.length - 1 ? 0 : index + 1;
+
+            gsap.to(imagedivs[index], {
+              top: "0%",
+              ease: "expo.inOut",
+              duration: 1,
+            });
+          }
+        });
+      });
+
+      var ele2 = document.querySelectorAll(".elem2");
+      
+      ele2.forEach(function (elem2) {
+        var textR1s = elem2.querySelectorAll(".textR1");
+        var index = 0;
+        var animating = false;
+      
+        document.querySelector("#main")
+        .addEventListener("click", function () {
+          if (!animating) {
+            animating = true;
+            gsap.to(textR1s[index], {
+              top: "100%",
+              ease: "expo.inOut",
+              duration: 1,
+              onComplete: function () {
+                gsap.set(this.targets()[0], { top: "-100%" });
+                animating = false;
+              },
+            });
+            
+            index = index === textR1s.length - 1 ? 0 : index + 1;
+            
+            gsap.to(textR1s[index], {
+              top: "0%",
+              ease: "expo.inOut",
+              duration: 1,
+            });
+          }
+        });
+      });
+
+      var ele3 = document.querySelectorAll(".elem3");
+      
+      ele3.forEach(function (elem3) {
+        var textR2s = elem3.querySelectorAll(".textR2");
+        var index = 0;
+        var animating = false;
+      
+        document.querySelector("#main")
+        .addEventListener("click", function () {
+          if (!animating) {
+            animating = true;
+            gsap.to(textR2s[index], {
+              top: "100%",
+              ease: "expo.inOut",
+              duration: 1,
+              onComplete: function () {
+                gsap.set(this.targets()[0], { top: "-100%" });
+                animating = false;
+              },
+            });
+            
+            index = index === textR2s.length - 1 ? 0 : index + 1;
+            
+            gsap.to(textR2s[index], {
+              top: "0%",
+              ease: "expo.inOut",
+              duration: 1,
+            });
+          }
+        });
+      });
+
+      var ele4 = document.querySelectorAll(".elem4");
+      
+      ele4.forEach(function (elem4) {
+        var textR3s = elem4.querySelectorAll(".textR3");
+        var index = 0;
+        var animating = false;
+      
+        document.querySelector("#main")
+        .addEventListener("click", function () {
+          if (!animating) {
+            animating = true;
+            gsap.to(textR3s[index], {
+              top: "100%",
+              ease: "expo.inOut",
+              duration: 1,
+              onComplete: function () {
+                gsap.set(this.targets()[0], { top: "-100%" });
+                animating = false;
+              },
+            });
+            
+            index = index === textR3s.length - 1 ? 0 : index + 1;
+            
+            gsap.to(textR3s[index], {
+              top: "0%",
+              ease: "expo.inOut",
+              duration: 1,
+            });
+          }
+        });
+      });
+
   }, []);
 
   return (
@@ -126,20 +256,87 @@ const Events = () => {
               <button>Explore Now</button>
             </div>
             <div id="heroright">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <div id="imagediv"></div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perspiciatis incidunt consequatur asperiores quod sint animi,
-                facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                a officia est sequi similique distinctio laborum nesciunt ex
-                mollitia.
-              </p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                itaque nihil provident, voluptate hic quae vero. Ratione
-                corporis eligendi ullam necessitatibus neque dolorem.
-              </p>
+              <div className="elem2">
+                <p className='textR1'>Lorem ipsum dolor sit amet.</p>
+                <p className='textR1'>tingting.</p>
+                <p className='textR1'>dodo.</p>
+                <p className='textR1'>bingbing.</p>
+                <p className='textR1'>Lorem ipsum dt.</p>
+              </div>
+
+              <div className="imgElem">
+                <div id="imagediv"></div>
+                <div id="imagediv"></div>
+                <div id="imagediv"></div>
+                <div id="imagediv"></div>
+                <div id="imagediv"></div>
+              </div>
+
+              <div className="elem3">
+                <p className='textR2'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perspiciatis incidunt consequatur asperiores quod sint animi,
+                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
+                  a officia est sequi similique distinctio laborum nesciunt ex
+                  mollitia.
+                </p>
+                <p className='textR2'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perspiciatis incidunt consequatur asperiores quod sint animi,
+                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
+                  a officia est sequi similique distinctio laborum nesciunt ex
+                  mollitia.
+                </p>
+                <p className='textR2'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perspiciatis incidunt consequatur asperiores quod sint animi,
+                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
+                  a officia est sequi similique distinctio laborum nesciunt ex
+                  mollitia.
+                </p>
+                <p className='textR2'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perspiciatis incidunt consequatur asperiores quod sint animi,
+                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
+                  a officia est sequi similique distinctio laborum nesciunt ex
+                  mollitia.
+                </p>
+                <p className='textR2'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perspiciatis incidunt consequatur asperiores quod sint animi,
+                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
+                  a officia est sequi similique distinctio laborum nesciunt ex
+                  mollitia.
+                </p>
+              </div>
+
+              <div className="elem4">
+                <p className='textR3'>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  itaque nihil provident, voluptate hic quae vero. Ratione
+                  corporis eligendi ullam necessitatibus neque dolorem.
+                </p>
+                <p className='textR3'>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  itaque nihil provident, voluptate hic quae vero. Ratione
+                  corporis eligendi ullam necessitatibus neque dolorem.
+                </p>
+                <p className='textR3'>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  itaque nihil provident, voluptate hic quae vero. Ratione
+                  corporis eligendi ullam necessitatibus neque dolorem.
+                </p>
+                <p className='textR3'>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  itaque nihil provident, voluptate hic quae vero. Ratione
+                  corporis eligendi ullam necessitatibus neque dolorem.
+                </p>
+                <p className='textR3'>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
+                  itaque nihil provident, voluptate hic quae vero. Ratione
+                  corporis eligendi ullam necessitatibus neque dolorem.
+                </p>
+              </div>
             </div>
           </div>
         </div>
