@@ -265,11 +265,11 @@ const Events = () => {
               </div>
 
               <div className="imgElem">
-                <div id="imagediv"></div>
-                <div id="imagediv"></div>
-                <div id="imagediv"></div>
-                <div id="imagediv"></div>
-                <div id="imagediv"></div>
+                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
+                <div id="imagediv"><img src="https://i.pinimg.com/474x/3b/b3/d6/3bb3d628bbcc152f29a9000bacd338fe.jpg" alt="" /></div>
+                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
+                <div id="imagediv"><img src="https://i.pinimg.com/474x/3b/b3/d6/3bb3d628bbcc152f29a9000bacd338fe.jpg" alt="" /></div>
+                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
               </div>
 
               <div className="elem3">
