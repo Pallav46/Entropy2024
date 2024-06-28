@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 // import IMG_7565 from "../../../public/assets/Events/img/IMG_7565.JPG"
 // import IMG_7566 from "../../../public/assets/Events/img/IMG_7566.JPG"
 // import IMG_7567 from "../../../public/assets/Events/img/IMG_7567.JPG"
+import img1 from "../../../public/assets/Events/img/img1.jpg"
 import './Events.css';
 
 const Events = () => {
@@ -12,33 +13,33 @@ const Events = () => {
     window.Shery.imageEffect("#back", {
         style: 5,
         config: {
-          a: { value: 2, range: [0, 30] },
-          b: { value: -0.8, range: [-1, 1] },
+          a: { value: 1.49, range: [0, 30] }, //To edit speed of BG wobble
+          b: { value: -0.98, range: [-1, 1] }, //To edit the wobbliness of BG. -1 and 1 = no wobble, 0 = max wobble
           zindex: { value: -9996999, range: [-9999999, 9999999] },
           aspect: { value: 1.8853306276095898 },
           ignoreShapeAspect: { value: true },
-          shapePosition: { value: { x: 0, y: 0 } },
-          shapeScale: { value: { x: 0.5, y: 0.5 } },
-          shapeEdgeSoftness: { value: 0, range: [0, 0.5] },
-          shapeRadius: { value: 0, range: [0, 2] },
+          shapePosition: { value: { x: 0, y: 0 } }, // To edit shape of bg img
+          shapeScale: { value: { x: 0.5, y: 0.5 } }, // To edit shape of bg img
+          shapeEdgeSoftness: { value: 0, range: [0, 0.5] }, // To edit shape of bg img
+          shapeRadius: { value: 0, range: [0, 2] }, // To edit shape of bg img
           currentScroll: { value: 0 },
-          scrollLerp: { value: 0.07 },
+          scrollLerp: { value: 0.07 }, // Reduced for less wobbly scroll
           gooey: { value: true },
           infiniteGooey: { value: true },
-          growSize: { value: 1.11, range: [1, 15] },
-          durationOut: { value: 1, range: [0.1, 5] },
-          durationIn: { value: 1.41, range: [0.1, 5] },
-          displaceAmount: { value: 0.5 },
+          growSize: { value: 1.11, range: [1, 15] }, // To edit the amount upto which wiggly spreads in order to change img, decrease the value to test
+          durationOut: { value: 1, range: [0.1, 5] }, //Time it takes for the current img to disappear
+          durationIn: { value: 1, range: [0.1, 5] }, //Time it takes for the next image and the wiggly thing around the mouse to appear
+          displaceAmount: { value: 0.5 }, 
           masker: { value: true },
           maskVal: { value: 1, range: [1, 5] },
           scrollType: { value: 0 },
           geoVertex: { range: [1, 64], value: 1 },
-          noEffectGooey: { value: true },
+          noEffectGooey: { value: false }, //To edit if the next image preview that is shown inside the wiggly around mouse also wobbles or not. keep false for smoother transition
           onMouse: { value: 1 },
-          noise_speed: { value: 0.2, range: [0, 10] },
-          metaball: { value: 0.2, range: [0, 2], _gsap: { id: 3 } },
-          discard_threshold: { value: 0.52, range: [0, 1] },
-          antialias_threshold: { value: 0, range: [0, 0.1] },
+          noise_speed: { value: 1.59, range: [0, 10] }, //To edit speed of the wiggly around mouse. put value=10 to test
+          metaball: { value: 0.21, range: [0, 2], _gsap: { id: 3 } }, //For editing radius of the wiggly thing around mouse, Increase the value to test
+          discard_threshold: { value: 0.5, range: [0, 1] },
+          antialias_threshold: { value: 0, range: [0, 0.1] }, //For editing the amount of next image visible
           noise_height: { value: 0.5, range: [0, 2] },
           noise_scale: { value: 12.98, range: [0, 100] },
         },
@@ -205,6 +206,38 @@ const Events = () => {
         });
       });
 
+      var reg = document.querySelectorAll(".register");
+      
+      reg.forEach(function (register) {
+        var registerLinks = register.querySelectorAll(".registerLink");
+        var index = 0;
+        var animating = false;
+      
+        document.querySelector("#main")
+        .addEventListener("click", function () {
+          if (!animating) {
+            animating = true;
+            gsap.to(registerLinks[index], {
+              left: "-100%",
+              ease: "expo.inOut",
+              duration: 1,
+              onComplete: function () {
+                gsap.set(this.targets()[0], { left: "100%" });
+                animating = false;
+              },
+            });
+            
+            index = index === registerLinks.length - 1 ? 0 : index + 1;
+            
+            gsap.to(registerLinks[index], {
+              left: "0%",
+              ease: "expo.inOut",
+              duration: 1,
+            });
+          }
+        });
+      });
+
   }, []);
 
   return (
@@ -214,6 +247,7 @@ const Events = () => {
         <img src="/assets/Events/img/IMG_7565.JPG" alt="" />
         <img src="/assets/Events/img/IMG_7566.JPG" alt="" />
         <img src="/assets/Events/img/IMG_7567.JPG" alt="" />
+        <img src="/assets/Events/img/IMG_7568.JPG" alt="" />
       </div>
       <div id="top">
         <div id="workingarea">
@@ -253,7 +287,13 @@ const Events = () => {
                 <h1>kjcr.</h1>
               </div>
 
-              <button>Explore Now</button>
+              <button className='register'>
+                <a href="#" className='registerLink'>Register Now</a>
+                <a href="#" className='registerLink'>Register Now</a>
+                <a href="#" className='registerLink'>Register Now</a>
+                <a href="#" className='registerLink'>Register Now</a>
+                <a href="#" className='registerLink'>Register Now</a>
+              </button>
             </div>
             <div id="heroright">
               <div className="elem2">
@@ -265,11 +305,21 @@ const Events = () => {
               </div>
 
               <div className="imgElem">
-                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
-                <div id="imagediv"><img src="https://i.pinimg.com/474x/3b/b3/d6/3bb3d628bbcc152f29a9000bacd338fe.jpg" alt="" /></div>
-                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
-                <div id="imagediv"><img src="https://i.pinimg.com/474x/3b/b3/d6/3bb3d628bbcc152f29a9000bacd338fe.jpg" alt="" /></div>
-                <div id="imagediv"><img src="https://i.pinimg.com/474x/6f/96/6d/6f966d9e2ce1bf57113605a05d21bca1.jpg" alt="" /></div>
+                <div id="imagediv">
+                  <img src={img1} alt="" />
+                </div>
+                <div id="imagediv">
+                  <img src={img1} alt="" />
+                </div>
+                <div id="imagediv">
+                  <img src={img1} alt="" />
+                </div>
+                <div id="imagediv">
+                  <img src={img1} alt="" />
+                </div>
+                <div id="imagediv">
+                  <img src={img1} alt="" />
+                </div>
               </div>
 
               <div className="elem3">
