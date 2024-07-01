@@ -11,6 +11,7 @@ import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'
 import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'
 import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
+import Team from './pages/Team/Team.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,35 +19,36 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path: "/teams",
-    element: <TeamPage/>
+    path: "/Entropy2024/teams",
+    // element: <TeamPage/>
+    element: <Team/>
   },
   {
-    path: "/teams/webAndCreatives",
+    path: "/Entropy2024/teams/webAndCreatives",
     element: <WebAndCreatives/>
   },
   {
-    path: "/teams/eventManagement",
+    path: "/Entropy2024/teams/eventManagement",
     element: <EventManagement/>
   },
   {
-    path: "/teams/design",
+    path: "/Entropy2024/teams/design",
     element: <DesignTeam/>
   },
   {
-    path: "/teams/sponsorship",
+    path: "/Entropy2024/teams/sponsorship",
     element: <Sponsorship/>
   },
   {
-    path: "/teams/faculty",
+    path: "/Entropy2024/teams/faculty",
     element: <FacultyCoordinators/>
   },
   {
-    path: "/past-events",
+    path: "/Entropy2024/past-events",
     element: <PastEvents/>
   },
   {
-    path: "/events",
+    path: "/Entropy2024/events",
     element: <Events/>
   }
 ])

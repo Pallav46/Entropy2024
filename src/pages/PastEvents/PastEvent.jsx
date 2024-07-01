@@ -13,10 +13,10 @@ function PastEvents() {
           
 
           <div className="images w-[25vw] h-[32vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img className="absolute w-full h-full object-cover opacity-0 absolute" src="/public/images/Entropy24.jpg"/>
-            <img className="absolute w-full h-full object-cover opacity-0 absolute" src="/public/images/Robocon.jpg"/>
-            <img className="absolute w-full h-full object-cover opacity-0 absolute" src="/public/images/Entropy22.jpg"/>
-            <img className="absolute w-full h-full object-cover opacity-0 absolute" src="public/images/CulNight.jpg"/>
+            <img className="absolute w-full h-full object-cover opacity-0" src="/public/images/Entropy24.jpg"/>
+            <img className="absolute w-full h-full object-cover opacity-0" src="/public/images/Robocon.jpg"/>
+            <img className="absolute w-full h-full object-cover opacity-0" src="/public/images/Entropy22.jpg"/>
+            <img className="absolute w-full h-full object-cover opacity-0" src="public/images/CulNight.jpg"/>
           </div>
           
         </div>
