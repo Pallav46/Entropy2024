@@ -11,6 +11,7 @@ import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'
 import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'
 import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
+import Team from './pages/Team/Team.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/teams",
-    element: <TeamPage/>
+    // element: <TeamPage/>
+    element: <Team/>
   },
   {
     path: "/teams/webAndCreatives",
