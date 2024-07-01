@@ -19,36 +19,36 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path: "/teams",
+    path: "/Entropy2024/teams",
     // element: <TeamPage/>
     element: <Team/>
   },
   {
-    path: "/teams/webAndCreatives",
+    path: "/Entropy2024/teams/webAndCreatives",
     element: <WebAndCreatives/>
   },
   {
-    path: "/teams/eventManagement",
+    path: "/Entropy2024/teams/eventManagement",
     element: <EventManagement/>
   },
   {
-    path: "/teams/design",
+    path: "/Entropy2024/teams/design",
     element: <DesignTeam/>
   },
   {
-    path: "/teams/sponsorship",
+    path: "/Entropy2024/teams/sponsorship",
     element: <Sponsorship/>
   },
   {
-    path: "/teams/faculty",
+    path: "/Entropy2024/teams/faculty",
     element: <FacultyCoordinators/>
   },
   {
-    path: "/past-events",
+    path: "/Entropy2024/past-events",
     element: <PastEvents/>
   },
   {
-    path: "/events",
+    path: "/Entropy2024/events",
     element: <Events/>
   }
 ])
