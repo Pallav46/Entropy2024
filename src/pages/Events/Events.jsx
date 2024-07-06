@@ -1,9 +1,9 @@
 import React from 'react';
-import Laptop_Event from './Laptop/Laptop_events.jsx';
-import Phone_Event from './Phone/Phone_events.jsx';
+import Laptop_eventsDay1 from './Laptop/Day1/Laptop_eventsDay1.jsx';
+import Phone_eventDay1 from './Phone/Day1/Phone_eventDay1.jsx';
 
 const Events = () => {
-  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 768);
+  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 850);
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -14,7 +14,7 @@ const Events = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return isLargeScreen ? <Laptop_Event /> : <Phone_Event />;
+  return isLargeScreen ? <Laptop_eventsDay1 /> : <Phone_eventDay1 />;
 };
 
 export default Events;
