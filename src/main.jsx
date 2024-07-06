@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TeamPage from './pages/TeamPage/TeamPage.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
@@ -12,6 +11,7 @@ import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/F
 import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
 import Team from './pages/Team/Team.jsx'
+import Sponsors from './pages/Sponsors/Sponsors.jsx'
 
 const router = createBrowserRouter([
   {
@@ -50,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/events",
     element: <Events/>
+  },
+  {
+    path: "/sponsors",
+    element: <Sponsors/>,
   }
 ])
 
