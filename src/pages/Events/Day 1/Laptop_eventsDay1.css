@@ -249,6 +249,8 @@ body {
   gap: 20px;
 }
 
+
+
 @media screen and (max-width: 780px) {
   #nav {
     /* flex-wrap: wrap; */

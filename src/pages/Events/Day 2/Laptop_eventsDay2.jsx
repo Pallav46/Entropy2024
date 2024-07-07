@@ -247,14 +247,14 @@ const Laptop_eventsDay2 = () => {
       <div id="top">
         <div id="workingarea">
           <div id="nav">
-            <div id="nleft">
+          <div id="nleft">
               <img src="logo.png" alt="logo" />
-              <a href="#">home</a>
-              <a href="#">events</a>
+              <a href="/">home</a>
+              <a href="/events">events</a>
             </div>
             <div id="nright">
-              <a href="#">team</a>
-              <a href="#">sponsors</a>
+              <a href="/teams">team</a>
+              <a href="/sponsors">sponsors</a>
             </div>
           </div>
           <div id="hero">

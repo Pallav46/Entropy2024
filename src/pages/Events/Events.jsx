@@ -1,20 +1,14 @@
-import React from 'react';
-import Laptop_eventsDay1 from './Laptop/Day1/Laptop_eventsDay1.jsx';
-import Phone_eventDay1 from './Phone/Day1/Phone_eventDay1.jsx';
+import React from 'react'
+import './Events.css'
 
 const Events = () => {
-  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 850);
+  return (
+    <>
+    <div>Events</div><br /><br /><br />
+    <a href="/events/day1">Day 1</a><br /><br /><br />
+    <a href="/events/day2">Day 2</a>
+    </>
+  )
+}
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return isLargeScreen ? <Laptop_eventsDay1 /> : <Phone_eventDay1 />;
-};
-
-export default Events;
+export default Events

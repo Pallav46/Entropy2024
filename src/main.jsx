@@ -12,6 +12,8 @@ import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
 import Team from './pages/Team/Team.jsx'
 import Sponsors from './pages/Sponsors/Sponsors.jsx'
+import EventsDay1 from './pages/Events/Day 1/EventsDay1.jsx'
+import EventsDay2 from './pages/Events/Day 2/EventsDay2.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,12 +51,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/events",
-    element: <Events/>
+    element: <Events/>,
   },
   {
     path: "/sponsors",
     element: <Sponsors/>,
-  }
+  },
+  {
+    path : "/events/day1",
+    element : <EventsDay1/>,
+  },
+  {
+    path : "/events/day2",
+    element : <EventsDay2/>,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

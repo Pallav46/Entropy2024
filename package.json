@@ -19,6 +19,8 @@
     "gsap": "^3.12.5",
     "imagesloaded": "^5.0.0",
     "jquery": "^3.7.1",
+    "pixi-filters": "^6.0.4",
+    "pixi.js": "^8.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
