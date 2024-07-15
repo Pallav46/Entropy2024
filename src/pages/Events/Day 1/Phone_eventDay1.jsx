@@ -140,117 +140,35 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        STORMTROPER <br />
-                        HELMET
+                        EVENT 1
                       </h1>
                       <span className="product-slider__price">
-                        $1.299,<sup>99</sup>
+                        Date
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            HELMET SIZE
-                          </div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type5"
-                              />
-                              <span className="product-labels__txt">S</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type5"
-                                checked
-                              />
-                              <span className="product-labels__txt">M</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type5"
-                              />
-                              <span className="product-labels__txt">L</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type5"
-                              />
-                              <span className="product-labels__txt">XL</span>
-                            </label>
+                            Venue
                           </div>
                         </div>
 
-                        <span className="hr-vertical"></span>
+                        <span className="hr-vertical"></span> 
 
                         <div className="product-inf">
-                          <div className="product-inf__percent">
-                            <div className="product-inf__percent-circle">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100"
-                                height="100"
-                                viewBox="0 0 100 100"
-                              >
-                                <defs>
-                                  <linearGradient
-                                    id="gradient"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="0%"
-                                    y2="100%"
-                                  >
-                                    <stop
-                                      offset="0%"
-                                      stopColor="#0c1e2c"
-                                      stopOpacity="0"
-                                    />
-                                    <stop
-                                      offset="100%"
-                                      stopColor="#cb2240"
-                                      stopOpacity="1"
-                                    />
-                                  </linearGradient>
-                                </defs>
-                                <circle
-                                  cx="50"
-                                  cy="50"
-                                  r="47"
-                                  strokeDasharray="240, 300"
-                                  stroke="#cb2240"
-                                  strokeWidth="4"
-                                  fill="none"
-                                />
-                              </svg>
-                            </div>
-                            <div className="product-inf__percent-txt">80%</div>
-                          </div>
-
                           <span className="product-inf__title">
-                            DURABILITY RATE
+                            Details
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
                         <button className="product-slider__cart">
-                          ADD TO CART
+                          Register Now
                         </button>
 
-                        <button className="product-slider__fav js-fav">
+                        {/* <button className="product-slider__fav js-fav">
                           <span className="heart"></span> ADD TO WISHLIST
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -267,101 +185,35 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        IMPERIAL ARMY’S <br />
-                        TIE FIGHTER
+                        EVENT 2
                       </h1>
                       <span className="product-slider__price">
-                        $9.999,<sup>99</sup>
+                        Date
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            ENGINE UNIT
-                          </div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type1"
-                                checked
-                              />
-                              <span className="product-labels__txt">
-                                P-S4 TWIN
-                              </span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type1"
-                              />
-                              <span className="product-labels__txt">
-                                P-W401
-                              </span>
-                            </label>
+                            Venue
                           </div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
-                          <div className="product-inf__percent">
-                            <div className="product-inf__percent-circle">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100"
-                                height="100"
-                                viewBox="0 0 100 100"
-                              >
-                                <defs>
-                                  <linearGradient
-                                    id="gradient"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="0%"
-                                    y2="100%"
-                                  >
-                                    <stop
-                                      offset="0%"
-                                      stopColor="#0c1e2c"
-                                      stopOpacity="0"
-                                    />
-                                    <stop
-                                      offset="100%"
-                                      stopColor="#cb2240"
-                                      stopOpacity="1"
-                                    />
-                                  </linearGradient>
-                                </defs>
-                                <circle
-                                  cx="50"
-                                  cy="50"
-                                  r="47"
-                                  strokeDasharray="225, 300"
-                                  stroke="#cb2240"
-                                  strokeWidth="4"
-                                  fill="none"
-                                />
-                              </svg>
-                            </div>
-                            <div className="product-inf__percent-txt">75%</div>
-                          </div>
-
-                          <span className="product-inf__title">DURABILITY</span>
+                          <span className="product-inf__title">
+                            Details
+                          </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
                         <button className="product-slider__cart">
-                          ADD TO CART
+                          Register Now
                         </button>
 
-                        <button className="product-slider__fav js-fav">
+                        {/* <button className="product-slider__fav js-fav">
                           <span className="heart"></span> ADD TO WISHLIST
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -379,144 +231,35 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        KYLO RENS <br />
-                        LIGHTSABER
+                        EVENT 3
                       </h1>
                       <span className="product-slider__price">
-                        $1.699,<sup>99</sup>
+                        Date
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            VOLTAGE RANGE
-                          </div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type3"
-                                checked
-                              />
-                              <span className="product-labels__txt">
-                                2000 <sup>WATT</sup>
-                              </span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type3"
-                              />
-                              <span className="product-labels__txt">
-                                2800 <sup>WATT</sup>
-                              </span>
-                            </label>
-                          </div>
-
-                          <div className="product-labels__title">
-                            LASER SIZE
-                          </div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type2"
-                              />
-                              <span className="product-labels__txt">S</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type2"
-                                checked
-                              />
-                              <span className="product-labels__txt">M</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type2"
-                              />
-                              <span className="product-labels__txt">L</span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type2"
-                              />
-                              <span className="product-labels__txt">XL</span>
-                            </label>
+                            Venue
                           </div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
-                          <div className="product-inf__percent">
-                            <div className="product-inf__percent-circle">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100"
-                                height="100"
-                                viewBox="0 0 100 100"
-                              >
-                                <defs>
-                                  <linearGradient
-                                    id="gradient"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="0%"
-                                    y2="100%"
-                                  >
-                                    <stop
-                                      offset="0%"
-                                      stopColor="#0c1e2c"
-                                      stopOpacity="0"
-                                    />
-                                    <stop
-                                      offset="100%"
-                                      stopColor="#cb2240"
-                                      stopOpacity="1"
-                                    />
-                                  </linearGradient>
-                                </defs>
-                                <circle
-                                  cx="50"
-                                  cy="50"
-                                  r="47"
-                                  strokeDasharray="240, 300"
-                                  stroke="#cb2240"
-                                  strokeWidth="4"
-                                  fill="none"
-                                />
-                              </svg>
-                            </div>
-                            <div className="product-inf__percent-txt">80%</div>
-                          </div>
-
-                          <span className="product-inf__title">DURABILITY</span>
+                          <span className="product-inf__title">
+                            Details
+                          </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
                         <button className="product-slider__cart">
-                          ADD TO CART
+                          Register Now
                         </button>
 
-                        <button className="product-slider__fav js-fav">
+                        {/* <button className="product-slider__fav js-fav">
                           <span className="heart"></span> ADD TO WISHLIST
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -534,130 +277,35 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        IMPERIAL ARMY <br />
-                        DEATH STAR
+                        EVENT 4
                       </h1>
                       <span className="product-slider__price">
-                        $9.999,<sup>99</sup>
+                        Date
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            HYPERDRIVE RATING
-                          </div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type6"
-                                checked
-                              />
-                              <span className="product-labels__txt">
-                                CLASS 4
-                              </span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type6"
-                              />
-                              <span className="product-labels__txt">
-                                CLASS 20
-                              </span>
-                            </label>
-                          </div>
-
-                          <div className="product-labels__title">ARMANENT</div>
-
-                          <div className="product-labels__group">
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type7"
-                                checked
-                              />
-                              <span className="product-labels__txt">
-                                SUPERLASER
-                              </span>
-                            </label>
-
-                            <label className="product-labels__item">
-                              <input
-                                type="radio"
-                                className="product-labels__checkbox"
-                                name="type7"
-                              />
-                              <span className="product-labels__txt">
-                                TURBOLASER
-                              </span>
-                            </label>
+                            Venue
                           </div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
-                          <div className="product-inf__percent">
-                            <div className="product-inf__percent-circle">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="100"
-                                height="100"
-                                viewBox="0 0 100 100"
-                              >
-                                <defs>
-                                  <linearGradient
-                                    id="gradient"
-                                    x1="0%"
-                                    y1="0%"
-                                    x2="0%"
-                                    y2="100%"
-                                  >
-                                    <stop
-                                      offset="0%"
-                                      stopColor="#0c1e2c"
-                                      stopOpacity="0"
-                                    />
-                                    <stop
-                                      offset="100%"
-                                      stopColor="#cb2240"
-                                      stopOpacity="1"
-                                    />
-                                  </linearGradient>
-                                </defs>
-                                <circle
-                                  cx="50"
-                                  cy="50"
-                                  r="47"
-                                  strokeDasharray="240, 300"
-                                  stroke="#cb2240"
-                                  strokeWidth="4"
-                                  fill="none"
-                                />
-                              </svg>
-                            </div>
-                            <div className="product-inf__percent-txt">80%</div>
-                          </div>
-
                           <span className="product-inf__title">
-                            DURABILITY RATE
+                            Details
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
                         <button className="product-slider__cart">
-                          ADD TO CART
+                          Register Now
                         </button>
 
-                        <button className="product-slider__fav js-fav">
+                        {/* <button className="product-slider__fav js-fav">
                           <span className="heart"></span> ADD TO WISHLIST
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -666,33 +314,6 @@ const Phone_eventDay1 = () => {
             </div>
           </div>
 
-          <div className="social">
-            <a
-              href="https://twitter.com/imuhammederdem"
-              target="_blank"
-              className="social__item"
-            >
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405220/starwars/twitter.webp"
-                alt="muhammed erdem"
-                className="social__img"
-              />
-              <span className="social__txt">Coded By Muhammed Erdem</span>
-            </a>
-
-            <a
-              href="https://dribbble.com/shots/3453028-Star-Wars-TIE-Fighter-UI"
-              target="_blank"
-              className="social__item"
-            >
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405220/starwars/dribbble.webp"
-                alt="eray yeşilyurt"
-                className="social__img"
-              />
-              <span className="social__txt">Designed By Eray Yeşilyurt</span>
-            </a>
-          </div>
         </div>
         <svg className="hidden" hidden>
           <symbol id="icon-arrow-left" viewBox="0 0 32 32">

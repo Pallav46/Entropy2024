@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay1.css';
 
 const Laptop_eventsDay1 = () => {
@@ -301,19 +302,19 @@ const Laptop_eventsDay1 = () => {
 
               <div className="imgElem">
                 <div id="imagediv">
-                  <img src="https://i.pinimg.com/564x/1d/bf/4a/1dbf4a11cfeaf1df0e0eaa8fa6025ccf.jpg" alt="" />
+                  <img src={img} alt="" />
                 </div>
                 <div id="imagediv">
-                  <img src="https://i.pinimg.com/564x/1d/bf/4a/1dbf4a11cfeaf1df0e0eaa8fa6025ccf.jpg" alt="" />
+                  <img src={img} alt="" />
                 </div>
                 <div id="imagediv">
-                  <img src="https://i.pinimg.com/564x/1d/bf/4a/1dbf4a11cfeaf1df0e0eaa8fa6025ccf.jpg" alt="" />
+                  <img src={img} alt="" />
                 </div>
                 <div id="imagediv">
-                  <img src="https://i.pinimg.com/564x/1d/bf/4a/1dbf4a11cfeaf1df0e0eaa8fa6025ccf.jpg" alt="" />
+                  <img src={img} alt="" />
                 </div>
                 <div id="imagediv">
-                  <img src="https://i.pinimg.com/564x/1d/bf/4a/1dbf4a11cfeaf1df0e0eaa8fa6025ccf.jpg" alt="" />
+                  <img src={img} alt="" />
                 </div>
               </div>
 

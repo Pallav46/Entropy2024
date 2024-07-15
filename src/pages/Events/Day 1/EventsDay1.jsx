@@ -1,7 +1,7 @@
 import React from 'react';
 import Laptop_eventsDay1 from './Laptop_eventsDay1.jsx';
 import Phone_eventDay1 from './Phone_eventDay1.jsx';
-import './EventsDay1.css'
+import './EventsDay1.css';
 
 const EventsDay1 = () => {
   const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 850);
@@ -18,4 +18,4 @@ const EventsDay1 = () => {
   return isLargeScreen ? <Laptop_eventsDay1 /> : <Phone_eventDay1 />;
 };
 
-export default EventsDay1 ;
+export default EventsDay1;
