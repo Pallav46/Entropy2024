@@ -12,6 +12,7 @@ import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
 import Team from './pages/Team/Team.jsx'
 import Sponsors from './pages/Sponsors/Sponsors.jsx'
+import Gallery from './pages/PastEvents/puzzle/gallery.jsx'
 
 const router = createBrowserRouter([
   {
