@@ -1,0 +1,59 @@
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(black, black);
+    height:100vh ;
+    background-size: cover;
+}
+.bigbox {
+    border: solid red 4px;
+    display: flex;
+    padding: 10px;
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstRow, .secondRow, .thirdRow {
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    width: 100%; /* Adjusted width to ensure full width */
+}
+
+/* .firstRow { border: solid blue 3px; }
+.secondRow { border: solid green 3px; }
+.thirdRow { border: solid orange 3px; } */
+
+.insiderbox {
+    display: flex;
+    width: 180px;
+    height: 200px;
+    background-size: cover;
+    position: relative; 
+}
+.black{
+    border: none;
+}
+.insiderbox p {
+    display: none;
+    font-size: 40px;
+    height: fit-content;
+    background-color: white;
+}
+
+.one { background-image: url(./images/one.jpg); padding: 3px;}
+.two { background-image: url(./images/two.jpg); padding: 3px;}
+.three { background-image: url(./images/three.jpg); padding: 3px;}
+.four { background-image: url(./images/four.jpg); padding: 3px;}
+.five { background-image: url(./images/five.jpg); padding: 3px;}
+.six { background-image: url(./images/six.jpg);padding: 3px; }
+.seven { background-image: url(./images/seven.jpg); padding: 3px;}
+.eight { background-image: url(./images/eight.jpg); padding: 3px;}
+
+.insiderbox {
+    /* Existing styles */
+    transition: transform 0.5s ease-out; /* Transition transform property */
+    position: relative; /* Ensure positioning context */
+}
