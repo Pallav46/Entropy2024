@@ -71,10 +71,10 @@ const Phone_eventDay1 = () => {
         <div className="wrapper">
           <div className="content">
             <div className="bg-shape">
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
+              {/* <img
+                // src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
                 alt=""
-              />
+              /> */}
             </div>
 
             <div className="product-img">
