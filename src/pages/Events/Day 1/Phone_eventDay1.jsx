@@ -110,7 +110,6 @@ const Phone_eventDay1 = () => {
                 />
               </div>
             </div>
-
             <div className="product-slider">
               <button className="prev disabled">
                 <span className="icon">

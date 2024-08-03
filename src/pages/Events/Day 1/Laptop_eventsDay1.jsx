@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay1.css';
+import Button from '../../../components/Navbar/button/Button';
 
 const Laptop_eventsDay1 = () => {
   useEffect(() => {

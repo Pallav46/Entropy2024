@@ -261,8 +261,8 @@ const Laptop_eventsDay2 = () => {
           <div id="hero">
             <div id="heroleft">
               <div className="elem">
-                <h1>david chang</h1>
-                <h1>Susan jamal</h1>
+                <h1>IPL AUCTION</h1>
+                <h1>Robo Race</h1>
                 <h1>orit chang</h1>
                 <h1>klew chang</h1>
                 <h1>vid chang</h1>

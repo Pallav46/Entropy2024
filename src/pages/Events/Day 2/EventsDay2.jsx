@@ -4,11 +4,11 @@ import Phone_eventDay2 from './Phone_eventsDay2.jsx';
 import './EventsDay2.css';
 
 const EventsDay2 = () => {
-  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 850);
+  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 1044);
 
   React.useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
+      setIsLargeScreen(window.innerWidth > 1044);
     };
 
     window.addEventListener('resize', handleResize);
