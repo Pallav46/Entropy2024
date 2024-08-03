@@ -383,6 +383,13 @@ const Laptop_eventsDay2 = () => {
                   corporis eligendi ullam necessitatibus neque dolorem.
                 </p>
               </div>
+              <button className='register'>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+              </button>
             </div>
           </div>
         </div>

@@ -1,12 +1,4 @@
-body {
-  height: 100%;
-  padding: 0;
-  display: block;
-  margin: 0;
-  background: #202344;
-  font: 20px Helvetica;
-  font-weight: 300;
-}
+
 
 a:hover {
   text-decoration: none;
