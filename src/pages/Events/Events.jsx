@@ -1,228 +1,1130 @@
-import React, { useEffect, useRef } from 'react';
-import './Events.css';
+import React, { useEffect, useRef } from "react";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import "./Events.css";
 
 const Events = () => {
-  const config = {
-    bodyClipPathHeightFraction: 0.6,
-    headClipPathHeight: 64,
-  };
-
-  const ids = {
-    gradient: 'myGradient',
-    bottomStraightLine: 'bottomStraightLine',
-    topStraightLine: 'topStraightLine',
-    curveLine: 'curveLine',
-    topStraightLineHead: 'topStraightLineHead',
-    clipPathBody: 'clipPathBody',
-    clipPathBodyRect: 'clipPathBodyRect',
-    clipPathHead: 'clipPathHead',
-    clipPathHeadRect: 'clipPathHeadRect',
-  };
-
-  let headClipStartY;
-
-  const mainRef = useRef(null);
-  const targetsRef = useRef([]);
-  const svgRef = useRef(null);
-  const defsRef = useRef(null);
-  const clipPathBodyRectRef = useRef(null);
-  const clipPathHeadRectRef = useRef(null);
-
-  function setY(elem, y) {
-    if (elem) {
-      elem.setAttribute('y', y);
-    }
-  }
-
-  function moveBodyRect(scrollY) {
-    setY(clipPathBodyRectRef.current, scrollY);
-  }
-
-  function moveHeadRect(scrollY) {
-    const newY = headClipStartY + scrollY;
-    setY(clipPathHeadRectRef.current, newY);
-  }
-
-  function rAFThrottle(callback) {
-    let requestID;
-
-    return function (...args) {
-      const context = this;
-
-      cancelAnimationFrame(requestID);
-
-      requestID = requestAnimationFrame(() => {
-        callback.call(context, ...args);
-      });
-    };
-  }
-
-  function getCurveCoords(x, y, isLeft) {
-    if (isLeft) {
-      return `
-          L ${x} ${y - 120}
-          c 0 60 -60 60 -60 120
-          c 0 60 60 60 60 120
-      `;
-    }
-
-    return `
-          L ${x} ${y - 120}
-          c 0 60 60 60 60 120
-          c 0 60 -60 60 -60 120
-      `;
-  }
-
-  function createCurveLine(x, height, targetsData) {
-    const path = `
-      <path
-          id="${ids.curveLine}"
-          d="
-              M ${x} 0 
-              ${targetsData
-                .map(({ y, isLeft }) => getCurveCoords(x, y, isLeft))
-                .join(' ')}
-              L ${x} ${height}
-          "
-          vector-effect="non-scaling-stroke"
-          clip-path="url(#${ids.clipPathBody})"
-          stroke="url(#${ids.gradient})"
-      />
-      `;
-    svgRef.current.insertAdjacentHTML('beforeend', path);
-  }
-
-  function createStraightLine(x, height, id, clipPathId) {
-    const line = `
-      <line
-          id="${id}"
-          x1="${x}"
-          y1="0"
-          x2="${x}"
-          y2="${height}"
-          vector-effect="non-scaling-stroke"
-          ${clipPathId ? `clip-path="url(#${clipPathId})"` : ``}
-      />
-    `;
-    svgRef.current.insertAdjacentHTML('beforeend', line);
-  }
-
-  function getTargetData(svgLeft) {
-    return Array.from(targetsRef.current).map((target) => {
-      const { left, height, top } = target.getBoundingClientRect();
-      return { y: top + window.scrollY + height / 2, isLeft: left < svgLeft };
-    });
-  }
-
-  function createClipPathBody(width, height) {
-    const clipPath = `
-      <clipPath id="${ids.clipPathBody}">
-        <rect id="${ids.clipPathBodyRect}" x="0" y="0" width="${width}" height="${height}" />
-      </clipPath>
-    `;
-    defsRef.current.insertAdjacentHTML('beforeend', clipPath);
-    clipPathBodyRectRef.current = document.querySelector(`#${ids.clipPathBodyRect}`);
-  }
-
-  function createClipPathHead(width, height) {
-    const clipPath = `
-      <clipPath id="${ids.clipPathHead}">
-        <rect id="${ids.clipPathHeadRect}" x="0" y="${headClipStartY}" width="${width}" height="${height}" />
-      </clipPath>
-    `;
-    defsRef.current.insertAdjacentHTML('beforeend', clipPath);
-    clipPathHeadRectRef.current = document.querySelector(`#${ids.clipPathHeadRect}`);
-  }
-
-  function createGradient() {
-    const gradient = `
-      <linearGradient
-        id="${ids.gradient}"
-        x1="0"
-        y1="0"
-        x2="1"
-      >
-        <stop offset="0%" stop-color="#c380f7" />
-        <stop offset="50%" stop-color="#6caef7" />
-        <stop offset="100%" stop-color="#c380f7" />
-      </linearGradient>
-    `;
-    defsRef.current.insertAdjacentHTML('beforeend', gradient);
-  }
-
-  function createSvg() {
-    const svg = `
-      <svg style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;">
-        <defs></defs>
-      </svg>
-    `;
-    mainRef.current.insertAdjacentHTML('beforeend', svg);
-    svgRef.current = mainRef.current.querySelector('svg');
-    defsRef.current = mainRef.current.querySelector('defs');
-  }
-
-  function onScroll() {
-    const scrollY = window.scrollY;
-    moveBodyRect(scrollY);
-    moveHeadRect(scrollY);
-  }
-
-  const onScrollThrottled = rAFThrottle(onScroll);
-
-  function onResize() {
-    window.removeEventListener('scroll', onScrollThrottled);
-    if (svgRef.current) svgRef.current.remove();
-    init();
-  }
-
-  function init() {
-    createSvg();
-    createGradient();
-
-    const { bodyClipPathHeightFraction, headClipPathHeight } = config;
-    const bodyClipPathHeight = window.innerHeight * bodyClipPathHeightFraction;
-    headClipStartY = bodyClipPathHeight - 24;
-    const { left, width, height } = svgRef.current.getBoundingClientRect();
-    const x = width / 2;
-    const targetsData = getTargetData(left);
-
-    createStraightLine(x, height, ids.bottomStraightLine);
-    createStraightLine(x, height, ids.topStraightLine, ids.clipPathBody);
-    createCurveLine(x, height, targetsData);
-    createStraightLine(x, height, ids.topStraightLineHead, ids.clipPathHead);
-    createClipPathBody(width, bodyClipPathHeight);
-    createClipPathHead(width, headClipPathHeight);
-
-    window.addEventListener('scroll', onScrollThrottled);
-    window.addEventListener('resize', onResize);
-  }
+  const postActionsControllersRef = useRef([]);
+  const likeBtnsRef = useRef([]);
 
   useEffect(() => {
-    targetsRef.current = document.querySelectorAll('.target');
-    init();
+    // Initialize Swiper
+    new Swiper(".swiper", {
+      grabCursor: true,
+      speed: 400,
+      mousewheel: { invert: false },
+      scrollbar: { el: ".swiper-scrollbar", draggable: true },
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        900: { slidesPerView: 2, spaceBetween: 20 },
+        1200: { slidesPerView: 3, spaceBetween: 20 },
+      },
+      autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      allowTouchMove: true,
+      speed: 2000,
+    });
+
+    // Event Listener for Post Actions
+    const handlePostActionsClick = (btn) => {
+      const targetId = btn.getAttribute("data-target");
+      const postActionsContent = document.getElementById(targetId);
+
+      if (postActionsContent) {
+        const isVisible = postActionsContent.getAttribute("data-visible");
+        if (isVisible === "false") {
+          postActionsContent.setAttribute("data-visible", "true");
+          postActionsContent.setAttribute("aria-hidden", "false");
+          btn.setAttribute("aria-expanded", "true");
+        } else {
+          postActionsContent.setAttribute("data-visible", "false");
+          postActionsContent.setAttribute("aria-hidden", "true");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      }
+    };
+
+    postActionsControllersRef.current.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        handlePostActionsClick(btn);
+      });
+    });
+
+    // Event Listener for Click Outside
+    const handleClickOutside = (event) => {
+      postActionsControllersRef.current.forEach((btn) => {
+        const targetId = btn.getAttribute("data-target");
+        const postActionsContent = document.getElementById(targetId);
+
+        if (
+          postActionsContent &&
+          postActionsContent.getAttribute("data-visible") === "true"
+        ) {
+          if (
+            !postActionsContent.contains(event.target) &&
+            event.target !== btn
+          ) {
+            postActionsContent.setAttribute("data-visible", "false");
+            postActionsContent.setAttribute("aria-hidden", "true");
+            btn.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
     return () => {
-      window.removeEventListener('scroll', onScrollThrottled);
-      window.removeEventListener('resize', onResize);
+      // Clean-Up
+      document.removeEventListener("click", handleClickOutside);
+      postActionsControllersRef.current.forEach((btn) => {
+        btn.removeEventListener("click", (event) => {
+          event.stopPropagation();
+          handlePostActionsClick(btn);
+        });
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    // Event Listener for Like Buttons
+    likeBtnsRef.current.forEach((likeBtn) => {
+      likeBtn.addEventListener("click", () => {
+        likeBtn.classList.toggle("active");
+      });
+    });
+
+    return () => {
+      likeBtnsRef.current.forEach((likeBtn) => {
+        likeBtn.removeEventListener("click", () => {
+          likeBtn.classList.toggle("active");
+        });
+      });
     };
   }, []);
 
   return (
-    <div className="full">
-      <main ref={mainRef}>
-        {/* Your gridSquare elements here */}
-        <div className="gridSquare col1"></div>
-        <div className="gridSquare col3"></div>
-        <div className="gridSquare col1"></div>
-        <div className="gridSquare col3 target">target</div>
-        <div className="gridSquare col1"></div>
-        <div className="gridSquare col3 target">target</div>
-        <div className="gridSquare col1 target">target</div>
-        <div className="gridSquare col3"></div>
-        <div className="gridSquare col1"></div>
-        <div className="gridSquare col3"></div>
-        <div className="gridSquare col1"></div>
-        <div className="gridSquare col3"></div>
-      </main>
+    <div>
+      <section>
+      <div className="recipe-container">
+        <h1>Pre Events</h1>
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/defebc72-ea17-41c7-9bb6-70b3974a93b7"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f9d29d0e-f03b-4990-9bc5-ade57a276b41"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Homemade Ice Cream</h2>
+                  <p className="post-author">Evelyn Taylor</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post1"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post1"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7443d18f-26b6-47eb-bfca-541fb72cee65" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3c7b6ef9-cd2d-4d70-819a-2aa9c2309083"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Pancake</h2>
+                  <p className="post-author">Ethan Wilson</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post2"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post2"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24566dbf-61a2-4bd0-bb29-ef1773364eba" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/01332597-5aeb-483b-b682-9379c6ed8f14"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Macaron</h2>
+                  <p className="post-author">Bella Smith</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post3"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post3"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/a208eb17-a847-4e04-be2c-d7ec2071ae45"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img className="post-avatar" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b9f5ef94-c2c9-4792-b7a3-593d393f2c84" alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Cheesecake</h2>
+                  <p className="post-author">Mia Dixon</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post4"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post4"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/208fe8f5-9d7f-4b83-9249-43601bb4c500" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/58f9319c-78cf-444b-ba71-701c506c2dd3"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Donuts</h2>
+                  <p className="post-author">Olivia Martinez</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post5"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post5"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e4f91d6d-ee11-4ff7-9e6f-0fb3f9a78598"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24ca2eec-a5ba-4c32-907c-ffffca203e1c"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Rolo Cheesecake</h2>
+                  <p className="post-author">Benjamin Clark</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post6"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post6"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div className="recipe-container">
+        <h1>Day 1</h1>
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/defebc72-ea17-41c7-9bb6-70b3974a93b7"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f9d29d0e-f03b-4990-9bc5-ade57a276b41"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Homemade Ice Cream</h2>
+                  <p className="post-author">Evelyn Taylor</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post1"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post1"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7443d18f-26b6-47eb-bfca-541fb72cee65" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3c7b6ef9-cd2d-4d70-819a-2aa9c2309083"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Pancake</h2>
+                  <p className="post-author">Ethan Wilson</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post2"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post2"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24566dbf-61a2-4bd0-bb29-ef1773364eba" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/01332597-5aeb-483b-b682-9379c6ed8f14"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Macaron</h2>
+                  <p className="post-author">Bella Smith</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post3"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post3"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/a208eb17-a847-4e04-be2c-d7ec2071ae45"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img className="post-avatar" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b9f5ef94-c2c9-4792-b7a3-593d393f2c84" alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Cheesecake</h2>
+                  <p className="post-author">Mia Dixon</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post4"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post4"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/208fe8f5-9d7f-4b83-9249-43601bb4c500" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/58f9319c-78cf-444b-ba71-701c506c2dd3"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Donuts</h2>
+                  <p className="post-author">Olivia Martinez</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post5"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post5"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e4f91d6d-ee11-4ff7-9e6f-0fb3f9a78598"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24ca2eec-a5ba-4c32-907c-ffffca203e1c"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Rolo Cheesecake</h2>
+                  <p className="post-author">Benjamin Clark</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post6"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post6"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <div className="recipe-container">
+        <h1>Day2</h1>
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/defebc72-ea17-41c7-9bb6-70b3974a93b7"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f9d29d0e-f03b-4990-9bc5-ade57a276b41"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Homemade Ice Cream</h2>
+                  <p className="post-author">Evelyn Taylor</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post1"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post1"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7443d18f-26b6-47eb-bfca-541fb72cee65" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3c7b6ef9-cd2d-4d70-819a-2aa9c2309083"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Pancake</h2>
+                  <p className="post-author">Ethan Wilson</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post2"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post2"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24566dbf-61a2-4bd0-bb29-ef1773364eba" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/01332597-5aeb-483b-b682-9379c6ed8f14"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Macaron</h2>
+                  <p className="post-author">Bella Smith</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post3"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post3"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/a208eb17-a847-4e04-be2c-d7ec2071ae45"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img className="post-avatar" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b9f5ef94-c2c9-4792-b7a3-593d393f2c84" alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Cheesecake</h2>
+                  <p className="post-author">Mia Dixon</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post4"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post4"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img className="post-img" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/208fe8f5-9d7f-4b83-9249-43601bb4c500" alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/58f9319c-78cf-444b-ba71-701c506c2dd3"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Donuts</h2>
+                  <p className="post-author">Olivia Martinez</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post5"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post5"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="swiper-slide post">
+              <img
+                className="post-img"
+                src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e4f91d6d-ee11-4ff7-9e6f-0fb3f9a78598"
+                alt="recipe" />
+
+              <div className="post-body">
+                <img
+                  className="post-avatar"
+                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24ca2eec-a5ba-4c32-907c-ffffca203e1c"
+                  alt="avatar" />
+                <div className="post-detail">
+                  <h2 className="post-name">Rolo Cheesecake</h2>
+                  <p className="post-author">Benjamin Clark</p>
+                </div>
+
+                <div className="post-actions">
+                  <a className="post-like" href="javascript:void(0)"
+                    ><i className="fas fa-heart"></i
+                  ></a>
+                  <button
+                    className="post-actions-controller"
+                    data-target="post6"
+                    aria-controls="post-actions-content"
+                    aria-expanded="false">
+                    <i className="fa-solid fa-ellipsis fa-2xl"></i>
+                  </button>
+                  <div
+                    className="post-actions-content"
+                    id="post6"
+                    data-visible="false"
+                    aria-hidden="true">
+                    <ul role="list" className="grid-flow" data-spacing="small">
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-folder-open"></i>
+                          <span>Add to Collection</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-eye"></i>
+                          <span>Show the Recipe</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="post-actions-link" href="javascript:void(0)">
+                          <i className="fa-solid fa-user-plus"></i>
+                          <span>Follow the User</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
     </div>
   );
 };
