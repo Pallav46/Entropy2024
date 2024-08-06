@@ -1,4 +1,5 @@
 import {useState,React, useEffect} from 'react';
+import mobile from './mo';
 import './gallery.css';
 
 
@@ -48,6 +49,10 @@ const Gallery = () => {
   }, [letters]);
 
   return (<>
+    <div className="mobby">
+      <mobile/>
+    </div>
+    <div className='lappy'>
     <div><h1 className="past" data-value="PAST EVENTS">{text}</h1></div>
     <div className="carousel">
       <div className="carousel-control-button left">
@@ -194,8 +199,8 @@ const Gallery = () => {
         </ul>
       </div>
     </div>
-    </>
-  );
+    </div>
+  </>);
 };
 
 export default Gallery;
