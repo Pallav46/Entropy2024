@@ -1,4 +1,8 @@
 import { useEffect } from 'react';
+import img1 from "./img1.gif";
+import img2 from "./img2.gif";
+import img3 from "./img3.gif";
+import bg from "./bg7.webm";
 import './Team.css'
 
 const Team = () => {
@@ -28,12 +32,25 @@ const Team = () => {
 
   return (
     <div className="blog-body">
+      <video autoPlay muted loop id="background-video">
+        <source src={bg} type="video/webm"/>
+        Your browser does not support the video tag.
+    </video>
     <div className="blog-slider">
+      <div className='light x1'></div>
+      <div className='light x2'></div>
+      <div className='light x3'></div>
+      <div className='light x4'></div>
+      <div className='light x5'></div>
+      <div className='light x6'></div>
+      <div className='light x7'></div>
+      <div className='light x8'></div>
+      <div className='light x9'></div>
       <div className="swiper-wrapper">
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
             <img
-              src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+              src={img1}
               alt="Blog Image 1"
             />
           </div>
@@ -41,14 +58,16 @@ const Team = () => {
             <span className="blog-slider__code">26 December 2019</span>
             <div className="blog-slider__title">Lorem Ipsum Dolor</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#" className="blog-slider__button">READ MORE</a>
+            <a href="#">
+            <button class="glow-on-hover">READ MORE</button>
+            </a>
           </div>
         </div>
 
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
             <img
-              src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+              src={img2}
               alt="Blog Image 2"
             />
           </div>
@@ -56,14 +75,16 @@ const Team = () => {
             <span className="blog-slider__code">26 December 2019</span>
             <div className="blog-slider__title">Lorem Ipsum Dolor2</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#" className="blog-slider__button">READ MORE</a>
+            <a href="#">
+            <button class="glow-on-hover">READ MORE</button>
+            </a>
           </div>
         </div>
 
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
             <img
-              src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+              src={img3}
               alt="Blog Image 3"
             />
           </div>
@@ -71,7 +92,9 @@ const Team = () => {
             <span className="blog-slider__code">26 December 2019</span>
             <div className="blog-slider__title">Lorem Ipsum Dolor</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#" className="blog-slider__button">READ MORE</a>
+            <a href="#">
+            <button class="glow-on-hover">READ MORE</button>
+            </a>
           </div>
         </div>
       </div>
