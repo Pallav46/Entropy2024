@@ -8,11 +8,10 @@ import EventManagement from './pages/TeamPage/SubTeams/EventManagement/EventMana
 import DesignTeam from './pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx'
 import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'
 import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'
-import PastEvents from './pages/PastEvents/PastEvent.jsx'
 import Events from './pages/Events/Events.jsx'
 import Team from './pages/Team/Team.jsx'
 import Sponsors from './pages/Sponsors/Sponsors.jsx'
-import Gallery from './pages/PastEvents/potato/gallery.jsx'
+import Gallery from './pages/PastEvents/gallery.jsx'
 
 const router = createBrowserRouter([
   {
@@ -45,8 +44,8 @@ const router = createBrowserRouter([
     element: <FacultyCoordinators/>
   },
   {
-    path: "/past-events",
-    element: <PastEvents/>
+    path: "/gallery",
+    element: <Gallery/>
   },
   {
     path: "/events",
