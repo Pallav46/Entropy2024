@@ -1,5 +1,5 @@
 /* SECTION STYLING */
-section {
+.timeline-section {
   display: flex;
   flex-direction: column;
   justify-content: center;

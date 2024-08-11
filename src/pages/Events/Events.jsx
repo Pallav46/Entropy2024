@@ -103,7 +103,7 @@ const Events = () => {
 
   return (
     <div>
-      <section>
+      <section className="timeline-section">
         <h1 className="text-white">Events</h1>
         <Template />
         <Template />
