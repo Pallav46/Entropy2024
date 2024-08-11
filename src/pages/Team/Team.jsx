@@ -59,7 +59,7 @@ const Team = () => {
             <div className="blog-slider__title">Lorem Ipsum Dolor</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
             <a href="#">
-            <button class="glow-on-hover">READ MORE</button>
+            <button className="glow-on-hover">READ MORE</button>
             </a>
           </div>
         </div>
@@ -76,7 +76,7 @@ const Team = () => {
             <div className="blog-slider__title">Lorem Ipsum Dolor2</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
             <a href="#">
-            <button class="glow-on-hover">READ MORE</button>
+            <button className="glow-on-hover">READ MORE</button>
             </a>
           </div>
         </div>
@@ -93,7 +93,7 @@ const Team = () => {
             <div className="blog-slider__title">Lorem Ipsum Dolor</div>
             <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
             <a href="#">
-            <button class="glow-on-hover">READ MORE</button>
+            <button className="glow-on-hover">READ MORE</button>
             </a>
           </div>
         </div>
