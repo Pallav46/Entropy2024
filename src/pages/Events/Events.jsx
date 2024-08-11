@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Swiper from "swiper";
 import "./Events.css";
 import Template from "../../components/Events/Template";

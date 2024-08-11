@@ -346,8 +346,7 @@ const Slideshow = () => {
             </div>
           </div>
         </div>
-      </section>
-      <svg xmlns="http://www.w3.org/2000/svg">
+        <svg xmlns="http://www.w3.org/2000/svg">
         <symbol viewBox="0 0 18 18" id="arrow-next">
           <path id="arrow-next-arrow.svg" d="M12.6,9L4,17.3L4.7,18l8.5-8.3l0,0L14,9l0,0l-0.7-0.7l0,0L4.7,0L4,0.7L12.6,9z"/>
         </symbol>
@@ -355,6 +354,8 @@ const Slideshow = () => {
           <path id="arrow-prev-arrow.svg" d="M14,0.7L13.3,0L4.7,8.3l0,0L4,9l0,0l0.7,0.7l0,0l8.5,8.3l0.7-0.7L5.4,9L14,0.7z"/>
         </symbol>
       </svg>
+      </section>
+      
     </div>
   );
 };

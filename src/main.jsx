@@ -8,13 +8,12 @@ import EventManagement from './pages/TeamPage/SubTeams/EventManagement/EventMana
 import DesignTeam from './pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx';
 import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx';
 import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx';
-import PastEvents from './pages/PastEvents/PastEvent.jsx';
 import Events from './pages/Events/Events.jsx';
 import Team from './pages/Team/Team.jsx';
 import Sponsors from './pages/Sponsors/Sponsors.jsx';
 import EventsDay1 from './pages/Events/Day 1/EventsDay1.jsx';
 import EventsDay2 from './pages/Events/Day 2/EventsDay2.jsx';
-import Gallery from './pages/PastEvents/Mobile/Gallery.jsx';
+import Gallery from './pages/PastEvents/gallery.jsx'
 
 const router = createBrowserRouter([
   {
@@ -46,8 +45,8 @@ const router = createBrowserRouter([
     element: <FacultyCoordinators />,
   },
   {
-    path: '/past-events',
-    element: <PastEvents />,
+    path: '/gallery',
+    element: <Gallery />,
   },
   {
     path: '/events',
@@ -65,10 +64,7 @@ const router = createBrowserRouter([
     path: '/events/day2',
     element: <EventsDay2 />,
   },
-  {
-    path: '/gallery',
-    element: <Gallery/>
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

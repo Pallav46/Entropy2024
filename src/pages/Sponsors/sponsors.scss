@@ -309,7 +309,7 @@
   margin: 20px;
   padding: 10px;
   position: relative;
-  border-radius: 6px;
+  // border-radius: 6px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -335,7 +335,7 @@
     content: "";
     width: 104%;
     height: 104%;
-    border-radius: 6px;
+    // border-radius: 6px;
     background-image: linear-gradient(var(--rotate), #ffc45d, #e38f3c 43%, #c26100);
     position: absolute;
     z-index: -1;
@@ -540,7 +540,7 @@
     width: 100%;
     height: 60%;
     margin-bottom: 40%;
-    border-radius: 100px;
+    // border-radius: 100px;
   }
   
   .o-button {
@@ -1757,7 +1757,7 @@
   }
   
   .o-radio-label::before, .o-radio-label::after {
-    border-radius: 50%;
+    // border-radius: 50%;
     width: 12px;
     height: 12px;
   }
