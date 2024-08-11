@@ -1,36 +1,91 @@
 import { useState, useEffect } from 'react';
-import $ from 'jquery'; // Import jQuery if not already included in your project
-import './sponsors.scss'; // Your SCSS file import
+import $ from 'jquery';
+import './sponsors.scss';
+import indianOil from './logo/indian-oil.jpg';
+import sbi from './logo/sbi.jpg';
+import indianBank from './logo/indian-bank.jpg';
+import kuberTechnoCraft from './logo/kuber-techno-craft.jpg';
+import bg from './bg.jpg';  
+
+const CardComponent = ({ title, logoUrl}) => (
+  <div className="card">
+    <div className='card__img-space'>
+      <div className='card__img-person'>
+        <img src={logoUrl} alt="logo" />
+      </div>
+    </div>
+    <div className='card__content'>
+      <h4 className='card__title'>{title}</h4>
+    </div>
+  </div>
+);
+
+//background can be changed by toggling the comment...
+const bgimg = bg;
+// const bgimg = 'https://static.vecteezy.com/system/resources/previews/012/742/301/original/abstract-finance-currency-money-exchange-moving-or-playing-lucky-draw-games-digital-finance-gold-coin-concept-currency-on-a-modern-background-golden-glow-vector.jpg';
+// const bgimg = 'https://media.licdn.com/dms/image/D5612AQH6FDa8gkBiuA/article-cover_image-shrink_600_2000/0/1674026548040?e=2147483647&v=beta&t=K807wpc-Y4cAgVXj01FHV49BV0xmFZqYTx0LBUD6sU4'
 
 const Slideshow = () => {
   const slides = [
     {
       id: 1,
       title: 'Title Sponsor',
-      subtitle: 'See how',
-      imageUrl:
-        'https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920',
+      // subtitle: 'See how',
+      imageUrl:bgimg,
+      cards: [
+        { title: 'Indian Oil', logoUrl: indianOil},
+        { title: 'SBI', logoUrl: sbi},
+        { title: 'Indian Bank', logoUrl: indianBank},
+        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+      ],
     },
     {
       id: 2,
-      title: 'See through the field',
-      subtitle: 'Learn more about',
-      imageUrl:
-        'https://images.pexels.com/photos/110649/pexels-photo-110649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920',
+      title: 'Associate Sponsors',
+      // subtitle: 'Learn more about',
+      imageUrl:bgimg,
+      cards: [
+        { title: 'Indian Oil', logoUrl: indianOil},
+        { title: 'SBI', logoUrl: sbi},
+        { title: 'Indian Bank', logoUrl: indianBank},
+        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+      ],
     },
     {
       id: 3,
-      title: 'Hey, take a time to relax!',
-      subtitle: 'Everybody needs',
-      imageUrl:
-        'https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920',
+      title: 'Gold Sponsors',
+      // subtitle: 'Learn more about',
+      imageUrl:bgimg,
+      cards: [
+        { title: 'Indian Oil', logoUrl: indianOil},
+        { title: 'SBI', logoUrl: sbi},
+        { title: 'Indian Bank', logoUrl: indianBank},
+        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+      ],
     },
     {
       id: 4,
-      title: 'New slide title',
-      subtitle: 'New slide subtitle',
-      imageUrl:
-        'https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920',
+      title: 'Silver Sponsors',
+      // subtitle: 'Learn more about',
+      imageUrl: bgimg,
+      cards: [
+        { title: 'Indian Oil', logoUrl: indianOil},
+        { title: 'SBI', logoUrl: sbi},
+        { title: 'Indian Bank', logoUrl: indianBank},
+        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+      ],
+    },
+    {
+      id: 5,
+      title: 'Bronze Sponsors',
+      // subtitle: 'Learn more about',
+      imageUrl: bgimg,
+      cards: [
+        { title: 'Indian Oil', logoUrl: indianOil},
+        { title: 'SBI', logoUrl: sbi},
+        { title: 'Indian Bank', logoUrl: indianBank},
+        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+      ],
     },
   ];
 
@@ -246,9 +301,24 @@ const Slideshow = () => {
               <div className="slideshow__slide-caption-text">
                 <div className="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
                   <h1 className="slideshow__slide-caption-title">{slide.title}</h1>
-                  <a className="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+                  {/* <a className="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
                     <span className="slideshow__slide-caption-subtitle-label">{slide.subtitle}</span>
-                  </a>
+                  </a> */}
+                </div>
+              </div>
+              <div className="slideshow__slide-sponsor-content">
+                <div className="slideshow__slide-caption-text2">
+                  <div className="slideshow__box">
+                    <div className="slideshow__slide-background sponsor-content">
+                      {slide.cards.map((card, cardIndex) => (
+                        <CardComponent
+                          key={cardIndex}
+                          title={card.title}
+                          logoUrl={card.logoUrl}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
