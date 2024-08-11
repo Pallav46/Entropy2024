@@ -32,12 +32,12 @@ const Team = () => {
 
   return (
     <div className="blog-body">
-      <video autoPlay muted loop id="background-video">
+      {/* <video autoPlay muted loop id="background-video">
         <source src={bg} type="video/webm"/>
         Your browser does not support the video tag.
-    </video>
+    </video> */}
     <div className="blog-slider">
-      <div className='light x1'></div>
+      {/* <div className='light x1'></div>
       <div className='light x2'></div>
       <div className='light x3'></div>
       <div className='light x4'></div>
@@ -45,21 +45,40 @@ const Team = () => {
       <div className='light x6'></div>
       <div className='light x7'></div>
       <div className='light x8'></div>
-      <div className='light x9'></div>
+      <div className='light x9'></div> */}
       <div className="swiper-wrapper">
-        <div className="blog-slider__item swiper-slide">
+
+      <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
             <img
-              src={img1}
+              src={img2}
               alt="Blog Image 1"
             />
           </div>
           <div className="blog-slider__content">
-            <span className="blog-slider__code">26 December 2019</span>
-            <div className="blog-slider__title">Lorem Ipsum Dolor</div>
-            <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#">
-            <button className="glow-on-hover">READ MORE</button>
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Faculty Coordinators</div>
+            <div className="blog-slider__text">The guiding lights of our fest! They’re the mentors who ensure everything runs smoothly, providing support and guidance to make our vision a reality.</div>
+            <a href="/teams/faculty">
+            <button className="glow-on-hover">Meet the Team</button>
+            </a>
+          </div>
+        </div>
+
+        <div className="blog-slider__item swiper-slide">
+          <div className="blog-slider__img">
+            <img
+              src={img1}
+              alt="Blog Image 2"
+            />
+          </div>
+          
+          <div className="blog-slider__content">
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Web and Creatives Team</div>
+            <div className="blog-slider__text">The digital heartbeat of the fest, the masterminds behind the fest’s digital identity!</div>
+            <a href="/teams/webAndCreatives">
+            <button className="glow-on-hover">Meet the Team</button>
             </a>
           </div>
         </div>
@@ -72,11 +91,11 @@ const Team = () => {
             />
           </div>
           <div className="blog-slider__content">
-            <span className="blog-slider__code">26 December 2019</span>
-            <div className="blog-slider__title">Lorem Ipsum Dolor2</div>
-            <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#">
-            <button className="glow-on-hover">READ MORE</button>
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Event Management Team</div>
+            <div className="blog-slider__text">Masters of coordination and champions of execution. If it’s happening, they’re the ones making it happen!</div>
+            <a href="/teams/eventManagement">
+            <button className="glow-on-hover">Meet the Team</button>
             </a>
           </div>
         </div>
@@ -89,14 +108,49 @@ const Team = () => {
             />
           </div>
           <div className="blog-slider__content">
-            <span className="blog-slider__code">26 December 2019</span>
-            <div className="blog-slider__title">Lorem Ipsum Dolor</div>
-            <div className="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
-            <a href="#">
-            <button className="glow-on-hover">READ MORE</button>
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Design Team</div>
+            <div className="blog-slider__text">The artistic force behind the fest’s visual identity. They don’t just create, they inspire!</div>
+            <a href="/teams/design">
+            <button className="glow-on-hover">Meet the Team</button>
             </a>
           </div>
         </div>
+
+        <div className="blog-slider__item swiper-slide">
+          <div className="blog-slider__img">
+            <img
+              src={img1}
+              alt="Blog Image 4"
+            />
+          </div>
+          <div className="blog-slider__content">
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Sponsorship Team</div>
+            <div className="blog-slider__text">Powering the fest with partnerships, they’re the go-getters of the fest ensuring every collaboration adds value to the event.</div>
+            <a href="/teams/sponsorship">
+            <button className="glow-on-hover">Meet the Team</button>
+            </a>
+          </div>
+        </div>
+
+        <div className="blog-slider__item swiper-slide">
+          <div className="blog-slider__img">
+            <img
+              src={img1}
+              alt="Blog Image 4"
+            />
+          </div>
+          <div className="blog-slider__content">
+            <span className="blog-slider__code"></span>
+            <div className="blog-slider__title">Public Relations Team</div>
+            <div className="blog-slider__text">Strategic communicators and buzz creators! They craft the perfect narrative to captivate audiences and ensure our event gets the attention it deserves. If it’s in the news, they made it happen!</div>
+            <a href="/teams/sponsorship">
+            <button className="glow-on-hover">Meet the Team</button>
+            </a>
+          </div>
+        </div>
+
       </div>
       <div className="blog-slider__pagination"></div>
     </div>

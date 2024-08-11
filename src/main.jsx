@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import WebAndCreatives from './pages/TeamPage/SubTeams/WebAndCreatives/WebAndCreatives.jsx';
-import EventManagement from './pages/TeamPage/SubTeams/EventManagement/EventManagement.jsx';
-import DesignTeam from './pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx';
-import Sponsorship from './pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx';
-import FacultyCoordinators from './pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx';
-import Events from './pages/Events/Events.jsx';
-import Team from './pages/Team/Team.jsx';
-import Sponsors from './pages/Sponsors/Sponsors.jsx';
-import EventsDay1 from './pages/Events/Day 1/EventsDay1.jsx';
-import EventsDay2 from './pages/Events/Day 2/EventsDay2.jsx';
-import Gallery from './pages/PastEvents/gallery.jsx'
+
+const WebAndCreatives = lazy(() => import('./pages/TeamPage/SubTeams/WebAndCreatives/WebAndCreatives.jsx'));
+const EventManagement = lazy(() => import('./pages/TeamPage/SubTeams/EventManagement/EventManagement.jsx'));
+const DesignTeam = lazy(() => import('./pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx'));
+const Sponsorship = lazy(() => import('./pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'));
+const FacultyCoordinators = lazy(() => import('./pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'));
+const Events = lazy(() => import('./pages/Events/Events.jsx'));
+const Team = lazy(() => import('./pages/Team/Team.jsx'));
+const Sponsors = lazy(() => import('./pages/Sponsors/Sponsors.jsx'));
+const EventsDay1 = lazy(() => import('./pages/Events/Day 1/EventsDay1.jsx'));
+const EventsDay2 = lazy(() => import('./pages/Events/Day 2/EventsDay2.jsx'));
+const Gallery = lazy(() => import('./pages/PastEvents/gallery.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -22,49 +23,48 @@ const router = createBrowserRouter([
   },
   {
     path: '/teams',
-    element: <Team />,
+    element: <Suspense fallback={<div>Loading...</div>}><Team /></Suspense>,
   },
   {
     path: '/teams/webAndCreatives',
-    element: <WebAndCreatives />,
+    element: <Suspense fallback={<div>Loading...</div>}><WebAndCreatives /></Suspense>,
   },
   {
     path: '/teams/eventManagement',
-    element: <EventManagement />,
+    element: <Suspense fallback={<div>Loading...</div>}><EventManagement /></Suspense>,
   },
   {
     path: '/teams/design',
-    element: <DesignTeam />,
+    element: <Suspense fallback={<div>Loading...</div>}><DesignTeam /></Suspense>,
   },
   {
     path: '/teams/sponsorship',
-    element: <Sponsorship />,
+    element: <Suspense fallback={<div>Loading...</div>}><Sponsorship /></Suspense>,
   },
   {
     path: '/teams/faculty',
-    element: <FacultyCoordinators />,
+    element: <Suspense fallback={<div>Loading...</div>}><FacultyCoordinators /></Suspense>,
   },
   {
     path: '/gallery',
-    element: <Gallery />,
+    element: <Suspense fallback={<div>Loading...</div>}><Gallery /></Suspense>,
   },
   {
     path: '/events',
-    element: <Events />,
+    element: <Suspense fallback={<div>Loading...</div>}><Events /></Suspense>,
   },
   {
     path: '/sponsors',
-    element: <Sponsors />,
+    element: <Suspense fallback={<div>Loading...</div>}><Sponsors /></Suspense>,
   },
   {
     path: '/events/day1',
-    element: <EventsDay1 />,
+    element: <Suspense fallback={<div>Loading...</div>}><EventsDay1 /></Suspense>,
   },
   {
     path: '/events/day2',
-    element: <EventsDay2 />,
+    element: <Suspense fallback={<div>Loading...</div>}><EventsDay2 /></Suspense>,
   },
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
