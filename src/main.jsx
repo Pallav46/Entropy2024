@@ -14,6 +14,7 @@ import Team from './pages/Team/Team.jsx';
 import Sponsors from './pages/Sponsors/Sponsors.jsx';
 import EventsDay1 from './pages/Events/Day 1/EventsDay1.jsx';
 import EventsDay2 from './pages/Events/Day 2/EventsDay2.jsx';
+import Gallery from './pages/PastEvents/Mobile/Gallery.jsx';
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
     path: '/events/day2',
     element: <EventsDay2 />,
   },
+  {
+    path: '/gallery',
+    element: <Gallery/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
