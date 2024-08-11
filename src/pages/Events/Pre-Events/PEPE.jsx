@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './Phone_eventDay1.css'
 
-const Phone_eventDay1 = () => {
+const PEPE = () => {
     useEffect(() => {
         var swiper = new window.Swiper('.product-slider', {
           spaceBetween: 30,
@@ -327,4 +327,4 @@ const Phone_eventDay1 = () => {
   );
 };
 
-export default Phone_eventDay1;
+export default PEPE;

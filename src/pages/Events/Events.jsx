@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Swiper from "swiper";
 import "./Events.css";
 import Template from "../../components/Events/Template";
@@ -105,9 +105,9 @@ const Events = () => {
     <div>
       <section className="timeline-section">
         <h1 className="text-white">Events</h1>
-        <Template />
-        <Template />
-        <Template />
+        <Template name="Pre Events"/>
+        <Template name="Day 1"/>
+        <Template name="Day 2"/>
       </section>
     </div>
   );

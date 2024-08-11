@@ -4,7 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay1.css';
 
-const Laptop_eventsDay1 = () => {
+const PELE = () => {
   useEffect(() => {
     window.Shery.imageEffect("#back", {
         style: 5,
@@ -384,11 +384,11 @@ const Laptop_eventsDay1 = () => {
                 </p>
               </div>
               <button className='register'>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
+                <a href="#" className='registerLink'>Timeline</a>
               </button>
             </div>
           </div>
@@ -398,4 +398,4 @@ const Laptop_eventsDay1 = () => {
   );
 };
 
-export default Laptop_eventsDay1;
+export default PELE;
