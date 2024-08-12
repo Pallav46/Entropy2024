@@ -75,13 +75,14 @@ import React from 'react';
 import './WebAndCreatives.css'; // Ensure this path matches your stylesheet
 import CardList from './CardList'; // Ensure this path matches where your CardList component is located
 
+
 function App() {
     return (
         <div className="App">
-        <div className="header">
+        {/* <div className="header">
         <div className="header1">DESIGN</div>
         <div className="header2">TEAM</div>
-        </div>
+        </div> */}
         <div className='bodyCard'>
             <CardList />
         </div>
