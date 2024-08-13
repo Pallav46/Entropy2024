@@ -1,0 +1,26 @@
+/* styles.css */
+html *,
+body * {
+  cursor: none;
+}
+.cursor,
+.cursor-outline {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10000000;
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(201, 31, 31, 0.767);
+}
+
+.cursor-outline {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(153, 117, 25);
+  opacity: 0.5;
+}
