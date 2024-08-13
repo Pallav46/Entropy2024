@@ -1,32 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 .blog-body {
-    
-    background-size: cover;
-    background-position: right center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-     align-items: center;  
-    background: radial-gradient(circle, rgba(115, 12, 50, 1) 5%, rgba(13, 12, 12, 1) 60%);
+  background-size: cover;
+  background-position: right center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+   align-items: center;  
+  background: radial-gradient(circle, rgba(115, 12, 50, 1) 5%, rgba(13, 12, 12, 1) 60%);
+}
 
-  }
+#background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
 
-  #background-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-  }
-  
-  .blog-slider {
-    width: 95%;
+.blog-slider {
+  width: 95%;
   position: relative;
   max-width: 800px;
   margin: auto;
@@ -35,16 +33,13 @@
   border-radius: 25px;
   height: 400px;
   transition: all 0.3s;
-  }
-
-
-
-  .blog-slider {
-    background: radial-gradient(#a23982,#36015b);
-    -webkit-animation: fadeIn 1 1s ease-out;
-    -moz-animation: fadeIn 1 1s ease-out;
-    -o-animation: fadeIn 1 1s ease-out;
-    animation: fadeIn 1 1s ease-out;
+}
+.blog-slider {
+  background: radial-gradient(#a23982,#36015b);
+  -webkit-animation: fadeIn 1 1s ease-out;
+  -moz-animation: fadeIn 1 1s ease-out;
+  -o-animation: fadeIn 1 1s ease-out;
+  animation: fadeIn 1 1s ease-out;
 }
 
 .light {

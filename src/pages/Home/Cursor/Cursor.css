@@ -1,7 +1,7 @@
 /* styles.css */
 html *,
 body * {
-  cursor: none;
+  /* cursor: none; */
 }
 .cursor,
 .cursor-outline {
