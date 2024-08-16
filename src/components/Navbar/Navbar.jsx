@@ -1,26 +1,69 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faCalendarDays,
-  faUserGroup,
-  faImages,
-  faPhoneVolume,
-  faAnglesRight,
-} from "@fortawesome/free-solid-svg-icons"; // Import the specific icons
-import { library } from "@fortawesome/fontawesome-svg-core";
-import styles from "./Navbar.module.css";
-
-// Add the imported icons to the library
-library.add(
-  faHouse,
-  faCalendarDays,
-  faUserGroup,
-  faImages,
-  faPhoneVolume,
-  faAnglesRight
-);
+import React from 'react';
+import './Navbar.module.css'; // Ensure your CSS is properly imported
+// import 'remixicon/fonts/remixicon.css'; // Import Remixicon CSS
 
 const Navbar = () => {
+  return (
+    <div id="page" className="site">
+      <div className="container">
+        <nav>
+          <input type="checkbox" id="link" />
+          <label htmlFor="link" className="link">
+            <i className="menu ri-menu-3-line ri-5px"></i>
+            <i className="close ri-menu-3-line ri-5px"></i>
+          </label>
+          <ul className="submenu">
+            <li>
+              <a href="#">
+                <span>Call</span>
+                <i className="ri-phone-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Headphone</span>
+                <i className="ri-headphone-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Chat</span>
+                <i className="ri-chat-3-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Location</span>
+                <i className="ri-map-pin-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Blaze</span>
+                <i className="ri-blaze-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Weather</span>
+                <i className="ri-moon-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Account</span>
+                <i className="ri-phone-line"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
+) => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navbarNav}>
