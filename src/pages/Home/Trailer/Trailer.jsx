@@ -92,7 +92,7 @@ const Trailer = () => {
     <div className="tr-body">
       <div className="lighting"></div>
 
-      <div className="container">
+      <div className="tr-container">
         <div className="lighting-floor"></div>
 
         <div className="floor">
