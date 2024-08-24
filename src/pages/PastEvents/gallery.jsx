@@ -1,5 +1,7 @@
 import './gallery.css';
 import img from './img.avif';
+import ScrambleText from '../../components/Scramble';
+import Navbar from '../../components/Navbar/Navbar';
 
 const CarouselItem = ({ index, imageUrl, description }) => {
     return (
@@ -106,10 +108,11 @@ const Gallery = () => {
 
     return (
         <div className="gli-wrapper">
+            <Navbar></Navbar>
             <div className="gli-main-heading">
                 <div className="gli-content">
-                    <div className="gli-h1">PastEvents</div>
-                    <div className="gli-h1">PastEvents</div>
+                    <div className="gli-h1"><ScrambleText>PastEvents</ScrambleText></div>
+                    <div className="gli-h1"><ScrambleText>PastEvents</ScrambleText></div>
                 </div>
             </div>
             <div className="gli-container">

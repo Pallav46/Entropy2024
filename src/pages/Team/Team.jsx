@@ -4,6 +4,7 @@ import img2 from "./img2.gif";
 import img3 from "./img3.gif";
 import bg from "./bg7.webm";
 import './Team.css'
+import Navbar from '../../components/Navbar/Navbar';
 
 const Team = () => {
   useEffect(() => {
@@ -31,6 +32,8 @@ const Team = () => {
   }, []);
 
   return (
+    <>
+
     <div className="blog-body">
       {/* <video autoPlay muted loop id="background-video">
         <source src={bg} type="video/webm"/>
@@ -155,6 +158,7 @@ const Team = () => {
       <div className="blog-slider__pagination"></div>
     </div>
     </div>
+    </>
   );
 };
 
