@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import Button from './components/Button/Button.jsx';
+import Loader from './components/Loader/Loader.jsx';
 
 const WebAndCreatives = lazy(() => import('./pages/TeamPage/SubTeams/WebAndCreatives/WebAndCreatives.jsx'));
 const EventManagement = lazy(() => import('./pages/TeamPage/SubTeams/EventManagement/EventManagement.jsx'));
@@ -24,51 +24,47 @@ const router = createBrowserRouter([
   },
   {
     path: '/teams',
-    element: <Suspense fallback={<div>Loading...</div>}><Team /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><Team /></Suspense>,
   },
   {
     path: '/teams/webAndCreatives',
-    element: <Suspense fallback={<div>Loading...</div>}><WebAndCreatives /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><WebAndCreatives /></Suspense>,
   },
   {
     path: '/teams/eventManagement',
-    element: <Suspense fallback={<div>Loading...</div>}><EventManagement /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><EventManagement /></Suspense>,
   },
   {
     path: '/teams/design',
-    element: <Suspense fallback={<div>Loading...</div>}><DesignTeam /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><DesignTeam /></Suspense>,
   },
   {
     path: '/teams/sponsorship',
-    element: <Suspense fallback={<div>Loading...</div>}><Sponsorship /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><Sponsorship /></Suspense>,
   },
   {
     path: '/teams/faculty',
-    element: <Suspense fallback={<div>Loading...</div>}><FacultyCoordinators /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><FacultyCoordinators /></Suspense>,
   },
   {
     path: '/gallery',
-    element: <Suspense fallback={<div>Loading...</div>}><Gallery /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><Gallery /></Suspense>,
   },
   {
     path: '/events',
-    element: <Suspense fallback={<div>Loading...</div>}><Events /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><Events /></Suspense>,
   },
   {
     path: '/sponsors',
-    element: <Suspense fallback={<div>Loading...</div>}><Sponsors /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><Sponsors /></Suspense>,
   },
   {
     path: '/events/day1',
-    element: <Suspense fallback={<div>Loading...</div>}><EventsDay1 /></Suspense>,
+    element: <Suspense fallback={<div><Loader/></div>}><EventsDay1 /></Suspense>,
   },
   {
     path: '/events/day2',
-    element: <Suspense fallback={<div>Loading...</div>}><EventsDay2 /></Suspense>,
-  },
-  {
-    path: '/btn',
-    element: <Button/>
+    element: <Suspense fallback={<div><Loader/></div>}><EventsDay2 /></Suspense>,
   }
 ]);
 
