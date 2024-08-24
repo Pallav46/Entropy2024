@@ -21,20 +21,20 @@ const Merch = () => {
         const runningTime = runningTimeRef.current;
 
         const showSlider = (type) => {
-            const sliderItemsDom = list.querySelectorAll('.item');
-            if (type === 'next') {
+            const sliderItemsDom = list.querySelectorAll('.mr-item');
+            if (type === 'mr-next') {
                 list.appendChild(sliderItemsDom[0]);
-                carousel.classList.add('next');
+                carousel.classList.add('mr-next');
             } else {
                 list.prepend(sliderItemsDom[sliderItemsDom.length - 1]);
-                carousel.classList.add('prev');
+                carousel.classList.add('mr-prev');
             }
 
             clearTimeout(runTimeOut);
 
             runTimeOut = setTimeout(() => {
-                carousel.classList.remove('next');
-                carousel.classList.remove('prev');
+                carousel.classList.remove('mr-next');
+                carousel.classList.remove('mr-prev');
             }, timeRunning);
 
             clearTimeout(runNextAuto);
@@ -53,11 +53,11 @@ const Merch = () => {
         };
 
         nextBtn.onclick = () => {
-            showSlider('next');
+            showSlider('mr-next');
         };
 
         prevBtn.onclick = () => {
-            showSlider('prev');
+            showSlider('mr-prev');
         };
 
         runNextAuto = setTimeout(() => {
@@ -77,134 +77,134 @@ const Merch = () => {
     return (
         <div className='mr-container'>
 
-            <div className="carousel" ref={carouselRef}>
-                <div className="list" ref={listRef}>
-                    <div className="item" style={{ backgroundImage: "url(/image/eagel1.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">EAGLE</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+            <div className="mr-carousel" ref={carouselRef}>
+                <div className="mr-list" ref={listRef}>
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/eagel1.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">EAGLE</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/owl1.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">OWL</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/owl1.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">OWL</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/crow.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">CROW</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/crow.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">CROW</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/butterfly1.jpeg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">BUTTERFLY</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/butterfly1.jpeg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">BUTTERFLY</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/owl2.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">OWL</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/owl2.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">OWL</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/eagel3.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">EAGLE</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/eagel3.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">EAGLE</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/kingfirser2.jpeg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">KINGFISHER</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/kingfirser2.jpeg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">KINGFISHER</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/parrot2.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">PARROT</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/parrot2.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">PARROT</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/heron.jpeg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">HERON</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/heron.jpeg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">HERON</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/butterfly2.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">BUTTERFLY</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/butterfly2.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">BUTTERFLY</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className="item" style={{ backgroundImage: "url(/image/parrot2.jpg)" }}>
-                        <div className="content">
-                            <div className="title">SLIDER</div>
-                            <div className="name">PARROT</div>
-                            <div className="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                            <div className="btn">
+                    <div className="mr-item" style={{ backgroundImage: "url(/image/parrot2.jpg)" }}>
+                        <div className="mr-content">
+                            <div className="mr-title">SLIDER</div>
+                            <div className="mr-name">PARROT</div>
+                            <div className="mr-des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                            <div className="mr-btn">
                                 <button>See More</button>
                                 <button>Subscribe</button>
                             </div>
@@ -213,13 +213,13 @@ const Merch = () => {
                 </div>
 
                 {/* next prev button */}
-                <div className="arrows">
-                    <button className="prev" ref={prevBtnRef}>&lt;</button>
-                    <button className="next" ref={nextBtnRef}>&gt;</button>
+                <div className="mr-arrows">
+                    <button className="mr-prev" ref={prevBtnRef}>&lt;</button>
+                    <button className="mr-next" ref={nextBtnRef}>&gt;</button>
                 </div>
 
                 {/* time running */}
-                <div className="timeRunning" ref={runningTimeRef}></div>
+                <div className="mr-timeRunning" ref={runningTimeRef}></div>
             </div>
         </div>
     );
