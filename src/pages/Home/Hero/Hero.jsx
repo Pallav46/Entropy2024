@@ -1,7 +1,7 @@
-
+import './Hero.css'
 const Hero = () => {
   return (
-    <div>
+    <div className="hr-container">
       Hero
     </div>
   )
