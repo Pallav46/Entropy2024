@@ -71,22 +71,26 @@
 // };
 
 // export default Card;
-import './WebAndCreatives.css'; // Ensure this path matches your stylesheet
-import CardList from './CardList'; // Ensure this path matches where your CardList component is located
-
+import "./WebAndCreatives.css"; // Ensure this path matches your stylesheet
+import CardList from "./CardList"; // Ensure this path matches where your CardList component is located
 
 function App() {
-    return (
-        <div className="App">
-        {/* <div className="header">
+  return (
+    <div className="App">
+      {/* <div className="header">
         <div className="header1">DESIGN</div>
         <div className="header2">TEAM</div>
         </div> */}
-        <div className='bodyCard'>
-            <CardList />
-        </div>
-        </div>
-    );
+      <div className="stars">
+        <div className="stars1"></div>
+        <div className="stars2"></div>
+        <div className="stars3"></div>
+      </div>
+      <div className="bodyCard">
+        <CardList />
+      </div>
+    </div>
+  );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Swiper from "swiper";
 import "./Events.css";
 import Template from "../../components/Events/Template";
@@ -103,6 +103,11 @@ const Events = () => {
 
   return (
     <div>
+      <div className="stars">
+        <div className="stars1"></div>
+        <div className="stars2"></div>
+        <div className="stars3"></div>
+      </div>
       <section className="timeline-section">
         <h1 className="text-white">Events</h1>
         <Template name="Pre Events"/>
