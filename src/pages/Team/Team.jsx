@@ -4,6 +4,7 @@ import img2 from "./img2.gif";
 import img3 from "./img3.gif";
 import bg from "./bg7.webm";
 import './Team.css'
+import Button from '../../components/Button/Button';
 
 const Team = () => {
   useEffect(() => {
@@ -60,7 +61,9 @@ const Team = () => {
             <div className="blog-slider__title">Faculty Coordinators</div>
             <div className="blog-slider__text">The guiding lights of our fest! They’re the mentors who ensure everything runs smoothly, providing support and guidance to make our vision a reality.</div>
             <a href="/teams/faculty">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
+
             </a>
           </div>
         </div>
@@ -78,7 +81,8 @@ const Team = () => {
             <div className="blog-slider__title">Web and Creatives Team</div>
             <div className="blog-slider__text">The digital heartbeat of the fest, the masterminds behind the fest’s digital identity!</div>
             <a href="/teams/webAndCreatives">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
             </a>
           </div>
         </div>
@@ -95,7 +99,9 @@ const Team = () => {
             <div className="blog-slider__title">Event Management Team</div>
             <div className="blog-slider__text">Masters of coordination and champions of execution. If it’s happening, they’re the ones making it happen!</div>
             <a href="/teams/eventManagement">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
+
             </a>
           </div>
         </div>
@@ -112,7 +118,9 @@ const Team = () => {
             <div className="blog-slider__title">Design Team</div>
             <div className="blog-slider__text">The artistic force behind the fest’s visual identity. They don’t just create, they inspire!</div>
             <a href="/teams/design">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
+
             </a>
           </div>
         </div>
@@ -129,7 +137,9 @@ const Team = () => {
             <div className="blog-slider__title">Sponsorship Team</div>
             <div className="blog-slider__text">Powering the fest with partnerships, they’re the go-getters of the fest ensuring every collaboration adds value to the event.</div>
             <a href="/teams/sponsorship">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
+
             </a>
           </div>
         </div>
@@ -146,7 +156,9 @@ const Team = () => {
             <div className="blog-slider__title">Public Relations Team</div>
             <div className="blog-slider__text">Strategic communicators and buzz creators! They craft the perfect narrative to captivate audiences and ensure our event gets the attention it deserves. If it’s in the news, they made it happen!</div>
             <a href="/teams/sponsorship">
-            <button className="glow-on-hover">Meet the Team</button>
+            {/* <button className="glow-on-hover">Meet the Team</button> */}
+            <Button/>
+
             </a>
           </div>
         </div>
