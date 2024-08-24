@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
+import Button from './components/Button/Button.jsx';
 
 const WebAndCreatives = lazy(() => import('./pages/TeamPage/SubTeams/WebAndCreatives/WebAndCreatives.jsx'));
 const EventManagement = lazy(() => import('./pages/TeamPage/SubTeams/EventManagement/EventManagement.jsx'));
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
     path: '/events/day2',
     element: <Suspense fallback={<div>Loading...</div>}><EventsDay2 /></Suspense>,
   },
+  {
+    path: '/btn',
+    element: <Button/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,8 +1,8 @@
 /* styles.css */
-html *,
+/* html *,
 body * {
-  /* cursor: none; */
-}
+  /* cursor: none; 
+} */
 .cursor,
 .cursor-outline {
   position: absolute;
@@ -15,7 +15,8 @@ body * {
 .cursor {
   width: 40px;
   height: 40px;
-  background-color: rgba(201, 31, 31, 0.767);
+  background-color: rgba(255, 255, 255, 0.767);
+  /* filter: invert(100%); */
 }
 
 .cursor-outline {
@@ -23,4 +24,13 @@ body * {
   height: 20px;
   border: 2px solid rgb(153, 117, 25);
   opacity: 0.5;
+}
+
+@media screen and (max-width: 780px) {
+  .cursor{
+    background-color: none;
+  }
+  .cursor-outline{
+    color: none;
+  }
 }
