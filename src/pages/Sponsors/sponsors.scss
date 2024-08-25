@@ -78,6 +78,7 @@
   &__slide {
     visibility: hidden;
     transition: visibility 0s 1.7s;
+    
 
     &.is-current {
       visibility: visible;
