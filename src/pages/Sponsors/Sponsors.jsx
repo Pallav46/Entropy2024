@@ -8,6 +8,7 @@ import kuberTechnoCraft from './logo/kuber-techno-craft.jpg';
 import { Banner } from './Banner';
 import './Banner.css'
 import bg from './bg.jpg';  
+import Navbar from '../../components/Navbar/Navbar';
 
 const CardComponent = ({ title, logoUrl}) => (
   <div className="card">
@@ -286,7 +287,7 @@ const Slideshow = () => {
     };
   }, []); // Empty dependency array to run effect only once on mount
 
-  return (
+  return (<>
     <div id="wrapper">
       <section className="slideshow" id="js-header">
         {slides.map((slide, index) => (
@@ -372,6 +373,7 @@ const Slideshow = () => {
       <Banner images= {images} speed={5000} />
       
     </div>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import Swiper from "swiper";
 import "./Events.css";
 import Template from "../../components/Events/Template";
-
+import Navbar from "../../components/Navbar/Navbar";
 const Events = () => {
   const postActionsControllersRef = useRef([]);
   const likeBtnsRef = useRef([]);

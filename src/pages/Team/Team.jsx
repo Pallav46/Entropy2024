@@ -32,6 +32,8 @@ const Team = () => {
   }, []);
 
   return (
+    <>
+
     <div className="blog-body">
       <div className="stars">
         <div className="stars1"></div>
@@ -160,6 +162,7 @@ const Team = () => {
         <div className="blog-slider__pagination"></div>
       </div>
     </div>
+    </>
   );
 };
 
