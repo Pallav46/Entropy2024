@@ -31,7 +31,7 @@ const ScrambleText = ({ children }) => {
         }
 
         iteration += 1/3;
-      }, 30);
+      }, 70);
     };
 
     const element = document.querySelector(".scramble-text");
