@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.stars{
+  height: 0px;
+}
+
 .stars1 {
   width: 1px;
   height: 1px;
