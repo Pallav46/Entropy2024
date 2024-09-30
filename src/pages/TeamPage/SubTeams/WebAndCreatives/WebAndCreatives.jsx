@@ -77,10 +77,10 @@ import CardList from "./CardList"; // Ensure this path matches where your CardLi
 function App() {
   return (
     <div className="App">
-      {/* <div className="header">
-        <div className="header1">DESIGN</div>
-        <div className="header2">TEAM</div>
-        </div> */}
+        <div className="header_wnc">
+        <div className="header1_wnc">DESIGN TEAM</div>
+        {/* <div className="header2">TEAM</div> */}
+        </div>
       <div className="stars">
         <div className="stars1"></div>
         <div className="stars2"></div>

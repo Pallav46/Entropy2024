@@ -150,8 +150,8 @@ const CardList = () => {
         <>
         <br></br><br></br><br></br>
         <div className="card-list">
-        <div className="header1">DESIGN</div>
-        <div className="header2">TEAM</div>
+        {/* <div className="header1">DESIGN</div>
+        <div className="header2">TEAM</div> */}
             {cardData.map((card, index) => (
                 <Card
                     key={index}
