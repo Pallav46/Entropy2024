@@ -239,11 +239,14 @@ const Laptop_eventsDay1 = () => {
   return (
     <div id="main">
       <div id="back">
-        <img src="/assets/Events/img/IMG_7564.JPG" alt="" />
-        <img src="/assets/Events/img/IMG_7565.JPG" alt="" />
-        <img src="/assets/Events/img/IMG_7566.JPG" alt="" />
-        <img src="/assets/Events/img/IMG_7567.JPG" alt="" />
-        <img src="/assets/Events/img/IMG_7568.JPG" alt="" />
+        <img src="/assets/Events/img/coding.jpg" alt="" />
+        <img src="/assets/Events/img/exhibition.jpg" alt="" />
+        <img src="/assets/Events/img/gameroom.jpg" alt="" />
+        <img src="/assets/Events/img/hackathon.jpg" alt="" />
+        <img src="/assets/Events/img/bgmi_valo.jpg" alt="" />
+        <img src="/assets/Events/img/quiz.jpg" alt="" />
+        <img src="/assets/Events/img/robotics.jpg" alt="" />
+
       </div>
       <div id="top">
         <div id="workingarea">
@@ -261,29 +264,36 @@ const Laptop_eventsDay1 = () => {
           <div id="hero">
             <div id="heroleft">
               <div className="elem">
-                <h1>david chang</h1>
-                <h1>Susan jamal</h1>
-                <h1>orit chang</h1>
-                <h1>klew chang</h1>
-                <h1>vid chang</h1>
+                <h1>CodeThrill 7.0</h1>
+                <h1>Tech Exhibition</h1>
+                <h1>Game Room</h1>
+                <h1>Hackathon</h1>
+                <h1>E-Sports</h1>
+                <h1>Tech Quiz</h1>
+                <h1>Robotics</h1>
               </div>
               <div className="elem">
-                <h1>gives zero</h1>
-                <h1>indifference is</h1>
-                <h1>hii ko</h1>
-                <h1>hii ko</h1>
-                <h1>klcwn klcw</h1>
-
+                <h1>time</h1>
+                <h1>time</h1>
+                <h1>time</h1>
+                <h1>time</h1>
+                <h1>time</h1>
+                <h1>time</h1>
+                <h1>time</h1>
               </div>
               <div className="elem">
-                <h1>funks.</h1>
-                <h1>Absolute.</h1>
-                <h1>kjw.</h1>
-                <h1>wkjkjef.</h1>
-                <h1>kjcr.</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
+                <h1>venue</h1>
               </div>
 
               <button className='register'>
+                <a href="#" className='registerLink'>Register Now</a>
+                <a href="#" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
@@ -293,14 +303,22 @@ const Laptop_eventsDay1 = () => {
             </div>
             <div id="heroright">
               <div className="elem2">
-                <p className='textR1'>Lorem ipsum dolor sit amet.</p>
-                <p className='textR1'>tingting.</p>
-                <p className='textR1'>dodo.</p>
-                <p className='textR1'>bingbing.</p>
-                <p className='textR1'>Lorem ipsum dt.</p>
+                <p className='textR1'>CodeThrill 7.0</p>
+                <p className='textR1'>Tech Exhibition</p>
+                <p className='textR1'>Game Room</p>
+                <p className='textR1'>Hackathon</p>
+                <p className='textR1'>E-Sports</p>
+                <p className='textR1'>Tech Quiz</p>
+                <p className='textR1'>Robotics</p>
               </div>
 
               <div className="imgElem">
+                <div id="imagediv">
+                  <img src={img} alt="" />
+                </div>
+                <div id="imagediv">
+                  <img src={img} alt="" />
+                </div>
                 <div id="imagediv">
                   <img src={img} alt="" />
                 </div>
@@ -320,70 +338,69 @@ const Laptop_eventsDay1 = () => {
 
               <div className="elem3">
                 <p className='textR2'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Perspiciatis incidunt consequatur asperiores quod sint animi,
-                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                  a officia est sequi similique distinctio laborum nesciunt ex
-                  mollitia.
+                Gear up for a coding showdown! 
+                Test your skills, solve complex problems, 
+                and race against the clock in CodeThrill 7.0. 
                 </p>
                 <p className='textR2'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Perspiciatis incidunt consequatur asperiores quod sint animi,
-                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                  a officia est sequi similique distinctio laborum nesciunt ex
-                  mollitia.
+                Explore the future at our Tech Exhibition!
+                Discover innovations, technology, 
+                and visionary projects all under one roof.
                 </p>
                 <p className='textR2'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Perspiciatis incidunt consequatur asperiores quod sint animi,
-                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                  a officia est sequi similique distinctio laborum nesciunt ex
-                  mollitia.
+                Time to unwind and have some fun!
+                Swing by our Game Room, dive into awesome games,
+                and hang out with friends. 
                 </p>
                 <p className='textR2'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Perspiciatis incidunt consequatur asperiores quod sint animi,
-                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                  a officia est sequi similique distinctio laborum nesciunt ex
-                  mollitia.
+                Get ready to hack, code, and create!
+                Join our Hackathon for a day of coding,
+                excitement and teamwork.
                 </p>
                 <p className='textR2'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Perspiciatis incidunt consequatur asperiores quod sint animi,
-                  facilis dolorum nam. Cumque, odio hic dignissimos odit sit fugit
-                  a officia est sequi similique distinctio laborum nesciunt ex
-                  mollitia.
+                Gear up for the ultimate esports showdown!
+                Whether you’re battling it out in Valorant 
+                or dropping into BGMI, the competition 
+                is fierce and the fun is unbeatable.
+                </p>
+                <p className='textR2'>
+                Think you know tech? 
+                Join our Tech Quiz for a chance to showcase 
+                your knowledge and compete for the top spot.
+                </p>
+                <p className='textR2'>
+                Get ready for the ultimate robotics face-off!
+                Watch as teams bring their robots to life 
+                and compete in thrilling challenges.
                 </p>
               </div>
 
               <div className="elem4">
                 <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
+                It's time to code, compete, and conquer!
                 </p>
                 <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
+                Join us and be inspired by tomorrow’s tech today!
                 </p>
                 <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
+                Let the good times roll!
                 </p>
                 <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
+                Team up, solve cool problems, and make some awesome stuff.
                 </p>
                 <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
+                Ready, set, game on!
+                </p>
+                <p className='textR3'>
+                It’s fun, it’s challenging, and it’s your chance to shine.
+                </p>
+                <p className='textR3'>
+                Who will rise to the top?
                 </p>
               </div>
               <button className='register'>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
