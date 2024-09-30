@@ -1,9 +1,9 @@
 /* BUTTON GLITCH */
 .butn-button-glitch,
 .butn-button-glitch:after {
-    width: 180px;
-    height: 80px;
-  line-height: 78px;
+    width: 200px;
+    height: 65px;
+  /* line-height: 78px; */
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
@@ -90,11 +90,11 @@
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .butn-button-glitch,
   .butn-button-glitch:after {
     width: 200px;
     height: 86px;
     line-height: 88px;
   }
-}
+} */

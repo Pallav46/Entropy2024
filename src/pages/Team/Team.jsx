@@ -1,8 +1,10 @@
 import { useEffect } from "react";
-import img1 from "./img1.gif";
-import img2 from "./img2.gif";
-import img3 from "./img3.gif";
-import bg from "./bg7.webm";
+import img1 from "./faculty-coordinators.jpg";
+import img2 from "./web-creatives.jpeg";
+import img3 from "./event-management.jpeg";
+import img4 from "./design-team.png";
+import img5 from "./sponsor.png";
+import img6 from "./public-relation.jpg";
 import "./Team.css";
 import Button from "../../components/Button/Button";
 
@@ -49,7 +51,7 @@ const Team = () => {
         <div className="swiper-wrapper">
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img2} alt="Blog Image 1" />
+              <img src={img1} alt="Blog Image 1" />
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
@@ -68,7 +70,7 @@ const Team = () => {
 
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img1} alt="Blog Image 2" />
+              <img src={img2} alt="Blog Image 2" />
             </div>
 
             <div className="blog-slider__content">
@@ -87,7 +89,7 @@ const Team = () => {
 
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img2} alt="Blog Image 2" />
+              <img src={img3} alt="Blog Image 2" />
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
@@ -105,7 +107,7 @@ const Team = () => {
 
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img3} alt="Blog Image 3" />
+              <img src={img4} alt="Blog Image 3" />
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
@@ -123,7 +125,7 @@ const Team = () => {
 
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img1} alt="Blog Image 4" />
+              <img src={img5} alt="Blog Image 4" />
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
@@ -141,7 +143,7 @@ const Team = () => {
 
           <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
-              <img src={img1} alt="Blog Image 4" />
+              <img src={img6} alt="Blog Image 4" />
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>

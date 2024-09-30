@@ -65,9 +65,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.29)),
-    url('./img5.gif');
   background-size: cover;
   background-position: center;
   width: 80vw;
@@ -81,12 +78,33 @@
   scroll-snap-stop: always;
   overflow: hidden;
   position: relative;
+  background-color: rgba(102, 80, 80, 0.653);  
+}
+
+.gli-slide:before{
+  content: '';
+  position: absolute;
+  filter: blur(60px);
+  background: inherit;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.379), rgba(0, 0, 0, 0.29)),
+    url('./img5.gif');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -20px;
+  box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.464);  
+  z-index: -1;
 }
 
 .gli-heading {
+  text-align: center;
   font-size: 3vw;
   font-weight: 500;
   margin-top: 2vh;
+  padding-left: 10px;
+  padding-right: 10px;
   letter-spacing: 3px;
   color: #fff;
   text-shadow:

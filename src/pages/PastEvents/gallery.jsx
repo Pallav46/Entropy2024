@@ -1,5 +1,4 @@
 import './gallery.css';
-import img from './img.avif';
 import ScrambleText from '../../components/Scramble';
 import Navbar from '../../components/Navbar/Navbar';
 
@@ -50,60 +49,292 @@ const Carousel = ({ items }) => {
 };
 
 const Gallery = () => {
-  const carouselItems = [
+  const carouselItems1 = [
     {
       index: 1,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img4.JPG',
       description: "Architecture Example 1",
     },
     {
       index: 2,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img1.JPG',
       description: "Architecture Example 2",
     },
     {
       index: 3,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img2.JPG',
       description: "Architecture Example 3",
     },
     {
       index: 4,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img3.JPG',
       description: "Architecture Example 4",
     },
     {
       index: 5,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img11.png',
       description: "Architecture Example 5",
     },
     {
       index: 6,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img5.JPG',
       description: "Architecture Example 6",
     },
     {
       index: 7,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img6.JPG',
       description: "Architecture Example 7",
     },
     {
       index: 8,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img7.JPG',
       description: "Architecture Example 8",
     },
     {
       index: 9,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img8.JPG',
       description: "Architecture Example 9",
     },
     {
       index: 10,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img9.JPG',
       description: "Architecture Example 10",
     },
     {
       index: 11,
-      imageUrl: img,
+      imageUrl: '/pastEvents/1/img10.JPG',
+      description: "Architecture Example 11",
+    },
+  ];
+
+  const carouselItems2 = [
+    {
+      index: 1,
+      imageUrl: '/pastEvents/2/img1.JPG',
+      description: "Architecture Example 1",
+    },
+    {
+      index: 2,
+      imageUrl: '/pastEvents/2/img2.JPG',
+      description: "Architecture Example 2",
+    },
+    {
+      index: 3,
+      imageUrl: '/pastEvents/2/img3.JPG',
+      description: "Architecture Example 3",
+    },
+    {
+      index: 4,
+      imageUrl: '/pastEvents/2/img4.JPG',
+      description: "Architecture Example 4",
+    },
+    {
+      index: 5,
+      imageUrl: '/pastEvents/2/img5.JPG',
+      description: "Architecture Example 5",
+    },
+    {
+      index: 6,
+      imageUrl: '/pastEvents/2/img6.JPG',
+      description: "Architecture Example 6",
+    },
+    {
+      index: 7,
+      imageUrl: '/pastEvents/2/img7.JPG',
+      description: "Architecture Example 7",
+    },
+    {
+      index: 8,
+      imageUrl: '/pastEvents/2/img8.JPG',
+      description: "Architecture Example 8",
+    },
+    {
+      index: 9,
+      imageUrl: '/pastEvents/2/img9.JPG',
+      description: "Architecture Example 9",
+    },
+    {
+      index: 10,
+      imageUrl: '/pastEvents/2/img10.JPG',
+      description: "Architecture Example 10",
+    },
+    {
+      index: 11,
+      imageUrl: '/pastEvents/2/img11.jpg',
+      description: "Architecture Example 11",
+    },
+  ];
+
+  const carouselItems3 = [
+    {
+      index: 1,
+      imageUrl: '/pastEvents/3/img11.JPG',
+      description: "Architecture Example 1",
+    },
+    {
+      index: 2,
+      imageUrl: '/pastEvents/3/img1.JPG',
+      description: "Architecture Example 2",
+    },
+    {
+      index: 3,
+      imageUrl: '/pastEvents/3/img2.JPG',
+      description: "Architecture Example 3",
+    },
+    {
+      index: 4,
+      imageUrl: '/pastEvents/3/img3.JPG',
+      description: "Architecture Example 4",
+    },
+    {
+      index: 5,
+      imageUrl: '/pastEvents/3/img4.JPG',
+      description: "Architecture Example 5",
+    },
+    {
+      index: 6,
+      imageUrl: '/pastEvents/3/img5.JPG',
+      description: "Architecture Example 6",
+    },
+    {
+      index: 7,
+      imageUrl: '/pastEvents/3/img6.JPG',
+      description: "Architecture Example 7",
+    },
+    {
+      index: 8,
+      imageUrl: '/pastEvents/3/img7.JPG',
+      description: "Architecture Example 8",
+    },
+    {
+      index: 9,
+      imageUrl: '/pastEvents/3/img8.JPG',
+      description: "Architecture Example 9",
+    },
+    {
+      index: 10,
+      imageUrl: '/pastEvents/3/img9.JPG',
+      description: "Architecture Example 10",
+    },
+    {
+      index: 11,
+      imageUrl: '/pastEvents/3/img10.JPG',
+      description: "Architecture Example 11",
+    },
+  ];
+
+  const carouselItems4 = [
+    {
+      index: 1,
+      imageUrl: '/pastEvents/4/img1.jpg',
+      description: "Architecture Example 1",
+    },
+    {
+      index: 2,
+      imageUrl: '/pastEvents/4/img2.jpg',
+      description: "Architecture Example 2",
+    },
+    {
+      index: 3,
+      imageUrl: '/pastEvents/4/img3.jpg',
+      description: "Architecture Example 3",
+    },
+    {
+      index: 4,
+      imageUrl: '/pastEvents/4/img4.jpg',
+      description: "Architecture Example 4",
+    },
+    {
+      index: 5,
+      imageUrl: '/pastEvents/4/img5.jpg',
+      description: "Architecture Example 5",
+    },
+    {
+      index: 6,
+      imageUrl: '/pastEvents/4/img6.jpg',
+      description: "Architecture Example 6",
+    },
+    {
+      index: 7,
+      imageUrl: '/pastEvents/4/img7.jpg',
+      description: "Architecture Example 7",
+    },
+    {
+      index: 8,
+      imageUrl: '/pastEvents/4/img8.jpg',
+      description: "Architecture Example 8",
+    },
+    {
+      index: 9,
+      imageUrl: '/pastEvents/4/img9.jpg',
+      description: "Architecture Example 9",
+    },
+    {
+      index: 10,
+      imageUrl: '/pastEvents/4/img10.jpg',
+      description: "Architecture Example 10",
+    },
+    {
+      index: 11,
+      imageUrl: '/pastEvents/4/img11.jpg',
+      description: "Architecture Example 11",
+    },
+  ];
+
+  const carouselItems5 = [
+    {
+      index: 1,
+      imageUrl: '/pastEvents/5/img1.jpg',
+      description: "Architecture Example 1",
+    },
+    {
+      index: 2,
+      imageUrl: '/pastEvents/5/img2.jpg',
+      description: "Architecture Example 2",
+    },
+    {
+      index: 3,
+      imageUrl: '/pastEvents/5/img3.jpg',
+      description: "Architecture Example 3",
+    },
+    {
+      index: 4,
+      imageUrl: '/pastEvents/5/img4.jpg',
+      description: "Architecture Example 4",
+    },
+    {
+      index: 5,
+      imageUrl: '/pastEvents/5/img5.jpg',
+      description: "Architecture Example 5",
+    },
+    {
+      index: 6,
+      imageUrl: '/pastEvents/5/img6.jpg',
+      description: "Architecture Example 6",
+    },
+    {
+      index: 7,
+      imageUrl: '/pastEvents/5/img7.jpg',
+      description: "Architecture Example 7",
+    },
+    {
+      index: 8,
+      imageUrl: '/pastEvents/5/img8.jpg',
+      description: "Architecture Example 8",
+    },
+    {
+      index: 9,
+      imageUrl: '/pastEvents/5/img9.jpg',
+      description: "Architecture Example 9",
+    },
+    {
+      index: 10,
+      imageUrl: '/pastEvents/5/img10.jpg',
+      description: "Architecture Example 10",
+    },
+    {
+      index: 11,
+      imageUrl: '/pastEvents/5/img11.jpg',
       description: "Architecture Example 11",
     },
   ];
@@ -124,24 +355,24 @@ const Gallery = () => {
       </div>
       <div className="gli-container">
         <section className="gli-slide">
-          <div className="gli-heading">Event1</div>
-          <Carousel items={carouselItems} />
+          <div className="gli-heading">Speaker Session</div>
+          <Carousel items={carouselItems1} />
         </section>
         <section className="gli-slide">
-          <div className="gli-heading">Event2</div>
-          <Carousel items={carouselItems} />
+          <div className="gli-heading">Tech Tonic Tussle | Millet Mela</div>
+          <Carousel items={carouselItems2} />
         </section>
         <section className="gli-slide">
-          <div className="gli-heading">Event3</div>
-          <Carousel items={carouselItems} />
+          <div className="gli-heading">Malkauns | DJ Raven</div>
+          <Carousel items={carouselItems3} />
         </section>
         <section className="gli-slide">
-          <div className="gli-heading">Event4</div>
-          <Carousel items={carouselItems} />
+          <div className="gli-heading">IPL Auction | Tech Quiz</div>
+          <Carousel items={carouselItems4} />
         </section>
         <section className="gli-slide">
-          <div className="gli-heading">Event5</div>
-          <Carousel items={carouselItems} />
+          <div className="gli-heading">D-Dazzlers x Tarang</div>
+          <Carousel items={carouselItems5} />
         </section>
       </div>
     </div>
