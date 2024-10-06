@@ -9,7 +9,9 @@
 
 /* Loader Container */
 .loader_container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: black;
     height: 100vh;
 }
@@ -39,20 +41,18 @@
 
 /* Loader Animation */
 .loader-6 {
-    border: 0.6vw groove #7e57c2;
+    border: 0.6vw groove #2f034d; /* Initial border color */
     transform: rotate(360deg);
     transition: all 1s ease;
-    -webkit-animation: loader-1-inner 1s ease-out alternate infinite;
-    animation: loader-1-inner 1s ease-out alternate infinite;
+    animation: loader-1-inner 1s ease-out alternate infinite, change-color 4s linear infinite; /* Added color change animation */
 }
 
 .loader-6 .loader-inner {
-    border: 0 inset #9575cd;
+    border: 0 inset #520c82; /* Initial inner border color */
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    -webkit-animation: border-zoom 1s ease-out alternate infinite;
-    animation: border-zoom 1s ease-out alternate infinite;
+    animation: border-zoom 1s ease-out alternate infinite, inner-change-color 4s linear infinite; /* Added inner color change animation */
 }
 
 /* Keyframes */
@@ -79,7 +79,7 @@
         border-width: 0px;
     }
     100% {
-        border-width: 2vw;
+        border-width: 1vw;
     }
 }
 
@@ -88,9 +88,61 @@
         border-width: 0px;
     }
     100% {
-        border-width: 2vw;
+        border-width: 1vw;
     }
 }
+
+/* Color Change for Outer Loader */
+@keyframes change-color {
+    0% {
+        border-color: #2f034d; /* First color */
+    }
+    25% {
+        border-color: #520c82; /* Second color */
+    }
+    50% {
+        border-color: #ff5733; /* Third color */
+    }
+    75% {
+        border-color: #ffc300; /* Fourth color */
+    }
+    100% {
+        border-color: #2f034d; /* Back to first color */
+    }
+}
+
+/* Color Change for Inner Loader */
+@keyframes inner-change-color {
+    0% {
+        border-color: #520c82; /* Initial inner color */
+    }
+    25% {
+        border-color: #ff5733; /* Second inner color */
+    }
+    50% {
+        border-color: #ffc300; /* Third inner color */
+    }
+    75% {
+        border-color: #2f034d; /* Fourth inner color */
+    }
+    100% {
+        border-color: #520c82; /* Back to initial inner color */
+    }
+}
+
+/* Loader Footer Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+
 
 /* Responsive Loader */
 @media only screen and (max-width: 1024px) {
