@@ -1,89 +1,120 @@
-.loader-body {
-  height: 100dvh;
-  display: grid;
-  place-content: center;
-  background: black;
-}
-
-.loader {
-  height: 300px;
-  aspect-ratio: 1;
-  background: black;
-  position: relative;
-}
-.loader .box {
-  position: absolute;
-  background: rgba(100, 100, 100, 0.15);
-  background: linear-gradient(0deg, rgba(50, 50, 50, 0.2) 0%, rgba(100, 100, 100, 0.2) 100%);
-  border-radius: 50%;
-  border-top: 1px solid #646464;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px 0px;
-  backdrop-filter: blur(5px);
-  animation: ripple 2s infinite ease-in-out;
-}
-.loader .box:nth-child(1) {
-  inset: 40%;
-  z-index: 99;
-}
-.loader .box:nth-child(2) {
-  inset: 30%;
-  z-index: 98;
-  border-color: rgba(100, 100, 100, 0.8);
-  animation-delay: 0.2s;
-}
-.loader .box:nth-child(3) {
-  inset: 20%;
-  z-index: 97;
-  border-color: rgba(100, 100, 100, 0.6);
-  animation-delay: 0.4s;
-}
-.loader .box:nth-child(4) {
-  inset: 10%;
-  z-index: 96;
-  border-color: rgba(100, 100, 100, 0.4);
-  animation-delay: 0.6s;
-}
-.loader .box:nth-child(5) {
-  inset: 0%;
-  z-index: 95;
-  border-color: rgba(100, 100, 100, 0.2);
-  animation-delay: 0.8s;
-}
-.loader .logo {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  padding: 30%;
-}
-.loader .logo svg {
-  fill: grey;
-  width: 100%;
-  animation: color-change 2s infinite ease-in-out;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px 0px;
+*,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+ 
+    
+    .loader_container {
+        text-align: center;
+        background: black;
+        height: 100vh;
+    }
+    
+    .loader_section {
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+        min-height: 215px;
+        vertical-align: top;
+        margin: 1%;
+        /* background: #080915; */
+        /* border-radius: 5px; */
+        /* box-shadow: 0px 0px 30px 1px #103136 inset;*/
   }
-  50% {
-    transform: scale(1.3);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 20px 0px;
+
+@media only screen and (max-width: 600px) {
+  section {
+    min-width: 350px;
+  }
+}
+    
+    .loader {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 220px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .loader-star {
+        position: absolute;
+        top: calc(50% - 12px);
+    }
+
+    /*LOADER-6*/
+    
+    .loader-6 {
+        border: 6px groove #7e57c2;
+        transform: rotate(360deg);
+        transition: all 1s ease;
+        -webkit-animation: loader-1-inner 1s ease-out alternate infinite;
+        animation: loader-1-inner 1s ease-out alternate infinite;
+    }
+    
+    .loader-6 .loader-inner {
+        border: 0px inset #9575cd;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        -webkit-animation: border-zoom 1s ease-out alternate infinite;
+        animation: border-zoom 1s ease-out alternate infinite;
+    }
+ 
+
+
+    /* ----------------     KEYFRAMES    ----------------- */
+    
+
+    @-webkit-keyframes loader-1-inner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+    
+    @keyframes loader-1-inner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+
+    
+    @-webkit-keyframes border-zoom {
+        0% {
+            border-width: 0px;
+        }
+        100% {
+            border-width: 20px;
+        }
+    }
+    
+    @keyframes border-zoom {
+        0% {
+            border-width: 0px;
+        }
+        100% {
+            border-width: 20px;
+            /* border-width: 10px; */
+        }
+    }
+    /*@-webkit-keyframes line-grow {
+  0% {
+    height: 0;
   }
   100% {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px 0px;
+    height: 75%;
   }
-}
-@keyframes color-change {
-  0% {
-    fill: grey;
-  }
-  50% {
-    fill: white;
-  }
-  100% {
-    fill: grey;
-  }
-}
+}*/
+    
+ 
