@@ -1,6 +1,6 @@
 import './gallery.css';
 import ScrambleText from '../../components/Scramble';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const CarouselItem = ({ index, imageUrl, description }) => {
   return (
@@ -20,6 +20,8 @@ const CarouselItem = ({ index, imageUrl, description }) => {
 
 const Carousel = ({ items }) => {
   return (
+    <>
+    <Navbar/>
     <div className="gli-carousel">
       <div className="gli-carousel-control-button gli-left">
         <input type="radio" name="carousel-control-input" />
@@ -44,7 +46,7 @@ const Carousel = ({ items }) => {
           <li className="gli-carousel-ground"></li>
         </ul>
       </div>
-    </div>
+    </div></>
   );
 };
 
