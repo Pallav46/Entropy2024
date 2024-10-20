@@ -7,7 +7,7 @@ import img5 from "./sponsor.png";
 import img6 from "./public-relation.jpg";
 import "./Team.css";
 import Button from "../../components/Button/Button";
-import Navbar from "/coding/Gamify/Entropy2024/src/pages/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 
 const Team = () => {
   useEffect(() => {

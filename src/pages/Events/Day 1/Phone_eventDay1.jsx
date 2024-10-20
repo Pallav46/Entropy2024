@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './Phone_eventDay1.css'
-import Navbar from '/coding/Gamify/Entropy2024/src/pages/Navbar/Navbar';
+import Navbar from '../../Navbar/Navbar';
 
 const Phone_eventDay1 = () => {
     useEffect(() => {
