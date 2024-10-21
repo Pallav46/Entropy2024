@@ -73,16 +73,16 @@
 // export default Card;
 import "./WebAndCreatives.css"; // Ensure this path matches your stylesheet
 import CardList from "./CardList"; // Ensure this path matches where your CardList component is located
+import ScrambleText from "../../../../components/scramble/Scramble";
 
 function App() {
   return (
     <div className="App">
         <div className="header_wnc">
-        <div className="header1_wnc">DESIGN TEAM</div>
-        {/* <div className="header2">TEAM</div> */}
+        <div className="header1_wnc"><ScrambleText className="header1_wnc">DESIGN TEAM</ScrambleText></div>
         </div>
       <div className="stars">
-        <div className="stars1"></div>
+        <div className="stars1"></div>  
         <div className="stars2"></div>
         <div className="stars3"></div>
       </div>
