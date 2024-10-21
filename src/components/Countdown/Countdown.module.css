@@ -8,7 +8,7 @@
   --Very_dark_blue: hsl(235, 16%, 14%);
   --Very_dark_black_blue: hsl(234, 17%, 12%);
 
-  --h-text: 1.6rem;
+  --h-text: 2.6rem;
   --p-text: 4rem;
   --s-text: 0.9rem;
 
@@ -118,6 +118,11 @@
   right: 0;
 }
 
+@media(max-width: 1024px){
+  .entropy-heading{
+    display: block;
+  }
+}
 
 @media (max-width: 450px) {
   :root {
