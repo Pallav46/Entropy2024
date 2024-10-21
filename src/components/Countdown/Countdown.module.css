@@ -61,12 +61,6 @@
   flex-wrap: nowrap;
 }
 
-/* .countdown-info {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-} */
-
 .timer-box {
   width: 6.7rem;
   padding: 0.8rem;
@@ -125,44 +119,42 @@
 }
 
 
-/* @media (min-width: 430px) {
+@media (max-width: 450px) {
   :root {
-    --h-text: 1.25rem;
-    --p-text: 2rem;
-    --s-text: 0.5rem;
+    --h-text: 2rem;
+    --p-text: 2.5rem;
+    --s-text: 0.65rem;
 
     --circle-width: 0.35em;
     --circle-height: 0.65em;
   }
 
+  .h1-heading {
+    letter-spacing: 0.2ch;
+  }
+
+  .countdown-timer {
+    gap: 0.7em;
+  }
+
   .timer-box {
     width: 5rem;
-    padding: 0.75rem;
+    padding: 0.7rem;
   }
 }
 
-@media (min-width: 550px) {
+@media (max-width: 370px) {
   :root {
-    --p-text: 3rem;
-    --s-text: 0.75rem;
-
-    --circle-width: 0.4em;
-    --circle-height: 0.7em;
+    --h-text: 1.6rem;
+    --p-text: 2.3rem;
+    --s-text: 0.6rem;
+  }
+  
+  .countdown-timer {
+    gap: 0.6em;
   }
 
   .timer-box {
-    width: 6rem;
-    padding: 0.75rem;
+    width: 4.5rem;
   }
 }
-
-@media (min-width: 800px) {
-  :root {
-    --p-text: 4rem;
-  }
-
-  .timer-box {
-    width: 8rem;
-    padding: 1rem;
-  }
-} */

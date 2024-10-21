@@ -21,7 +21,7 @@ const CarouselItem = ({ index, imageUrl, description }) => {
 const Carousel = ({ items }) => {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="gli-carousel">
       <div className="gli-carousel-control-button gli-left">
         <input type="radio" name="carousel-control-input" />
