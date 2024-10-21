@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import classes from "./TeamPage.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 
 class WebAndCreatives extends React.Component {
   render() {

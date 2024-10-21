@@ -7,6 +7,7 @@ import img5 from "./sponsor.png";
 import img6 from "./public-relation.jpg";
 import "./Team.css";
 import Button from "../../components/Button/Button";
+import Navbar from "../Navbar/Navbar";
 
 const Team = () => {
   useEffect(() => {
@@ -35,7 +36,7 @@ const Team = () => {
 
   return (
     <>
-
+    <Navbar/> 
     <div className="blog-body">
       <div className="stars">
         <div className="stars1"></div>

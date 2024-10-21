@@ -301,7 +301,7 @@
     display: none;
   }
   .blog-body {
-    background-image: url(./bg6.jpg);
+    /* background-image: url(./bg6.jpg); */
     display: flex;
   justify-content: center;
   align-items: center;

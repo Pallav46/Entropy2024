@@ -1,8 +1,11 @@
 import './Hero.css'
+import Countdown from '../../../components/Countdown/Countdown.jsx'
 const Hero = () => {
   return (
     <div className="hr-container">
-      Hero
+      <div className="countdown">
+        <Countdown/>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import './gallery.css';
 import ScrambleText from '../../components/Scramble';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 const CarouselItem = ({ index, imageUrl, description }) => {
   return (
@@ -20,6 +20,8 @@ const CarouselItem = ({ index, imageUrl, description }) => {
 
 const Carousel = ({ items }) => {
   return (
+    <>
+    <Navbar/>
     <div className="gli-carousel">
       <div className="gli-carousel-control-button gli-left">
         <input type="radio" name="carousel-control-input" />
@@ -44,7 +46,7 @@ const Carousel = ({ items }) => {
           <li className="gli-carousel-ground"></li>
         </ul>
       </div>
-    </div>
+    </div></>
   );
 };
 
@@ -355,6 +357,14 @@ const Gallery = () => {
       </div>
       <div className="gli-container">
         <section className="gli-slide">
+          <div className="gli-heading">Malkauns | DJ Raven</div>
+          <Carousel items={carouselItems3} />
+        </section>
+        <section className="gli-slide">
+          <div className="gli-heading">D-Dazzlers x Tarang</div>
+          <Carousel items={carouselItems5} />
+        </section>
+        <section className="gli-slide">
           <div className="gli-heading">Speaker Session</div>
           <Carousel items={carouselItems1} />
         </section>
@@ -363,16 +373,8 @@ const Gallery = () => {
           <Carousel items={carouselItems2} />
         </section>
         <section className="gli-slide">
-          <div className="gli-heading">Malkauns | DJ Raven</div>
-          <Carousel items={carouselItems3} />
-        </section>
-        <section className="gli-slide">
           <div className="gli-heading">IPL Auction | Tech Quiz</div>
           <Carousel items={carouselItems4} />
-        </section>
-        <section className="gli-slide">
-          <div className="gli-heading">D-Dazzlers x Tarang</div>
-          <Carousel items={carouselItems5} />
         </section>
       </div>
     </div>

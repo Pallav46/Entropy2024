@@ -15,6 +15,7 @@
     font-family: 'LCDMono', sans-serif;
     font-family: 'Digitalism', sans-serif;
     background: #0e0e0e;
+    margin-top: -400px;
 }
 
 .tr-container {
@@ -695,4 +696,10 @@ input[type="range"]#opacity::-webkit-slider-thumb:hover {
 } 
 .dvr:hover input[type="range"]#opacity {
     opacity: 1;
+}
+
+@media (max-width: 1028px) {
+    .tr-body {
+        margin-top: -800px;
+    }
 }
