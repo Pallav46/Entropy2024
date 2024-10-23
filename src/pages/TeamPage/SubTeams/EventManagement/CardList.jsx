@@ -4,8 +4,8 @@ import Card from './Card'; // Ensure this path matches where your Card component
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Sheshagiri Sampath Girish Vardhan',
+        profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -14,8 +14,38 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Hamley Doe',
-        profession: 'Front-End Developer',
+        name: 'Shouraya Mishra',
+        profession: 'Team Head',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/shouryaa.16/?utm_source=ig_web_button_share_sheet', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Pratapaditya Chander',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/_pretop_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Sachin Mohanty',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/sach_moh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Debrup Das',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -24,8 +54,98 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Jules',
-        profession: 'UI/UX Designer',
+        name: 'Shambhavi Mishra',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/born_insane16?igsh=MWxoNW1vZGxmY2Nmcw%3D%3D', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Samridhi Tiwari',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/samr_idhitiwari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Vemali Deepika',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/deepika_vemali?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Yash Singhal',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/yash_singha1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Tadikonda Lohith Aditya',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/lohith471407?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Shubhashish Shukla',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/itsmeshubh005/?utm_source=ig_web_button_share_sheet', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Shivam Raj',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/_shivam26raj_/?utm_source=ig_web_button_share_sheet', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Aditya Bhatt',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/its_aditya.b_205?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Kunal Purohit',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/kunal.purohit007?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Anurag Sahoo',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -34,108 +154,18 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'Samadrita Mondal',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://www.instagram.com/samadrita.30?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'Agnidipto Banik',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },

@@ -5,10 +5,15 @@ import indianOil from './logo/indian-oil.jpg';
 import sbi from './logo/sbi.jpg';
 import indianBank from './logo/indian-bank.jpg';
 import kuberTechnoCraft from './logo/kuber-techno-craft.jpg';
-import { Banner } from './Banner';
 import './Banner.css'
 import bg from './bg.jpg';  
 import Navbar from '../Navbar/Navbar';
+import CanaraBank from './logo/CanaraBank.webp';
+import GFG from './logo/GFG.png';
+import HP from './logo/HP.png';
+import NodwinGaming from './logo/NodwinGaming.png';
+import PizzaHut from './logo/PizzaHut.png';
+import KFC from './logo/KFC.jpg';
 
 const CardComponent = ({ title, logoUrl}) => (
   <div className="card">
@@ -23,18 +28,18 @@ const CardComponent = ({ title, logoUrl}) => (
   </div>
 );
 
-const images = [
-  "/public/sponsors/TS.jpg",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://media.istockphoto.com/photos/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-picture-id1185953092?k=6&m=1185953092&s=612x612&w=0&h=SNiShskOfwQ7Sys5TX0eb5eBxHobktWUfZGrox5LMyk=",
-  "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-  "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
-  "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
-  "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
-].map((image) => ({
-  id: crypto.randomUUID(),
-  image
-}));
+// const images = [
+//   "/public/sponsors/TS.jpg",
+//   "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
+//   "https://media.istockphoto.com/photos/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-picture-id1185953092?k=6&m=1185953092&s=612x612&w=0&h=SNiShskOfwQ7Sys5TX0eb5eBxHobktWUfZGrox5LMyk=",
+//   "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+//   "https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270",
+//   "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+//   "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+// ].map((image) => ({
+//   id: crypto.randomUUID(),
+//   image
+// }));
 //background can be changed by toggling the comment...
 const bgimg = bg;
 // const bgimg = 'https://static.vecteezy.com/system/resources/previews/012/742/301/original/abstract-finance-currency-money-exchange-moving-or-playing-lucky-draw-games-digital-finance-gold-coin-concept-currency-on-a-modern-background-golden-glow-vector.jpg';
@@ -44,62 +49,33 @@ const Slideshow = () => {
   const slides = [
     {
       id: 1,
-      title: 'Title Sponsor',
-      // subtitle: 'See how',
-      imageUrl:"/public/sponsors/TS.jpg",
+      title: 'Bank Sponsors',
+      // subtitle: 'Learn more about',
+      imageUrl:"/public/sponsors/GS.jpg",
       cards: [
-        { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},
-        { title: 'Indian Bank', logoUrl: indianBank},
-        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+        { title: 'Canara Bank', logoUrl: CanaraBank},
       ],
     },
     {
       id: 2,
-      title: 'Associate Sponsors',
-      // subtitle: 'Learn more about',
-      imageUrl:"/public/sponsors/AS.jpg",
+      title: 'Event Sponsors',
+      // subtitle: 'See how',
+      imageUrl:"/public/sponsors/TS.jpg",
       cards: [
-        { title: 'Indian Oil', logoUrl: indianOil},
-        { title: 'SBI', logoUrl: sbi},
-        { title: 'Indian Bank', logoUrl: indianBank},
-        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+        { title: 'Geeks for Geeks', logoUrl: GFG},
+        { title: 'HP', logoUrl: HP},
+        { title: 'Nodwin Gaming', logoUrl: NodwinGaming},
       ],
     },
     {
       id: 3,
-      title: 'Gold Sponsors',
+      title: 'Food Sponsors',
       // subtitle: 'Learn more about',
-      imageUrl:"/public/sponsors/GS.jpg",
+      imageUrl:"/public/sponsors/AS.jpg",
       cards: [
-        { title: 'Indian Oil', logoUrl: indianOil},
-        { title: 'SBI', logoUrl: sbi},
-        { title: 'Indian Bank', logoUrl: indianBank},
-        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
-      ],
-    },
-    {
-      id: 4,
-      title: 'Silver Sponsors',
-      // subtitle: 'Learn more about',
-      imageUrl: "/public/sponsors/SS.jpg",
-      cards: [
-        { title: 'Indian Oil', logoUrl: indianOil},
-        { title: 'SBI', logoUrl: sbi},
-        { title: 'Indian Bank', logoUrl: indianBank},
-        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
-      ],
-    },
-    {
-      id: 5,
-      title: 'Bronze Sponsors',
-      // subtitle: 'Learn more about',
-      imageUrl: "/public/sponsors/BS.jpg",
-      cards: [
-        { title: 'Indian Oil', logoUrl: indianOil},
-        { title: 'SBI', logoUrl: sbi},
-        { title: 'Indian Bank', logoUrl: indianBank},
-        { title: 'Kuber Techno Craft', logoUrl: kuberTechnoCraft}
+        { title: 'Pizza Hut', logoUrl: PizzaHut},
+        { title: 'KFC', logoUrl: KFC},
       ],
     },
   ];
