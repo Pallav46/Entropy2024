@@ -141,15 +141,15 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        Code Thrill 7.0
+                        Tech Quiz Round 1
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        10 am
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            Venue
+                            Academic block
                           </div>
                         </div>
 
@@ -189,10 +189,10 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        Tech Exhibition
+                        Cyber Hunt
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        11 am
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
@@ -237,10 +237,10 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        Game Room
+                        Debuggers Round 1
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        2 pm
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
@@ -285,10 +285,10 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        Hackathon
+                        Tech Quiz Round 2
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        3 pm
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
@@ -333,10 +333,10 @@ const Phone_eventDay1 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        E-Sports
+                        E-Sports Round 1
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        5 pm
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
@@ -370,101 +370,9 @@ const Phone_eventDay1 = () => {
                   </div>
                 </div>
 
-                <div
-                  className="product-slider__item swiper-slide"
-                  data-target="img1"
-                >
-                  <div className="product-slider__card">
-                    <img
-                      src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-1-bg.webp"
-                      alt="star wars"
-                      className="product-slider__cover"
-                    />
-                    <div className="product-slider__content">
-                      <h1 className="product-slider__title">
-                        Tech Quiz
-                      </h1>
-                      <span className="product-slider__price">
-                        Date
-                      </span>
-                      <div className="product-ctr">
-                        <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
-                        </div>
+                
 
-                        <span className="hr-vertical"></span>
-
-                        <div className="product-inf">
-                          <span className="product-inf__title">
-                          Think you know tech? 
-                          Join our Tech Quiz for a chance to showcase 
-                          your knowledge and compete for the top spot.
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
-                          Register Now
-                        </button>
-
-                        {/* <button className="product-slider__fav js-fav">
-                          <span className="heart"></span> ADD TO WISHLIST
-                        </button> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="product-slider__item swiper-slide"
-                  data-target="img3"
-                >
-                  <div className="product-slider__card">
-                    <img
-                      src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-3-bg.webp"
-                      alt="star wars"
-                      className="product-slider__cover"
-                    />
-                    <div className="product-slider__content">
-                      <h1 className="product-slider__title">
-                        Robotics
-                      </h1>
-                      <span className="product-slider__price">
-                        Date
-                      </span>
-                      <div className="product-ctr">
-                        <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
-                        </div>
-
-                        <span className="hr-vertical"></span>
-
-                        <div className="product-inf">
-                          <span className="product-inf__title">
-                          Get ready for the ultimate robotics face-off!
-                          Watch as teams bring their robots to life 
-                          and compete in thrilling challenges.
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
-                          Register Now
-                        </button>
-
-                        {/* <button className="product-slider__fav js-fav">
-                          <span className="heart"></span> ADD TO WISHLIST
-                        </button> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    
               </div>
             </div>
           </div>
