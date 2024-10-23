@@ -4,41 +4,41 @@ import Card from './Card'; // Ensure this path matches where your Card component
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Deepanika Gupta',
+        profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://www.instagram.com/deepanikagupta/?utm_source=ig_web_button_share_sheet', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Hamley Doe',
-        profession: 'Front-End Developer',
+        name: 'Vamika Chaturvedi',
+        profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://www.instagram.com/vamzz_22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Jules',
-        profession: 'UI/UX Designer',
+        name: 'Vadlamuru Pranavi',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://www.instagram.com/pranavi_varma___/?utm_source=ig_web_button_share_sheet', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'K.Shreeja',
+        profession: 'Core Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://www.instagram.com/shreeja_reddy21?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
