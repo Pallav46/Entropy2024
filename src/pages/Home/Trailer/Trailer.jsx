@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import video1 from '../../../../public/assets/video/Render.mp4';
-import video2 from '../../../../public/assets/video/Sequence 01.mp4';
+import video1 from '../../../../public/assets/video/Rendr.mp4';
+import video2 from '../../../../public/assets/video/Sequence_01.mp4';
 import video3 from '../../../../public/assets/video/Technology Loop Background.mp4';
 import './Trailer.css'
 
 const Trailer = () => {
     useEffect(() => {
         const mediaUrls = [
-            video1,
             video2,
+            video1,
             video3
         ];
         
