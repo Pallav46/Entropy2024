@@ -10,6 +10,7 @@ const EventManagement = lazy(() => import('./pages/TeamPage/SubTeams/EventManage
 const DesignTeam = lazy(() => import('./pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx'));
 const Sponsorship = lazy(() => import('./pages/TeamPage/SubTeams/Sponsorship/Sponsorship.jsx'));
 const FacultyCoordinators = lazy(() => import('./pages/TeamPage/SubTeams/FacultyCoordinators/FacultyCoordinators.jsx'));
+const PublicRelations = lazy(() => import('./pages/TeamPage/SubTeams/PublicRelations/PublicRelations.jsx'));
 const Events = lazy(() => import('./pages/Events/Events.jsx'));
 const Team = lazy(() => import('./pages/Team/Team.jsx'));
 const Sponsors = lazy(() => import('./pages/Sponsors/Sponsors.jsx'));
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: '/teams/faculty',
     element: <Suspense fallback={<div><Loader/></div>}><FacultyCoordinators /></Suspense>,
+  },
+  {
+    path: '/teams/publicRelations',
+    element: <Suspense fallback={<div><Loader/></div>}><PublicRelations /></Suspense>,
   },
   {
     path: '/gallery',
