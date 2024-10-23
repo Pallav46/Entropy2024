@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import img from '../../../../public/assets/Events/img/img1.jpg'
+// import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay1.css';
 
 const Laptop_eventsDay1 = () => {
@@ -302,7 +302,7 @@ const Laptop_eventsDay1 = () => {
               </button>
             </div>
             <div id="heroright">
-              <div className="elem2">
+              {/*<div className="elem2">
                 <p className='textR1'>CodeThrill 7.0</p>
                 <p className='textR1'>Tech Exhibition</p>
                 <p className='textR1'>Game Room</p>
@@ -310,9 +310,9 @@ const Laptop_eventsDay1 = () => {
                 <p className='textR1'>E-Sports</p>
                 <p className='textR1'>Tech Quiz</p>
                 <p className='textR1'>Robotics</p>
-              </div>
+              </div>*/}
 
-              <div className="imgElem">
+              {/*<div className="imgElem">
                 <div id="imagediv">
                   <img src={img} alt="" />
                 </div>
@@ -334,7 +334,7 @@ const Laptop_eventsDay1 = () => {
                 <div id="imagediv">
                   <img src={img} alt="" />
                 </div>
-              </div>
+              </div>*/}
 
               <div className="elem3">
                 <p className='textR2'>
@@ -375,6 +375,7 @@ const Laptop_eventsDay1 = () => {
                 </p>
               </div>
 
+              {/* <div className="elem4">
               <div className="elem4">
                 <p className='textR3'>
                 It's time to code, compete, and conquer!
@@ -397,7 +398,8 @@ const Laptop_eventsDay1 = () => {
                 <p className='textR3'>
                 Who will rise to the top?
                 </p>
-              </div>
+              </div>*/}
+
               <button className='register'>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>

@@ -4,8 +4,8 @@ import Card from './Card'; // Ensure this path matches where your Card component
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Pallav Kumar',
+        profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -14,8 +14,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Hamley Doe',
-        profession: 'Front-End Developer',
+        name: 'Piyush Upadhyay',
+        profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -24,8 +24,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Jules',
-        profession: 'UI/UX Designer',
+        name: 'Deepanshu Singh',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -34,8 +34,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'Dipanshu Singh',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -44,8 +44,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Nishant Prabhat',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -54,8 +54,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'Prithvi Raj',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -64,8 +64,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Shambhavi Mishra',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -74,8 +74,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
+        name: 'Shouraya Mishra',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -84,65 +84,14 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
+        name: 'Shreya Sarnagar',
+        profession: 'Team Member',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-
 ];
 
 const CardList = () => {

@@ -110,10 +110,10 @@ const Events = () => {
         <div className="stars3"></div>
       </div>
       <section className="timeline-section">
-        <h1 className="text-white">Events</h1>
+        <h1 className="text-white"></h1>
         <Template name="Pre Events"/>
-        <Template name="Day 1"/>
-        <Template name="Day 2"/>
+        <Template name="Day 1"  url="/events/day1"/>
+        <Template name="Day 2"  url="/events/day2"/>
       </section>
     </div>
   );

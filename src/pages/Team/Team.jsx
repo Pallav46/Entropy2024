@@ -56,7 +56,7 @@ const Team = () => {
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
-              <div className="blog-slider__title">Faculty Coordinators</div>
+              <div className="blog-slider__title">SGC Members</div>
               <div className="blog-slider__text">
                 The guiding lights of our fest! They’re the mentors who ensure
                 everything runs smoothly, providing support and guidance to make

@@ -66,6 +66,10 @@
   flex: 0 0 auto;
 }
 
+.post:hover{
+  box-shadow: 1px 1px 1px white;
+}
+
 /* POST IMAGE */
 .post-img {
   width: 100%;
@@ -80,20 +84,25 @@
 
 /* POST BODY LAYOUT */
 .post-body {
+  /* width: 300vw; */
   display: grid;
   grid-template-columns: 15% 60% 20%;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   gap: 8px;
   padding: 12px 0;
   cursor: default;
 }
 
 /* POST NAME */
-.post-name {
-  font-size: 0.8rem;
+.post-detail .post-name {
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2px;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-overflow: ellipsis;
   white-space: nowrap;
 }

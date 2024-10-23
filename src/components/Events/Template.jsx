@@ -1,10 +1,22 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
-const Template = () => {
+const Template = (props) => {
+
+  const navigate = useNavigate();
+
+  const navigateToEvents = () => {
+    if(props.url){
+      navigate(props.url);
+    }
+
+  }
+
+  
   return (
         <div className="recipe-container">
-          <h1>The Dessert Recipes</h1>
-          <div className="swiper">
+          <h1>{props.name}</h1>
+          <div className="swiper" onClick={navigateToEvents}>
             <div className="swiper-wrapper">
               <div className="swiper-slide post">
                 <img
@@ -14,14 +26,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/f9d29d0e-f03b-4990-9bc5-ade57a276b41"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Homemade Ice Cream</h2>
-                    <p className="post-author">Evelyn Taylor</p>
+                    {/* <p className="post-author">Evelyn Taylor</p> */}
                   </div>
 
                   <div className="post-actions">
@@ -88,14 +100,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3c7b6ef9-cd2d-4d70-819a-2aa9c2309083"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Pancake</h2>
-                    <p className="post-author">Ethan Wilson</p>
+                    {/* <p className="post-author">Ethan Wilson</p> */}
                   </div>
 
                   <div className="post-actions">
@@ -162,14 +174,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/01332597-5aeb-483b-b682-9379c6ed8f14"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Macaron</h2>
-                    <p className="post-author">Bella Smith</p>
+                    {/* <p className="post-author">Bella Smith</p> */}
                   </div>
 
                   <div className="post-actions">
@@ -236,14 +248,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b9f5ef94-c2c9-4792-b7a3-593d393f2c84"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Cheesecake</h2>
-                    <p className="post-author">Mia Dixon</p>
+                    {/* <p className="post-author">Mia Dixon</p> */}
                   </div>
 
                   <div className="post-actions">
@@ -310,14 +322,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/58f9319c-78cf-444b-ba71-701c506c2dd3"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Donuts</h2>
-                    <p className="post-author">Olivia Martinez</p>
+                    {/* <p className="post-author">Olivia Martinez</p> */}
                   </div>
 
                   <div className="post-actions">
@@ -384,14 +396,14 @@ const Template = () => {
                 />
 
                 <div className="post-body">
-                  <img
+                  {/* <img
                     className="post-avatar"
                     src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/24ca2eec-a5ba-4c32-907c-ffffca203e1c"
                     alt="avatar"
-                  />
+                  /> */}
                   <div className="post-detail">
                     <h2 className="post-name">Rolo Cheesecake</h2>
-                    <p className="post-author">Benjamin Clark</p>
+                    {/* <p className="post-author">Benjamin Clark</p> */}
                   </div>
 
                   <div className="post-actions">
