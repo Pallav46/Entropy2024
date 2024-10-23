@@ -4,7 +4,87 @@ import Card from './Card'; // Ensure this path matches where your Card component
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
+        name: 'Shriram Dinkar',
+        profession: 'Team Head',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Harsh Mishra',
+        profession: 'Team Head',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Anirudha Laxmikant Gade',
+        profession: 'Team Head',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Aditya Bhatt',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Ratna Jaiswal',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Kavita Yadav',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Anupam Tripathi',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Chiranjeet Saha',
+        profession: 'Core Team Member',
+        socialLinks: [
+            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
+            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
+            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
+        ],
+    },
+    {
+        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        name: 'Harshit Jain',
         profession: 'UI/UX Designer',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
@@ -14,7 +94,7 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Hamley Doe',
+        name: 'XYZ',
         profession: 'Front-End Developer',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
@@ -24,87 +104,7 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
-        profession: 'UI/UX Designer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'John Doe',
-        profession: 'Front-End Developer',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Emily Jules',
+        name: 'XYZ',
         profession: 'UI/UX Designer',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
