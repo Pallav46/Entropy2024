@@ -124,7 +124,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   :root {
     --h-text: 2rem;
     --p-text: 2.5rem;
