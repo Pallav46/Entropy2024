@@ -64,9 +64,8 @@ img {
 }
 
 .card__img {
-  width: 9849793px;
-  height: 100px;
-  border-radius: 10020px;
+  width: 96px;
+  border-radius: 50%;
 }
 
 .card__border {
