@@ -1,11 +1,10 @@
-import React from 'react';
 import Card from './Card'; // Ensure this path matches where your Card component is located
 
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Pallav Kumar',
-        profession: 'Team Head',
+        name: 'Dr. Kaustuv Nag',
+        profession: 'Faculty Coordinator',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -14,8 +13,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Piyush Upadhyay',
-        profession: 'Team Head',
+        name: 'Dr. Rakesh Matam',
+        profession: 'Faculty Coordinator',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -24,8 +23,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Deepanshu Singh',
-        profession: 'Team Member',
+        name: 'Naman Jain',
+        profession: 'General Secretary Technical',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -34,8 +33,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Dipanshu Singh',
-        profession: 'Team Member',
+        name: 'Sai Yashwant Gantasala',
+        profession: 'President',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -44,54 +43,15 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Nishant Prabhat',
-        profession: 'Team Member',
+        name: 'Siddharth Singh',
+        profession: 'Vice President',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
             { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
         ],
     },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Prithvi Raj',
-        profession: 'Team Member',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Shambhavi Mishra',
-        profession: 'Team Member',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Shouraya Mishra',
-        profession: 'Team Member',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
-    {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-        name: 'Shreya Sarnagar',
-        profession: 'Team Member',
-        socialLinks: [
-            { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
-            { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
-            { url: 'https://twitter.com/', icon: 'ri-twitter-line' },
-        ],
-    },
+    
 ];
 
 const CardList = () => {
