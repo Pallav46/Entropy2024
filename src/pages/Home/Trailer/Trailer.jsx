@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import video1 from '../../../../public/assets/video/Rendr.mp4';
-import video2 from '../../../../public/assets/video/Sequence_01.mp4';
-import video3 from '../../../../public/assets/video/Technology Loop Background.mp4';
+import video1 from '/assets/video/Rendr.mp4';
+import video2 from '/assets/video/Sequence_01.mp4';
+import video3 from '/assets/video/Technology Loop Background.mp4';
 import './Trailer.css'
 
 const Trailer = () => {
