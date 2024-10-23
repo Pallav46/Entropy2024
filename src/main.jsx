@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Loader from './components/Loader/Loader.jsx';
 
+// Lazy-loaded components
 const WebAndCreatives = lazy(() => import('./pages/TeamPage/SubTeams/WebAndCreatives/WebAndCreatives.jsx'));
 const EventManagement = lazy(() => import('./pages/TeamPage/SubTeams/EventManagement/EventManagement.jsx'));
 const DesignTeam = lazy(() => import('./pages/TeamPage/SubTeams/DesignTeam/DesignTeam.jsx'));
@@ -17,55 +18,104 @@ const EventsDay1 = lazy(() => import('./pages/Events/Day 1/EventsDay1.jsx'));
 const EventsDay2 = lazy(() => import('./pages/Events/Day 2/EventsDay2.jsx'));
 const Gallery = lazy(() => import('./pages/PastEvents/gallery.jsx'));
 
+// Define the router with Suspense and Loader
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <App />
+      </Suspense>
+    ),
   },
   {
     path: '/teams',
-    element: <Suspense fallback={<div><Loader/></div>}><Team /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Team />
+      </Suspense>
+    ),
   },
   {
     path: '/teams/webAndCreatives',
-    element: <Suspense fallback={<div><Loader/></div>}><WebAndCreatives /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <WebAndCreatives />
+      </Suspense>
+    ),
   },
   {
     path: '/teams/eventManagement',
-    element: <Suspense fallback={<div><Loader/></div>}><EventManagement /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <EventManagement />
+      </Suspense>
+    ),
   },
   {
     path: '/teams/design',
-    element: <Suspense fallback={<div><Loader/></div>}><DesignTeam /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <DesignTeam />
+      </Suspense>
+    ),
   },
   {
     path: '/teams/sponsorship',
-    element: <Suspense fallback={<div><Loader/></div>}><Sponsorship /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Sponsorship />
+      </Suspense>
+    ),
   },
   {
     path: '/teams/faculty',
-    element: <Suspense fallback={<div><Loader/></div>}><FacultyCoordinators /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <FacultyCoordinators />
+      </Suspense>
+    ),
   },
   {
     path: '/gallery',
-    element: <Suspense fallback={<div><Loader/></div>}><Gallery /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Gallery />
+      </Suspense>
+    ),
   },
   {
     path: '/events',
-    element: <Suspense fallback={<div><Loader/></div>}><Events /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Events />
+      </Suspense>
+    ),
   },
   {
     path: '/sponsors',
-    element: <Suspense fallback={<div><Loader/></div>}><Sponsors /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Sponsors />
+      </Suspense>
+    ),
   },
   {
     path: '/events/day1',
-    element: <Suspense fallback={<div><Loader/></div>}><EventsDay1 /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <EventsDay1 />
+      </Suspense>
+    ),
   },
   {
     path: '/events/day2',
-    element: <Suspense fallback={<div><Loader/></div>}><EventsDay2 /></Suspense>,
-  }
+    element: (
+      <Suspense fallback={<Loader />}>
+        <EventsDay2 />
+      </Suspense>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

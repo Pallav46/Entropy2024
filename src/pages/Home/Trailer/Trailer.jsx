@@ -1,14 +1,15 @@
 import { useEffect } from "react";
+import video1 from '../../../../public/assets/video/Render.mp4';
+import video2 from '../../../../public/assets/video/Sequence 01.mp4';
+import video3 from '../../../../public/assets/video/Technology Loop Background.mp4';
 import './Trailer.css'
 
 const Trailer = () => {
     useEffect(() => {
         const mediaUrls = [
-            'https://assets.codepen.io/3421562/lavalamp.mp4',
-            'https://assets.codepen.io/3421562/onepunch.mp4',
-            'https://assets.codepen.io/3421562/spiderverse.mp4',
-            'https://assets.codepen.io/3421562/PlayStation+5++Startup.mp4',
-            '',
+            video1,
+            video2,
+            video3
         ];
         
         let currentIndex = 0;

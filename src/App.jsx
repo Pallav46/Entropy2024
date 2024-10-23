@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Trailer from "./pages/Home/Trailer/Trailer";
 import Cursor from "./pages/Home/Cursor/Cursor";
 import Hero from "./pages/Home/Hero/Hero";
