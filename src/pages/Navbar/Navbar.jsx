@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import CSS for styling
+import Logo from '/assets/logo/logo.png'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // State to track if the menu is open
@@ -11,7 +12,11 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbar-title">Entropy 2K24</div>
+            {/* <div className="navbar-title">{Logo}</div> */}
+            <div className="navbar-title">
+    <img src={Logo} alt="Logo" className="navbar-logo" />
+</div>
+
             <div className="navbar-toggle" onClick={toggleMenu}>
                 {isOpen ? (
                     <span className="navbar-icon-close">✖</span> // Close icon
