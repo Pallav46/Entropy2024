@@ -28,7 +28,7 @@ const ScrambleText = ({ children }) => {
           .join("")
       );
 
-      iteration += 0.085;
+      iteration += 1/6;
       if (iteration >= originalText.length) {
         setText(originalText);
         setScrambling(false); // Stop scrambling after complete
