@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import './Laptop_eventsDay1.css';
+import Navbar from '../../Navbar/Navbar';
 
 const Laptop_eventsDay1 = () => {
   useEffect(() => {
@@ -237,6 +238,7 @@ const Laptop_eventsDay1 = () => {
 
   return (
     <div id="main">
+      <Navbar/>
       <div id="back">
         <img src="/assets/laptop_photos/quiz.jpg" alt="" />
         <img src="/assets/laptop_photos/cyberhunt.png" alt="" />
@@ -246,17 +248,7 @@ const Laptop_eventsDay1 = () => {
       </div>
       <div id="top">
         <div id="workingarea"> 
-          <div id="nav">
-            <div id="nleft">
-              <img src="logo.png" alt="logo" />
-              <a href="/">home</a>
-              <a href="/events">events</a>
-            </div>
-            <div id="nright">
-              <a href="/teams">team</a>
-              <a href="/sponsors">sponsors</a>
-            </div>
-          </div>
+          
           <div id="hero">
             <div id="heroleft">
               <div className="elem">
@@ -282,11 +274,11 @@ const Laptop_eventsDay1 = () => {
               </div>
 
               <button className='register'>
+                <a href="https://forms.gle/DUDXkhFmKmCnPTqs8" className='registerLink'>Register Now</a>
+                <a href="https://forms.gle/UiNQqJRmaoHEXcQv5" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
-                <a href="#" className='registerLink'>Register Now</a>
-                <a href="#" className='registerLink'>Register Now</a>
-                <a href="#" className='registerLink'>Register Now</a>
-                <a href="#" className='registerLink'>Register Now</a>
+                <a href="https://forms.gle/DUDXkhFmKmCnPTqs8" className='registerLink'>Register Now</a>
+                <a href="https://forms.gle/KR7BdRgnxs2gZmn6A" className='registerLink'>Register Now</a>
               </button>
             </div>
             <div id="heroright">

@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay2.css';
+import Navbar from '../../Navbar/Navbar';
+import '../Day 1/Laptop_eventsDay1.css'
 
 const Laptop_eventsDay2 = () => {
   useEffect(() => {
@@ -238,6 +240,7 @@ const Laptop_eventsDay2 = () => {
 
   return (
     <div id="main">
+      <Navbar/>
       <div id="back">
         <img src="/assets/laptop_photos/gameroom.jpg" alt="" />
         <img src="/assets/laptop_photos/robotics.jpg" alt="" />
@@ -247,17 +250,6 @@ const Laptop_eventsDay2 = () => {
       </div>
       <div id="top">
         <div id="workingarea">
-          <div id="nav"> 
-          <div id="nleft">
-              <img src="logo.png" alt="logo" />
-              <a href="/">home</a>
-              <a href="/events">events</a>
-            </div>
-            <div id="nright">
-              <a href="/teams">team</a>
-              <a href="/sponsors">sponsors</a>
-            </div>
-          </div>
           <div id="hero">
             <div id="heroleft">
               <div className="elem">
@@ -285,7 +277,7 @@ const Laptop_eventsDay2 = () => {
               </div>
 
               <button className='register'>
-                <a href="#" className='registerLink'>Register Now</a>
+                <a href="https://forms.gle/KR7BdRgnxs2gZmn6A" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
                 <a href="#" className='registerLink'>Register Now</a>
@@ -322,14 +314,12 @@ const Laptop_eventsDay2 = () => {
                 and race against the clock in CodeThrill 7.0. 
                 </p>
               </div>
-
-              
               <button className='register'>
-                <a href="#" className='registerLink'>Timeline</a>
-                <a href="#" className='registerLink'>Timeline</a>
-                <a href="#" className='registerLink'>Timeline</a>
-                <a href="#" className='registerLink'>Timeline</a>
-                <a href="#" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events/preEvents" className='registerLink'>Timeline</a>
               </button>
             </div>
           </div>

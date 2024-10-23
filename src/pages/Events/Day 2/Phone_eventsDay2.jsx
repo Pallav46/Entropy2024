@@ -172,13 +172,12 @@ const Phone_eventDay2 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
-                          Register Now
+                        <button 
+                            className="product-slider__cart" 
+                            onClick={() => window.location.href = "https://forms.gle/KR7BdRgnxs2gZmn6A"}
+                          >
+                            Register Now
                         </button>
-
-                        {/* <button className="product-slider__fav js-fav">
-                          <span className="heart"></span> ADD TO WISHLIST
-                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -217,14 +216,14 @@ const Phone_eventDay2 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                        <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = ""}
+                        >
                           Register Now
                         </button>
-
-                        {/* <button className="product-slider__fav js-fav">
-                          <span className="heart"></span> ADD TO WISHLIST
-                        </button> */}
                       </div>
+
                     </div>
                   </div>
                 </div>

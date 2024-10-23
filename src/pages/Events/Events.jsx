@@ -3,9 +3,27 @@ import Swiper from "swiper";
 import "./Events.css";
 import Template from "../../components/Events/Template";
 import Navbar from "../Navbar/Navbar";
+import day1img1 from '/assets/Events/day1/e-sports.jpg';
+import day1img2 from '/assets/Events/day1/day1img2.jpg';
+import day1img3 from '/assets/Events/day1/day1img3.jpg';
+
+import day2img1 from '/assets/Events/day2/e-sports.jpg';
+import day2img2 from '/assets/Events/day2/day2img2.png';
+import day2img3 from '/assets/Events/day2/day2img3.jpg';
+
+
+
+
+
 const Events = () => {
   const postActionsControllersRef = useRef([]);
   const likeBtnsRef = useRef([]);
+  // make two array 1 with day1 images and 1 with day2 images
+  const day1Images = [day1img1, day1img2, day1img3];
+  const day2Images = [day2img1, day2img2, day2img3];
+
+  const day1Name = ["E-Sports", "TechSure Hunt", "Tech Quiz"];
+  const day2Name = ["E-Sports", "GFG FastTrack", "Robotics"];
 
   useEffect(() => {
     // Initialize Swiper
@@ -111,9 +129,9 @@ const Events = () => {
       </div>
       <section className="timeline-section">
         <h1 className="text-white"></h1>
-        <Template name="Pre Events"/>
-        <Template name="Day 1"  url="/events/day1"/>
-        <Template name="Day 2"  url="/events/day2"/>
+        {/* <Template name="Pre Events"/> */}
+        <Template name="Day 1 Events"  url="/events/day1" images={day1Images} eventName={day1Name}/>
+        <Template name="Day 2 Events"  url="/events/day2" images={day2Images} eventName={day2Name}/>
       </section>
     </div>
   );

@@ -178,7 +178,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                      <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/DUDXkhFmKmCnPTqs8"}
+                        >
                           Register Now
                         </button>
 
@@ -226,7 +229,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                      <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/UiNQqJRmaoHEXcQv5"}
+                        >
                           Register Now
                         </button>
 
@@ -274,7 +280,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                      <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "#"}
+                        >
                           Register Now
                         </button>
 
@@ -322,7 +331,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                      <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/DUDXkhFmKmCnPTqs8"}
+                        >
                           Register Now
                         </button>
 
@@ -371,7 +383,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                      <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/KR7BdRgnxs2gZmn6A"}
+                        >
                           Register Now
                         </button>
 
