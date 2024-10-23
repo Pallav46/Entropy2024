@@ -24,7 +24,7 @@ const CardComponent = ({ title, logoUrl}) => (
 );
 
 const images = [
-  "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+  "/public/sponsors/TS.jpg",
   "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
   "https://media.istockphoto.com/photos/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-picture-id1185953092?k=6&m=1185953092&s=612x612&w=0&h=SNiShskOfwQ7Sys5TX0eb5eBxHobktWUfZGrox5LMyk=",
   "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
@@ -46,7 +46,7 @@ const Slideshow = () => {
       id: 1,
       title: 'Title Sponsor',
       // subtitle: 'See how',
-      imageUrl:bgimg,
+      imageUrl:"/public/sponsors/TS.jpg",
       cards: [
         { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},
@@ -58,7 +58,7 @@ const Slideshow = () => {
       id: 2,
       title: 'Associate Sponsors',
       // subtitle: 'Learn more about',
-      imageUrl:bgimg,
+      imageUrl:"/public/sponsors/AS.jpg",
       cards: [
         { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},
@@ -70,7 +70,7 @@ const Slideshow = () => {
       id: 3,
       title: 'Gold Sponsors',
       // subtitle: 'Learn more about',
-      imageUrl:bgimg,
+      imageUrl:"/public/sponsors/GS.jpg",
       cards: [
         { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},
@@ -82,7 +82,7 @@ const Slideshow = () => {
       id: 4,
       title: 'Silver Sponsors',
       // subtitle: 'Learn more about',
-      imageUrl: bgimg,
+      imageUrl: "/public/sponsors/SS.jpg",
       cards: [
         { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},
@@ -94,7 +94,7 @@ const Slideshow = () => {
       id: 5,
       title: 'Bronze Sponsors',
       // subtitle: 'Learn more about',
-      imageUrl: bgimg,
+      imageUrl: "/public/sponsors/BS.jpg",
       cards: [
         { title: 'Indian Oil', logoUrl: indianOil},
         { title: 'SBI', logoUrl: sbi},

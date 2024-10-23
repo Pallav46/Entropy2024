@@ -112,7 +112,7 @@ const Team = () => {
             </div>
             <div className="blog-slider__content">
               <span className="blog-slider__code"></span>
-              <div className="blog-slider__title">Design Team</div>
+              <div className="blog-slider__title">Media and Publicity</div>
               <div className="blog-slider__text">
                 The artistic force behind the fest’s visual identity. They don’t
                 just create, they inspire!
@@ -155,7 +155,7 @@ const Team = () => {
                 gets the attention it deserves. If it’s in the news, they made
                 it happen!
               </div>
-              <a href="/teams/sponsorship">
+              <a href="/teams/publicRelations">
                 {/* <button className="glow-on-hover">Meet the Team</button> */}
                 <Button />
               </a>
