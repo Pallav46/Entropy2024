@@ -3,7 +3,7 @@ import Card from './Card'; // Ensure this path matches where your Card component
 
 const cardData = [
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/deepanika.JPG',
         name: 'Deepanika Gupta',
         profession: 'Team Head',
         socialLinks: [
@@ -13,7 +13,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/vamika.JPG',
         name: 'Vamika Chaturvedi',
         profession: 'Team Head',
         socialLinks: [
@@ -23,7 +23,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/pranavi.JPG',
         name: 'Vadlamuru Pranavi',
         profession: 'Core Team Member',
         socialLinks: [
@@ -33,7 +33,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/shreeja.JPG',
         name: 'K.Shreeja',
         profession: 'Core Team Member',
         socialLinks: [

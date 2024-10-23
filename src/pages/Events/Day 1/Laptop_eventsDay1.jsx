@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-// import img from '../../../../public/assets/Events/img/img1.jpg'
 import './Laptop_eventsDay1.css';
 
 const Laptop_eventsDay1 = () => {
@@ -239,14 +238,14 @@ const Laptop_eventsDay1 = () => {
   return (
     <div id="main">
       <div id="back">
-        <img src="/assets/Events/img/quiz.jpg" alt="" />
-        {/* techhunt */}
-        <img src="/assets/Events/img/hackathon.jpg" alt="" />
-        <img src="/assets/Events/img/quiz.jpg" alt="" />
-        <img src="/assets/Events/img/bgmi_valo.jpg" alt="" />
+        <img src="/assets/laptop_photos/quiz.jpg" alt="" />
+        <img src="/assets/laptop_photos/cyberhunt.png" alt="" />
+        <img src="/assets/laptop_photos/debuggers.png" alt="" />
+        <img src="/assets/laptop_photos/quiz.jpg" alt="" />
+        <img src="/assets/laptop_photos/bgmi_valo.jpg " alt="" />
       </div>
       <div id="top">
-        <div id="workingarea">
+        <div id="workingarea"> 
           <div id="nav">
             <div id="nleft">
               <img src="logo.png" alt="logo" />
@@ -291,39 +290,7 @@ const Laptop_eventsDay1 = () => {
               </button>
             </div>
             <div id="heroright">
-              {/*<div className="elem2">
-                <p className='textR1'>CodeThrill 7.0</p>
-                <p className='textR1'>Tech Exhibition</p>
-                <p className='textR1'>Game Room</p>
-                <p className='textR1'>Hackathon</p>
-                <p className='textR1'>E-Sports</p>
-                <p className='textR1'>Tech Quiz</p>
-                <p className='textR1'>Robotics</p>
-              </div>*/}
-
-              {/*<div className="imgElem">
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-              </div>*/}
+             
 
               <div className="elem3">
                 <p className='textR2'>
@@ -355,31 +322,6 @@ const Laptop_eventsDay1 = () => {
                 </p>
               </div>
 
-              {/* <div className="elem4">
-              <div className="elem4">
-                <p className='textR3'>
-                It's time to code, compete, and conquer!
-                </p>
-                <p className='textR3'>
-                Join us and be inspired by tomorrow’s tech today!
-                </p>
-                <p className='textR3'>
-                Let the good times roll!
-                </p>
-                <p className='textR3'>
-                Team up, solve cool problems, and make some awesome stuff.
-                </p>
-                <p className='textR3'>
-                Ready, set, game on!
-                </p>
-                <p className='textR3'>
-                It’s fun, it’s challenging, and it’s your chance to shine.
-                </p>
-                <p className='textR3'>
-                Who will rise to the top?
-                </p>
-              </div>*/}
-
               <button className='register'>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
                 <a href="/events/preEvents" className='registerLink'>Timeline</a>
@@ -396,3 +338,4 @@ const Laptop_eventsDay1 = () => {
 };
 
 export default Laptop_eventsDay1;
+  

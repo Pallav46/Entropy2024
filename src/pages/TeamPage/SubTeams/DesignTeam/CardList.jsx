@@ -3,7 +3,7 @@ import Card from './Card'; // Ensure this path matches where your Card component
 
 const cardData = [
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/pratap.JPG',
         name: 'Aditya Pratap',
         profession: 'Team Head',
         socialLinks: [
@@ -13,7 +13,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/prince.jpeg',
         name: 'Prince Kumar',
         profession: 'Team Head',
         socialLinks: [
@@ -23,7 +23,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/ipshita.JPG',
         name: 'Ipshita Ranjan',
         profession: 'Core Team Member',
         socialLinks: [
@@ -33,7 +33,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/pranay.JPG',
         name: 'Pranay Siwach',
         profession: 'Core Team Member',
         socialLinks: [
@@ -43,7 +43,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/adarsh.JPG',
         name: 'Talabattula Adarsh',
         profession: 'Core Team Member',
         socialLinks: [
@@ -53,7 +53,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/vardhan.JPG',
         name: 'Mallena Vardhan',
         profession: 'Core Team Member',
         socialLinks: [

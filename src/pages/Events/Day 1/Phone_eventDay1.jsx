@@ -74,39 +74,52 @@ const Phone_eventDay1 = () => {
           <div className="content">
             <div className="bg-shape">
               {/* <img
-                // src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
+                src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
                 alt=""
               /> */}
             </div>
 
+              {/* cyberhunt */}
             <div className="product-img">
               <div className="product-img__item" id="img1">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-1.webp"
+                  src="/assets/phone_photos/cyberhunt.png"
                   alt="star wars"
                   className="product-img__img"
-                />
+                /> 
               </div>
 
+              {/* debuggers */}
               <div className="product-img__item" id="img2">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-2.webp"
+                  src="/assets/phone_photos/debuggers.png"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
 
+
+              {/* quiz - 2*/}
               <div className="product-img__item" id="img3">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405218/starwars/item-3.webp"
+                  src="/assets/phone_photos/quiz.png"
+                  alt="star wars"
+                  className="product-img__img"
+                />
+              </div>
+                {/*  */}
+              <div className="product-img__item" id="img4">
+                <img
+                  src="/assets/phone_photos/bgmi.png"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
 
-              <div className="product-img__item" id="img4">
+                {/* quiz round 1 */}
+              <div className="product-img__item" id="img5">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-4.webp"
+                  src="/assets/phone_photos/quiz.png"
                   alt="star wars"
                   className="product-img__img"
                 />
@@ -131,7 +144,7 @@ const Phone_eventDay1 = () => {
               <div className="product-slider__wrp swiper-wrapper">
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img4"
+                  data-target="img5"
                 >
                   <div className="product-slider__card">
                     <img
@@ -323,7 +336,7 @@ const Phone_eventDay1 = () => {
 
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img2"
+                  data-target="img4"
                 >
                   <div className="product-slider__card">
                     <img
@@ -370,9 +383,6 @@ const Phone_eventDay1 = () => {
                   </div>
                 </div>
 
-                
-
-    
               </div>
             </div>
           </div>

@@ -239,15 +239,15 @@ const Laptop_eventsDay2 = () => {
   return (
     <div id="main">
       <div id="back">
-        <img src="/assets/Events/img/bgmi_valo.jpg" alt="" />
-        <img src="/assets/Events/img/robotics.jpg" alt="" />
-        <img src="/assets/Events/img/hackathon.jpg" alt="" />
-        <img src="/assets/Events/img/robotics.jpg" alt="" />
-        <img src="/assets/Events/img/coding.jpg" alt="" />
+        <img src="/assets/laptop_photos/gameroom.jpg" alt="" />
+        <img src="/assets/laptop_photos/robotics.jpg" alt="" />
+        <img src="/assets/laptop_photos/hackathon.jpg" alt="" />
+        <img src="/assets/laptop_photos/fastrack.png" alt="" />
+        <img src="/assets/laptop_photos/coding.jpg" alt="" />
       </div>
       <div id="top">
         <div id="workingarea">
-          <div id="nav">
+          <div id="nav"> 
           <div id="nleft">
               <img src="logo.png" alt="logo" />
               <a href="/">home</a>
@@ -293,32 +293,7 @@ const Laptop_eventsDay2 = () => {
               </button>
             </div>
             <div id="heroright">
-              {/* <div className="elem2">
-                <p className='textR1'>Lorem ipsum dolor sit amet.</p>
-                <p className='textR1'>tingting.</p>
-                <p className='textR1'>dodo.</p>
-                <p className='textR1'>bingbing.</p>
-                <p className='textR1'>Lorem ipsum dt.</p>
-              </div> */}
-
-              {/* <div className="imgElem">
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-                <div id="imagediv">
-                  <img src={img} alt="" />
-                </div>
-              </div> */}
-
+              
               <div className="elem3">
               <p className='textR2'>
                 Gear up for the ultimate esports showdown!
@@ -348,33 +323,7 @@ const Laptop_eventsDay2 = () => {
                 </p>
               </div>
 
-              {/* <div className="elem4">
-                <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
-                </p>
-                <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
-                </p>
-                <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
-                </p>
-                <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
-                </p>
-                <p className='textR3'>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure
-                  itaque nihil provident, voluptate hic quae vero. Ratione
-                  corporis eligendi ullam necessitatibus neque dolorem.
-                </p>
-              </div> */}
+              
               <button className='register'>
                 <a href="#" className='registerLink'>Timeline</a>
                 <a href="#" className='registerLink'>Timeline</a>

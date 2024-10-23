@@ -71,24 +71,24 @@ const Phone_eventDay2 = () => {
         <div className="wrapper">
           <div className="content">
             <div className="bg-shape">
-              <img
+              {/* <img
                 src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
                 alt=""
-              />
+              /> */}
             </div>
 
+              
             <div className="product-img">
-              <div className="product-img__item" id="img1">
+            <div className="product-img__item" id="img1">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-1.webp"
+                  src="/assets/phone_photos/bgmi.png"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
-
               <div className="product-img__item" id="img2">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-2.webp"
+                  src="/assets/phone_photos/fastrack.png"
                   alt="star wars"
                   className="product-img__img"
                 />
@@ -96,7 +96,7 @@ const Phone_eventDay2 = () => {
 
               <div className="product-img__item" id="img3">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405218/starwars/item-3.webp"
+                  src="/assets/phone_photos/debuggers.png"
                   alt="star wars"
                   className="product-img__img"
                 />
@@ -104,11 +104,21 @@ const Phone_eventDay2 = () => {
 
               <div className="product-img__item" id="img4">
                 <img
-                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-4.webp"
+                  src="/assets/phone_photos/fastrack.png"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
+
+              <div className="product-img__item" id="img5">
+                <img
+                  src="/assets/phone_photos/gfg.png"
+                  alt="star wars"
+                  className="product-img__img"
+                />
+              </div>
+
+              
             </div>
 
             <div className="product-slider">
@@ -130,7 +140,7 @@ const Phone_eventDay2 = () => {
               <div className="product-slider__wrp swiper-wrapper">
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img4"
+                  data-target="img1"
                 >
                   <div className="product-slider__card">
                     <img
@@ -140,7 +150,7 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        EVENT 1
+                        bgmi
                       </h1>
                       <span className="product-slider__price">
                         Date
@@ -175,7 +185,7 @@ const Phone_eventDay2 = () => {
                 </div>
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img1"
+                  data-target="img2"
                 >
                   <div className="product-slider__card">
                     <img
@@ -185,7 +195,52 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        EVENT 2
+                        fastrack - 1
+                      </h1>
+                      <span className="product-slider__price">
+                        Date
+                      </span>
+                      <div className="product-ctr">
+                        <div className="product-labels">
+                          <div className="product-labels__title">
+                            Venue
+                          </div>
+                        </div>
+
+                        <span className="hr-vertical"></span>
+
+                        <div className="product-inf">
+                          <span className="product-inf__title">
+                            Details
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="product-slider__bottom">
+                        <button className="product-slider__cart">
+                          Register Now
+                        </button>
+
+                        {/* <button className="product-slider__fav js-fav">
+                          <span className="heart"></span> ADD TO WISHLIST
+                        </button> */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="product-slider__item swiper-slide"
+                  data-target="img3"
+                >
+                  <div className="product-slider__card">
+                    <img
+                      src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405222/starwars/item-1-bg.webp"
+                      alt="star wars"
+                      className="product-slider__cover"
+                    />
+                    <div className="product-slider__content">
+                      <h1 className="product-slider__title">
+                        debuggers
                       </h1>
                       <span className="product-slider__price">
                         Date
@@ -221,7 +276,7 @@ const Phone_eventDay2 = () => {
 
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img2"
+                  data-target="img4"
                 >
                   <div className="product-slider__card">
                     <img
@@ -231,7 +286,7 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        EVENT 3
+                        fastrack- 2
                       </h1>
                       <span className="product-slider__price">
                         Date
@@ -267,7 +322,7 @@ const Phone_eventDay2 = () => {
 
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img3"
+                  data-target="img5"
                 >
                   <div className="product-slider__card">
                     <img
@@ -277,7 +332,7 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        EVENT 4
+                        codethrill
                       </h1>
                       <span className="product-slider__price">
                         Date
@@ -326,6 +381,6 @@ const Phone_eventDay2 = () => {
       </div>
     </>
   );
-};
+}; 
 
 export default Phone_eventDay2;

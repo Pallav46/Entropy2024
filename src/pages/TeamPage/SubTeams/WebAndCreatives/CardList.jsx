@@ -3,7 +3,7 @@ import Card from './Card'; // Ensure this path matches where your Card component
 
 const cardData = [
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/pallav.JPG',
         name: 'Pallav Kumar',
         profession: 'Team Head',
         socialLinks: [
@@ -13,7 +13,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/piyush.JPG',
         name: 'Piyush Upadhyay',
         profession: 'Team Head',
         socialLinks: [
@@ -23,7 +23,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/deepanshu.JPG',
         name: 'Deepanshu Singh',
         profession: 'Team Member',
         socialLinks: [
@@ -43,7 +43,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/nishant.JPG',
         name: 'Nishant Prabhat',
         profession: 'Team Member',
         socialLinks: [
@@ -53,7 +53,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/prithvi.JPG',
         name: 'Prithvi Raj',
         profession: 'Team Member',
         socialLinks: [
@@ -63,7 +63,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/shambhavi.JPG',
         name: 'Shambhavi Mishra',
         profession: 'Team Member',
         socialLinks: [
@@ -73,7 +73,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/shouraya.JPG',
         name: 'Shouraya Mishra',
         profession: 'Team Member',
         socialLinks: [
@@ -83,7 +83,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_non_heads/shreya.JPG',
         name: 'Shreya Sarnagar',
         profession: 'Team Member',
         socialLinks: [
