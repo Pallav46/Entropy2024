@@ -7,7 +7,7 @@ const Navbar = () => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 9999);
+      setIsLargeScreen(window.innerWidth > 1044);
     };
 
     window.addEventListener('resize', handleResize);
