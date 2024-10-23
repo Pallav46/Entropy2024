@@ -372,7 +372,7 @@ const Slideshow = () => {
         </symbol>
       </svg>
       </section>
-      <Banner images= {images} speed={5000} />
+      {/* <Banner images= {images} speed={5000} /> */}
       
     </div>
     </>
