@@ -1,38 +1,35 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import CSS for styling
+import Logo from '/assets/logo/logo.png'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // State to track if the menu is open
-    const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 1044);
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 1044);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
     // Function to toggle the menu
     const toggleMenu = () => {
-        isLargeScreen ? setIsOpen(false) : setIsOpen(!isOpen);
+        setIsOpen(!isOpen); // Toggle the menu on any screen size
     };
 
     return (
-        <nav className="nav_navbar">
-            <div className="nav_menu-toggle" onClick={toggleMenu}>
-                {isOpen & !isLargeScreen? (
-                    <span className="nav_bx-x">✖</span> // Close icon
+        <nav className="navbar">
+            {/* <div className="navbar-title">{Logo}</div> */}
+            <div className="navbar-title">
+    <img src={Logo} alt="Logo" className="navbar-logo" />
+</div>
+
+            <div className="navbar-toggle" onClick={toggleMenu}>
+                {isOpen ? (
+                    <span className="navbar-icon-close">✖</span> // Close icon
                 ) : (
-                    <span className="nav_bx-menu">☰</span> // Menu icon
+                    <span className="navbar-icon-open">☰</span> // Hamburger icon
                 )}
             </div>
-            <div className={`nav_nav-links ${isOpen || isLargeScreen ? 'nav_show-navbar' : ''}`}>
-                <a className='nav-a' href="/">Home</a>
-                <a className='nav-a' href="/teams">Team</a>
-                <a className='nav-a' href="/events">Events</a>
-                <a className='nav-a' href="/sponsors">Sponsor</a>
+            <div className={`navbar-links ${isOpen ? 'navbar-show' : ''}`}>
+                <a href="/" className="navbar-link">Home</a>
+                <a href="/teams" className="navbar-link">Team</a>
+                <a href="/events" className="navbar-link">Events</a>
+                <a href="/gallery" className="navbar-link">Gallery</a>
+                <a href="/sponsors" className="navbar-link">Sponsors</a>
             </div>
         </nav>
     );

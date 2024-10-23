@@ -38,8 +38,14 @@
   color: #fff;
   font-size: 8em;
   position: absolute;
-  transform: translate(-50%, -50%);
+  top: 0; /* Align to the top of the viewport */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset to center based on its own width */
+  width: auto; /* Adjust width if needed */
+  text-align: center; /* Center text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
+
 
 .gli-content .gli-h1:nth-child(2) {
   color: #c19bf5;
