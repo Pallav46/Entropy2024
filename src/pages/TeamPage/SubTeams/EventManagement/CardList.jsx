@@ -4,11 +4,7 @@ import Card from './Card'; // Ensure this path matches where your Card component
 const cardData = [
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-<<<<<<< HEAD
-        name: 'Girish',
-=======
         name: 'Sheshagiri Sampath Girish Vardhan',
->>>>>>> cb604f9b2f8ded18651b91fb9358aae5a2b03467
         profession: 'Team Head',
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
@@ -18,10 +14,6 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-<<<<<<< HEAD
-        name: 'Shourya Mishra',
-        profession: 'Team Head',
-=======
         name: 'Shouraya Mishra',
         profession: 'Team Head',
         socialLinks: [
@@ -54,7 +46,6 @@ const cardData = [
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
         name: 'Debrup Das',
         profession: 'Core Team Member',
->>>>>>> cb604f9b2f8ded18651b91fb9358aae5a2b03467
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -63,10 +54,6 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-<<<<<<< HEAD
-        name: 'Aditya',
-        profession: 'Team Member',
-=======
         name: 'Shambhavi Mishra',
         profession: 'Core Team Member',
         socialLinks: [
@@ -159,7 +146,6 @@ const cardData = [
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
         name: 'Anurag Sahoo',
         profession: 'Core Team Member',
->>>>>>> cb604f9b2f8ded18651b91fb9358aae5a2b03467
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/', icon: 'ri-instagram-line' },
@@ -168,13 +154,8 @@ const cardData = [
     },
     {
         image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
-<<<<<<< HEAD
-        name: 'Agnidipto',
-        profession: 'Team Member',
-=======
         name: 'Samadrita Mondal',
         profession: 'Core Team Member',
->>>>>>> cb604f9b2f8ded18651b91fb9358aae5a2b03467
         socialLinks: [
             { url: 'https://www.facebook.com/', icon: 'ri-facebook-line' },
             { url: 'https://www.instagram.com/samadrita.30?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', icon: 'ri-instagram-line' },
