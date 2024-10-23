@@ -6,11 +6,18 @@
   background-color: none; /* Navbar background color */
   color: white;
   display: flex;
-  justify-content: center; /* Center the navbar content horizontally */
-  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 1000;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 1.5rem; /* Ensure the title stays on the left */
 }
 
 .navbar-toggle {
@@ -27,12 +34,13 @@
   top: 60px; /* Adjust based on navbar height */
   right: 0;
   width: 100%;
-  background-color: rgb(109, 47, 109); /* Match navbar background */
-  padding: 1rem 2rem;
-  transition: all 0.3s ease;
-  justify-content: center; /* Center the items vertically */
+  height: 100vh; /* Full screen height */
+  background-color: rgb(109, 47, 109); /* Navbar background */
+  justify-content: space-between; /* Center the items vertically */
   align-items: center; /* Center the items horizontally */
   gap: 1.5rem; /* Add space between the items vertically */
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
 }
 
 .navbar-show {
@@ -50,5 +58,3 @@
 .navbar-link:hover {
   color: aqua; /* Change link color on hover */
 }
-
-/* No media queries for larger screens */
