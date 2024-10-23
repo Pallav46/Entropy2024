@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="App">
         <div className="header_wnc">
-        <div className="header1_wnc"><ScrambleText className="header1_wnc">SPONSORSHIP</ScrambleText></div>
+        <div className="header1_wnc"><ScrambleText className="header1_wnc">Sponsorship</ScrambleText></div>
         </div>
       <div className="stars">
         <div className="stars1"></div>  
