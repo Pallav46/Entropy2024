@@ -315,11 +315,11 @@ const Laptop_eventsDay2 = () => {
                 </p>
               </div>
               <button className='register'>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
-                <a href="/events/preEvents" className='registerLink'>Timeline</a>
+                <a href="/events" className='registerLink'>Timeline</a>
+                <a href="/events" className='registerLink'>Timeline</a>
+                <a href="/events" className='registerLink'>Timeline</a>
+                <a href="/events" className='registerLink'>Timeline</a>
+                <a href="/events" className='registerLink'>Timeline</a>
               </button>
             </div>
           </div>
