@@ -2,7 +2,7 @@ import Card from './Card'; // Ensure this path matches where your Card component
 
 const cardData = [
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/DrKaustuvNag.webp',
         name: 'Dr. Kaustuv Nag',
         profession: 'Faculty Coordinator',
         socialLinks: [
@@ -12,7 +12,7 @@ const cardData = [
         ],
     },
     {
-        image: 'https://i.pinimg.com/originals/07/33/ba/0733ba760b29378474dea0fdbcb97107.png',
+        image: '/assets/TeamPage/team_heads/DrRakeshMatam.png',
         name: 'Dr. Rakesh Matam',
         profession: 'Faculty Coordinator',
         socialLinks: [
