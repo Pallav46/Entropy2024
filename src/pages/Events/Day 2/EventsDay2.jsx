@@ -2,6 +2,7 @@ import React from 'react';
 import Laptop_eventsDay2 from './Laptop_eventsDay2.jsx';
 import Phone_eventDay2 from './Phone_eventsDay2.jsx';
 import './EventsDay2.css';
+import Cursor from '../../Home/Cursor/Cursor.jsx';
 
 const EventsDay2 = () => {
   const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWidth > 1044);
@@ -15,7 +16,7 @@ const EventsDay2 = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return isLargeScreen ? <Laptop_eventsDay2 /> : <Phone_eventDay2 />;
+  return isLargeScreen ? <><Cursor/><Laptop_eventsDay2 /></> : <Phone_eventDay2 />;
 };
 
 export default EventsDay2;
