@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import './Phone_eventDay2.css'
+import Navbar from "../../Navbar/Navbar";
 
 const Phone_eventDay2 = () => {
     useEffect(() => {
@@ -67,6 +68,7 @@ const Phone_eventDay2 = () => {
       
   return (
     <>
+    <Navbar />
       <div>
         <div className="wrapper">
           <div className="content">
