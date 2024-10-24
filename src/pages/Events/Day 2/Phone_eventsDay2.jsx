@@ -150,15 +150,15 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        bgmi
+                        E-Sports Final
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        8 am
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            Venue
+                            TownHall
                           </div>
                         </div>
 
@@ -166,7 +166,10 @@ const Phone_eventDay2 = () => {
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                            Details
+                          Gear up for the ultimate esports showdown!
+                          Whether you’re battling it out in Valorant 
+                          or dropping into BGMI, the competition 
+                          is fierce and the fun is unbeatable.
                           </span>
                         </div>
                       </div>
@@ -194,15 +197,15 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        fastrack - 1
+                        Fastrack
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        4 pm
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            Venue
+                            Academic Block
                           </div>
                         </div>
 
@@ -210,7 +213,9 @@ const Phone_eventDay2 = () => {
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                            Details
+                          Get ready to hack, code, and create! Join our
+                            Hackathon for a day of coding, excitement and
+                            teamwork.
                           </span>
                         </div>
                       </div>
@@ -239,15 +244,15 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        debuggers
+                        Robotics
                       </h1>
                       <span className="product-slider__price">
-                        Date
+                        10 am
                       </span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
-                            Venue
+                            TownHall
                           </div>
                         </div>
 
@@ -255,7 +260,7 @@ const Phone_eventDay2 = () => {
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                            Details
+                          Gear up to build, innovate, and compete! Join our Robotics Competition for a thrilling day of engineering, creativity, and hands-on action.
                           </span>
                         </div>
                       </div>
