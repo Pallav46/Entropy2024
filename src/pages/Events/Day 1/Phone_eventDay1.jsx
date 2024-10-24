@@ -1,125 +1,124 @@
 import React, { useEffect } from "react";
-import './Phone_eventDay1.css'
-import Navbar from '../../Navbar/Navbar';
+import "./Phone_eventDay1.css";
+import Navbar from "../../Navbar/Navbar";
 
 const Phone_eventDay1 = () => {
-    useEffect(() => {
-        var swiper = new window.Swiper('.product-slider', {
-          spaceBetween: 30,
-          effect: 'fade',
-          loop: true, 
-          navigation: {
-            nextEl: '.next',
-            prevEl: '.prev'
-          },
-          on: {
-            init: function () {
-              var index = this.activeIndex;
-              var target = document.querySelector(`.product-slider__item[data-target="${this.slides[index].dataset.target}"]`);
-              console.log(target);
-    
-              document.querySelectorAll('.product-img__item').forEach(item => item.classList.remove('active'));
-              if (target) {
-                document.querySelector(`.product-img__item#${target.dataset.target}`).classList.add('active');
-              }
-            }
-          }
-        });
-    
-        swiper.on('slideChange', function () {
+  useEffect(() => {
+    var swiper = new window.Swiper(".product-slider", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+      on: {
+        init: function () {
           var index = this.activeIndex;
-          var target = document.querySelector(`.product-slider__item[data-target="${this.slides[index].dataset.target}"]`);
+          var target = document.querySelector(
+            `.product-slider__item[data-target="${this.slides[index].dataset.target}"]`
+          );
           console.log(target);
-    
-          document.querySelectorAll('.product-img__item').forEach(item => item.classList.remove('active'));
+
+          document
+            .querySelectorAll(".product-img__item")
+            .forEach((item) => item.classList.remove("active"));
           if (target) {
-            document.querySelector(`.product-img__item#${target.dataset.target}`).classList.add('active');
+            document
+              .querySelector(`.product-img__item#${target.dataset.target}`)
+              .classList.add("active");
           }
-    
-          if (swiper.isEnd) {
-            document.querySelector('.prev').classList.remove('disabled');
-            document.querySelector('.next').classList.add('disabled');
-          } else {
-            document.querySelector('.next').classList.remove('disabled');
-          }
-    
-          if (swiper.isBeginning) {
-            document.querySelector('.prev').classList.add('disabled');
-          } else {
-            document.querySelector('.prev').classList.remove('disabled');
-          }
+        },
+      },
+    });
+
+    swiper.on("slideChange", function () {
+      var index = this.activeIndex;
+      var target = document.querySelector(
+        `.product-slider__item[data-target="${this.slides[index].dataset.target}"]`
+      );
+      console.log(target);
+
+      document
+        .querySelectorAll(".product-img__item")
+        .forEach((item) => item.classList.remove("active"));
+      if (target) {
+        document
+          .querySelector(`.product-img__item#${target.dataset.target}`)
+          .classList.add("active");
+      }
+
+      if (swiper.isEnd) {
+        document.querySelector(".prev").classList.remove("disabled");
+        document.querySelector(".next").classList.add("disabled");
+      } else {
+        document.querySelector(".next").classList.remove("disabled");
+      }
+
+      if (swiper.isBeginning) {
+        document.querySelector(".prev").classList.add("disabled");
+      } else {
+        document.querySelector(".prev").classList.remove("disabled");
+      }
+    });
+
+    document.querySelectorAll(".js-fav").forEach((button) => {
+      button.addEventListener("click", () => {
+        button.querySelector(".heart").classList.toggle("is-active");
+      });
+    });
+
+    return () => {
+      swiper.destroy();
+      document.querySelectorAll(".js-fav").forEach((button) => {
+        button.removeEventListener("click", () => {
+          button.querySelector(".heart").classList.toggle("is-active");
         });
-    
-        document.querySelectorAll(".js-fav").forEach(button => {
-          button.addEventListener("click", () => {
-            button.querySelector('.heart').classList.toggle("is-active");
-          });
-        });
-    
-        return () => {
-          swiper.destroy();
-          document.querySelectorAll(".js-fav").forEach(button => {
-            button.removeEventListener("click", () => {
-              button.querySelector('.heart').classList.toggle("is-active");
-            });
-          });
-        };
-      }, []);
-      
+      });
+    };
+  }, []);
+
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div>
         <div className="wrapper">
           <div className="content">
             <div className="bg-shape">
               {/* <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
+                // src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405214/starwars/logo.webp"
                 alt=""
               /> */}
             </div>
 
-              {/* cyberhunt */}
             <div className="product-img">
               <div className="product-img__item" id="img1">
                 <img
-                  src="/assets/phone_photos/cyberhunt.png"
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-1.webp"
                   alt="star wars"
                   className="product-img__img"
-                /> 
+                />
               </div>
 
-              {/* debuggers */}
               <div className="product-img__item" id="img2">
                 <img
-                  src="/assets/phone_photos/debuggers.png"
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405217/starwars/item-2.webp"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
 
-
-              {/* quiz - 2*/}
               <div className="product-img__item" id="img3">
                 <img
-                  src="/assets/phone_photos/quiz.png"
-                  alt="star wars"
-                  className="product-img__img"
-                />
-              </div>
-                {/*  */}
-              <div className="product-img__item" id="img4">
-                <img
-                  src="/assets/phone_photos/bgmi.png"
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405218/starwars/item-3.webp"
                   alt="star wars"
                   className="product-img__img"
                 />
               </div>
 
-                {/* quiz round 1 */}
-              <div className="product-img__item" id="img5">
+              <div className="product-img__item" id="img4">
                 <img
-                  src="/assets/phone_photos/quiz.png"
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1536405215/starwars/item-4.webp"
                   alt="star wars"
                   className="product-img__img"
                 />
@@ -144,7 +143,7 @@ const Phone_eventDay1 = () => {
               <div className="product-slider__wrp swiper-wrapper">
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img5"
+                  data-target="img4"
                 >
                   <div className="product-slider__card">
                     <img
@@ -156,9 +155,7 @@ const Phone_eventDay1 = () => {
                       <h1 className="product-slider__title">
                         Tech Quiz Round 1
                       </h1>
-                      <span className="product-slider__price">
-                        10 am
-                      </span>
+                      <span className="product-slider__price">10 am</span>
                       <div className="product-ctr">
                         <div className="product-labels">
                           <div className="product-labels__title">
@@ -166,22 +163,19 @@ const Phone_eventDay1 = () => {
                           </div>
                         </div>
 
-                        <span className="hr-vertical"></span> 
+                        <span className="hr-vertical"></span>
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                          Gear up for a coding showdown! 
-                          Test your skills, solve complex problems, 
-                          and race against the clock in CodeThrill 7.0.
+                            Gear up for a coding showdown! Test your skills,
+                            solve complex problems, and race against the clock
+                            in CodeThrill 7.0.
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
-                      <button 
-                          className="product-slider__cart" 
-                          onClick={() => window.location.href = "https://forms.gle/DUDXkhFmKmCnPTqs8"}
-                        >
+                        <button className="product-slider__cart">
                           Register Now
                         </button>
 
@@ -204,35 +198,26 @@ const Phone_eventDay1 = () => {
                       className="product-slider__cover"
                     />
                     <div className="product-slider__content">
-                      <h1 className="product-slider__title">
-                        Cyber Hunt
-                      </h1>
-                      <span className="product-slider__price">
-                        11 am
-                      </span>
+                      <h1 className="product-slider__title">Cyber Hunt</h1>
+                      <span className="product-slider__price">11 am</span>
                       <div className="product-ctr">
                         <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
+                          <div className="product-labels__title">Venue</div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                          Explore the future at our Tech Exhibition!
-                          Discover innovations, technology, 
-                          and visionary projects all under one roof.
+                            Explore the future at our Tech Exhibition! Discover
+                            innovations, technology, and visionary projects all
+                            under one roof.
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
-                      <button 
-                          className="product-slider__cart" 
-                          onClick={() => window.location.href = "https://forms.gle/UiNQqJRmaoHEXcQv5"}
-                        >
+                        <button className="product-slider__cart">
                           Register Now
                         </button>
 
@@ -258,32 +243,25 @@ const Phone_eventDay1 = () => {
                       <h1 className="product-slider__title">
                         Debuggers Round 1
                       </h1>
-                      <span className="product-slider__price">
-                        2 pm
-                      </span>
+                      <span className="product-slider__price">2 pm</span>
                       <div className="product-ctr">
                         <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
+                          <div className="product-labels__title">Venue</div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                          Time to unwind and have some fun!
-                          Swing by our Game Room, dive into awesome games,
-                          and hang out with friends. 
+                            Time to unwind and have some fun! Swing by our Game
+                            Room, dive into awesome games, and hang out with
+                            friends.
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
-                      <button 
-                          className="product-slider__cart" 
-                          onClick={() => window.location.href = "#"}
-                        >
+                        <button className="product-slider__cart">
                           Register Now
                         </button>
 
@@ -309,32 +287,25 @@ const Phone_eventDay1 = () => {
                       <h1 className="product-slider__title">
                         Tech Quiz Round 2
                       </h1>
-                      <span className="product-slider__price">
-                        3 pm
-                      </span>
+                      <span className="product-slider__price">3 pm</span>
                       <div className="product-ctr">
                         <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
+                          <div className="product-labels__title">Venue</div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                          Get ready to hack, code, and create!
-                          Join our Hackathon for a day of coding,
-                          excitement and teamwork.
+                            Get ready to hack, code, and create! Join our
+                            Hackathon for a day of coding, excitement and
+                            teamwork.
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
-                      <button 
-                          className="product-slider__cart" 
-                          onClick={() => window.location.href = "https://forms.gle/DUDXkhFmKmCnPTqs8"}
-                        >
+                        <button className="product-slider__cart">
                           Register Now
                         </button>
 
@@ -348,7 +319,7 @@ const Phone_eventDay1 = () => {
 
                 <div
                   className="product-slider__item swiper-slide"
-                  data-target="img4"
+                  data-target="img2"
                 >
                   <div className="product-slider__card">
                     <img
@@ -360,32 +331,31 @@ const Phone_eventDay1 = () => {
                       <h1 className="product-slider__title">
                         E-Sports Round 1
                       </h1>
-                      <span className="product-slider__price">
-                        5 pm
-                      </span>
+                      <span className="product-slider__price">5 pm</span>
                       <div className="product-ctr">
                         <div className="product-labels">
-                          <div className="product-labels__title">
-                            Venue
-                          </div>
+                          <div className="product-labels__title">Online</div>
                         </div>
 
                         <span className="hr-vertical"></span>
 
                         <div className="product-inf">
                           <span className="product-inf__title">
-                          Gear up for the ultimate esports showdown!
-                          Whether you’re battling it out in Valorant 
-                          or dropping into BGMI, the competition 
-                          is fierce and the fun is unbeatable.
+                            Gear up for the ultimate esports showdown! Whether
+                            you’re battling it out in Valorant or dropping into
+                            BGMI, the competition is fierce and the fun is
+                            unbeatable.
                           </span>
                         </div>
                       </div>
 
                       <div className="product-slider__bottom">
-                      <button 
-                          className="product-slider__cart" 
-                          onClick={() => window.location.href = "https://forms.gle/KR7BdRgnxs2gZmn6A"}
+                        <button
+                          className="product-slider__cart"
+                          onClick={() =>
+                            (window.location.href =
+                              "https://forms.gle/KR7BdRgnxs2gZmn6A")
+                          }
                         >
                           Register Now
                         </button>
@@ -397,11 +367,9 @@ const Phone_eventDay1 = () => {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
         <svg className="hidden" hidden>
           <symbol id="icon-arrow-left" viewBox="0 0 32 32">
