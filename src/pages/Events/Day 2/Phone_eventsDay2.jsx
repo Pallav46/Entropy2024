@@ -338,7 +338,7 @@ const Phone_eventDay2 = () => {
                     />
                     <div className="product-slider__content">
                       <h1 className="product-slider__title">
-                        codethrill
+                        Codethrill
                       </h1>
                       <span className="product-slider__price">
                         Date

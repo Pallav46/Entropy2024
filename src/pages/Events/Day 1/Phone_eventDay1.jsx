@@ -217,7 +217,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                        <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/ji8NdSTGWx5Taz8D6"}
+                        >
                           Register Now
                         </button>
 
@@ -261,7 +264,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                        <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfuk4wLXa7ac1ZI8AEb1-GfWjOmRB4XCVGg9yjqXUb6QMgARg/viewform"}
+                        >
                           Register Now
                         </button>
 
@@ -305,7 +311,10 @@ const Phone_eventDay1 = () => {
                       </div>
 
                       <div className="product-slider__bottom">
-                        <button className="product-slider__cart">
+                        <button 
+                          className="product-slider__cart" 
+                          onClick={() => window.location.href = "https://forms.gle/2guLhnYWmWy4s7fFA"}
+                        >
                           Register Now
                         </button>
 
