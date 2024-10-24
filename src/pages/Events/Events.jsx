@@ -10,7 +10,7 @@ import day1img3 from '/assets/Events/day1/day1img3.jpg';
 import day2img1 from '/assets/Events/day2/e-sports.jpg';
 import day2img2 from '/assets/Events/day2/day2img2.png';
 import day2img3 from '/assets/Events/day2/day2img3.jpg';
-
+import debuggers1 from '/assets/Events/day1/debuggers.png';
 
 
 
@@ -19,11 +19,11 @@ const Events = () => {
   const postActionsControllersRef = useRef([]);
   const likeBtnsRef = useRef([]);
   // make two array 1 with day1 images and 1 with day2 images
-  const day1Images = [day1img1, day1img2, day1img3];
-  const day2Images = [day2img1, day2img2, day2img3];
+  const day1Images = [day1img1, day1img2, day1img3, debuggers1, day1img3];
+  const day2Images = [day2img1, day2img2, day2img3, debuggers1, day2img3];
 
-  const day1Name = ["E-Sports", "TechSure Hunt", "Tech Quiz"];
-  const day2Name = ["E-Sports", "GFG FastTrack", "Robotics"];
+  const day1Name = ["E-Sports", "Cyber Hunt", "Tech Quiz R-1", "Debuggers R-1", "Tech Quiz R-2"];
+  const day2Name = ["E-Sports", "Codethrill", "FastTrack R-1", "Debuggers R-2", "FasTrack R-2"];
 
   useEffect(() => {
     // Initialize Swiper
